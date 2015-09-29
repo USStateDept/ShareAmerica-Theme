@@ -1,0 +1,22 @@
+{
+    "name": "iip-design/shareamerica",
+    "description": "ShareAmerica's theme, a child of Newspaper",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nathan Kleekamp",
+            "email": "nkleekamp@gmail.com"
+        },
+        {
+            "name": "Terri Regan"
+        },
+        {
+            "name": "Sean Parker"
+        }
+    ],
+    "minimum-stability": "stable",
+    "type": "wordpress-theme",
+    "require": {
+        "composer/installers": "v1.0.21"
+    }
+}
