@@ -504,7 +504,7 @@ body {
 .td-post-text-content a[href*="https://share.america.gov"] { background-image: none !important; padding-right: 0px !important; }
 .td-post-text-content a[href*="share.america.gov"] { background-image: none !important; padding-right: 0px !important; }
 .td-post-text-content a {
-    background-image: linear-gradient(transparent, transparent), url("/wp-content/uploads/sites/2/2014/09/external_link1.png");
+    background-image: linear-gradient(transparent, transparent), url("/wp-content/uploads/2014/09/external_link1.png");
     background-position: right 60%;
     background-repeat: no-repeat;
     padding-right: 16px;
@@ -514,7 +514,7 @@ body {
 .span8.column_container.td-no-pagination a[href*="https://share.america.gov"] { background-image: none !important; padding-right: 0px !important; }
 .span8.column_container.td-no-pagination a[href*="share.america.gov"] { background-image: none !important; padding-right: 0px !important; }
 .span8.column_container.td-no-pagination a {
-    background-image: linear-gradient(transparent, transparent), url("/wp-content/uploads/sites/2/2014/09/external_link.png");
+    background-image: linear-gradient(transparent, transparent), url("/wp-content/uploads/2014/09/external_link.png");
     background-position: right center;
     background-repeat: no-repeat;
     padding-right: 16px;
@@ -998,7 +998,7 @@ html div#om-xgcuqiqs9s-sidebar #om-sidebar-action-theme-optin {
 
 
 .home, .home .td-page-wrap {
-    background: url("/wp-content/uploads/sites/2/2014/08/share-bg.png") repeat scroll 0 0 #efefef !important;
+    background: url("/wp-content/uploads/2014/08/share-bg.png") repeat scroll 0 0 #efefef !important;
 }
 
 .meta-info ul.td-category a {
@@ -1039,7 +1039,7 @@ html div#om-xgcuqiqs9s-sidebar #om-sidebar-action-theme-optin {
 
 
 .span4.td-sub-footer-copy:before {
-    content: url("/wp-content/uploads/sites/2/2014/07/flag.png");
+    content: url("/wp-content/uploads/2014/07/flag.png");
     float: left;
     margin: 3px 5px 3px 0;
 }
@@ -1123,7 +1123,7 @@ END Navigation
 }
 
 .lang-item.lang-item-67.lang-item-en.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-first.td-not-mega.menu-item-534-en > a:before{
-    content: url("/wp-content/uploads/sites/2/2014/07/en_US.png");
+    content: url("/wp-content/uploads/2014/07/en_US.png");
 }
 .lang-item.lang-item-67.lang-item-en.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-first.td-not-mega.menu-item-534-en img {
     display: none;
@@ -1132,7 +1132,7 @@ END Navigation
     display: none;
 }
 .lang-item.lang-item-67.lang-item-en.current-lang.no-translation.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-first.td-not-mega.menu-item-501-en > a:before {
-    content: url("/wp-content/uploads/sites/2/2014/07/en_US.png");
+    content: url("/wp-content/uploads/2014/07/en_US.png");
 }
 .td-social-sharing-buttons {
     left:0 !important;
@@ -1375,7 +1375,7 @@ margin-bottom: 5px;
 .td_mod6 h3.entry-title:before {
     background-color: #55acee;
     color: #fff;
-    content: url(/wp-content/uploads/sites/2/2014/07/small-tweetthis1.png);
+    content: url(/wp-content/uploads/2014/07/small-tweetthis1.png);
     float: left;
     font-family: 'Roboto Condensed',sans-serif;
     font-size: 13px;
@@ -1388,7 +1388,7 @@ margin-bottom: 5px;
 .td_mod6 .thumb-wrap:after {
     background-color: #47639e;
     color: #fff;
-     content: url(/wp-content/uploads/sites/2/2014/07/small-sharethis1.png);
+     content: url(/wp-content/uploads/2014/07/small-sharethis1.png);
     font-family: 'Roboto Condensed',sans-serif;
     float: left;
     width: 50%;
@@ -2204,7 +2204,7 @@ h3.ui-accordion-header a {
 .connectez-vous-avec-lamerique,
 .homepage1 .page, .page .td-page-wrap,
 .homepage1 {
-    background: url("/wp-content/uploads/sites/2/2014/08/share-bg.png") repeat scroll 0 0 #efefef !important;
+    background: url("/wp-content/uploads/2014/08/share-bg.png") repeat scroll 0 0 #efefef !important;
 }
 
 .page-id-157509 .page .td-page-wrap .td_mod_wrap,
