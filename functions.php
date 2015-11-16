@@ -118,3 +118,21 @@ function ssl_post_thumbnail_urls( $url, $post_id ) {
 }
 
 add_filter('wp_get_attachment_url', 'ssl_post_thumbnail_urls', 10, 2);
+
+
+// Remove unwanted wp-cron jobs
+function remove_cron_job() {
+   wp_clear_scheduled_hook("wsal_cleanup");
+}
+add_action("init", "remove_cron_job");
+
+
+// Disable All Wordpress/plugin/theme update notifications for non-admins
+function remove_core_updates() {
+    if ( !current_user_can('update_core') ) {
+        add_filter('pre_site_transient_update_core','remove_core_updates');
+        add_filter('pre_site_transient_update_plugins','remove_core_updates');
+        add_filter('pre_site_transient_update_themes','remove_core_updates');
+    }
+}
+add_action('after_setup_theme','remove_core_updates');
