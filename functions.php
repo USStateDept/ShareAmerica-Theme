@@ -248,3 +248,49 @@ if ( current_user_can('manage_network') ) {
     }
     add_action('tgmpa_register', 'share_required_plugins');
 }
+
+//Generates the RSS enclosure for the first audio attachment
+function feedContentFilter($item) {
+  global $post;
+
+  $args = array(
+    'order'          => 'ASC',
+    'post_type'      => 'attachment',
+    'post_parent'    => $post->ID,
+    'post_mime_type' => 'audio',
+    'post_status'    => null,
+    'numberposts'    => 1,
+  );
+
+  $attachments = get_posts($args);
+
+  if ($attachments) {
+    foreach ($attachments as $attachment) {
+      $audio = wp_get_attachment_url( $attachments[0]->ID );
+      $mime = get_post_mime_type($attachment->ID);
+    }
+  }
+
+  if ($audio) {
+    echo '<enclosure url="'.$audio.'" length="1" type="'.$mime.'"/>';
+  }
+  return $item;
+}
+
+// First remove audio enclosures, and then add them back
+
+function delete_enclosure() {
+  return '';
+}
+
+function feedFilter($query) {
+  if ($query->is_feed) {
+    add_filter( 'get_enclosed', 'delete_enclosure' );
+    add_filter( 'rss_enclosure', 'delete_enclosure' );
+    add_filter( 'atom_enclosure', 'delete_enclosure' );
+    add_filter('rss2_item', 'feedContentFilter');
+  }
+
+  return $query;
+}
+add_filter('pre_get_posts','feedFilter');
