@@ -33,7 +33,7 @@ echo td_page_generator::wrap_start();
         <div class="td-404-sub-sub-title">
             <?php _etd('You can go to the', ''); ?>
             <a href="<?php echo get_home_url(); ?>"><?php _etd('homepage', ''); ?></a>
- 	    <?php _etd('or browse some of our recent posts below.', ''); ?>
+            <?php _e('or browse some of our recent posts below.', 'shareamerica'); ?>
 
         </div>
 

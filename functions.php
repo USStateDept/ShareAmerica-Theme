@@ -294,3 +294,10 @@ function feedFilter($query) {
   return $query;
 }
 add_filter('pre_get_posts','feedFilter');
+
+
+//* Activaating child theme tranlsations and namespace
+function share_locale() {
+    load_child_theme_textdomain( 'shareamerica', get_stylesheet_directory() . '/languages' );
+}
+add_action( 'after_setup_theme', 'share_locale' );
