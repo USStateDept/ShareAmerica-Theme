@@ -3,9 +3,9 @@ Theme Name:     ShareAmerica theme
 Theme URI: 		  http://share.america.gov
 Description:    Child theme of the Newspaper theme
 Author:         Office of Design, Bureau of International Information Programs
-Author URI: 	  http://share.america.gov
 Template:       Newspaper
 Version:        1
+Text Domain:    share
 */
 
 @import url("../Newspaper/style.css");
@@ -277,7 +277,7 @@ body.single .toprelated img.entry-thumb:hover {
 .rtl #mc4wp-form-1 input {
     float: right;
 }
-.rtl .span4.td-sub-footer-copy:before {
+.rtl .span12.td-sub-footer-copy:before {
     float: right;
     margin: 3px 0 3px 5px;
 }
@@ -657,13 +657,6 @@ input.wpcf7-form-control.wpcf7-text {
 .wpb_button.wpb_btn-inverse.btn {
     font-size: 18px;
 }
-.span4.td-sub-footer-copy {
-    width: 100%;
-}
-.span8.td-sub-footer-menu {
-    width: 0%;
-    display:none;
-}
 .format-link p {
     font-family: 'Source Sans Pro';
     font-size: 18px;
@@ -1038,12 +1031,12 @@ html div#om-xgcuqiqs9s-sidebar #om-sidebar-action-theme-optin {
 }
 
 
-.span4.td-sub-footer-copy:before {
+.span12.td-sub-footer-copy:before {
     content: url("/wp-content/uploads/2014/07/flag.png");
     float: left;
     margin: 3px 5px 3px 0;
 }
-.span4.td-sub-footer-copy {
+.span12.td-sub-footer-copy {
     line-height: 1.3;
 }
 .sf-with-ul {
@@ -2649,12 +2642,7 @@ h3.ui-accordion-header a {
   :lang(fa) .menu_icon.td-sp.td-sp-ico-contact:before {
       display: none;
   }
-  .span4.td-sub-footer-copy {
-      width: 100%;
-     text-align:center;
-  }
-  .span8.td-sub-footer-menu {
-      width: 100%;
+  .span12.td-sub-footer-copy {
      text-align:center;
   }
   .underbar.fb-subscribe .follow-msg {
@@ -2697,7 +2685,7 @@ h3.ui-accordion-header a {
   .td-big-slide-background {
       display: none;
   }
-  .span4.td-sub-footer-copy:before {
+  .td-sub-footer-copy:before {
       float: none;
   }
   .td-menu-wrap #td-top-menu {

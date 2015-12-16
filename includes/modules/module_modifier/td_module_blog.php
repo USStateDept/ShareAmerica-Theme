@@ -180,8 +180,8 @@ class td_module_blog extends td_module {
             'link_before' => '<span>',
             'link_after' => '</span>',
             'echo' => false,
-            'nextpagelink'     => ' ' . __td('Next') . ' <img width="6" class="td-retina right-arrow" src="' . get_template_directory_uri()  . '/images/icons/similar-right.png" alt=""/>',
-            'previouspagelink' => '<img width="6" class="td-retina left-arrow" src="' . get_template_directory_uri()  . '/images/icons/similar-left.png" alt=""/> ' . __td('Prev')
+            'nextpagelink'     => ' ' . __('Next') . ' <img width="6" class="td-retina right-arrow" src="' . get_template_directory_uri()  . '/images/icons/similar-right.png" alt=""/>',
+            'previouspagelink' => '<img width="6" class="td-retina left-arrow" src="' . get_template_directory_uri()  . '/images/icons/similar-left.png" alt=""/> ' . __('Prev')
         ));
     }
 
@@ -429,7 +429,7 @@ class td_module_blog extends td_module {
         /*  ----------------------------------------------------------------------------
             Prepare the content
         */
-        $content = get_the_content(__td('Continue', TD_THEME_NAME));
+        $content = get_the_content(__('Continue', 'shareamerica'));
         $content = apply_filters('the_content', $content);
         $content = str_replace(']]>', ']]&gt;', $content);
 
@@ -573,7 +573,7 @@ class td_module_blog extends td_module {
             $buffy .= '<div class="post-source-via">';
 
             if (!empty($this->td_post_theme_settings['td_via']) or !empty($this->td_post_theme_settings['td_via_2'])) {
-                $buffy .= '<div class="post-via"><span>' . __td('VIA') . '</span>';
+                $buffy .= '<div class="post-via"><span>' . __('VIA', 'shareamerica') . '</span>';
                 if (!empty($this->td_post_theme_settings['td_via'])) {
                     $buffy .= ' <a rel="nofollow" href="' . $this->td_post_theme_settings['td_via_url'] . '">' . $this->td_post_theme_settings['td_via'] . '</a>';
                 }
@@ -585,7 +585,7 @@ class td_module_blog extends td_module {
                 }
 
             if (!empty($this->td_post_theme_settings['td_source']) or !empty($this->td_post_theme_settings['td_source_2'])) {
-                $buffy .= '<div class="post-via"><span>' . __td('SOURCE') . '</span>';
+                $buffy .= '<div class="post-via"><span>' . __('SOURCE', 'shareamerica') . '</span>';
                 if (!empty($this->td_post_theme_settings['td_source'])) {
                     $buffy .= ' <a rel="nofollow" href="' . $this->td_post_theme_settings['td_source_url'] . '">' . $this->td_post_theme_settings['td_source'] . '</a>';
                 }
@@ -618,7 +618,7 @@ class td_module_blog extends td_module {
 
         $td_post_tags = get_the_tags();
         if ($td_post_tags) {
-            $buffy .= '<ul class="td-tags clearfix"><li><span class="td-tag-black">' . __td('TAGS') . '</span></li>';
+            $buffy .= '<ul class="td-tags clearfix"><li><span class="td-tag-black">' . __('Topics', 'shareamerica') . '</span></li>';
             foreach ($td_post_tags as $tag) {
                 $buffy .=  '<li><a href="' . get_tag_link($tag->term_id) . '">' . $tag->name . '</a></li>';
             }
@@ -647,7 +647,7 @@ class td_module_blog extends td_module {
             if (!empty($prev_post)) {
                 $buffy .= '<div class="span6 prev-post">';
                 $buffy .= '<div><img width="6" class="td-retina" src="' . get_template_directory_uri()  .
-                    '/images/icons/similar-left.png" alt=""/>' . __td('Previous article', TD_THEME_NAME) . '</div>';
+                    '/images/icons/similar-left.png" alt=""/>' . __('Previous article', 'shareamerica') . '</div>';
                 $buffy .= '<a href="' . get_permalink($prev_post->ID) . '">' . $prev_post->post_title . '</a>';
                 $buffy .= '</div>';
             } else {
@@ -657,7 +657,7 @@ class td_module_blog extends td_module {
 
             if (!empty($next_post)) {
                 $buffy .= '<div class="span6 next-post">';
-                $buffy .= '<div>' . __td('Next article', TD_THEME_NAME) . '<img width="6" class="td-retina" src="' .
+                $buffy .= '<div>' . __('Next article', 'shareamerica') . '<img width="6" class="td-retina" src="' .
                     get_template_directory_uri()  . '/images/icons/similar-right.png" alt=""/></div>';
                 $buffy .= '<a href="' . get_permalink($next_post->ID) . '">' . $next_post->post_title . '</a>';
                 $buffy .= '</div>';
@@ -824,7 +824,7 @@ class td_module_blog extends td_module {
             //do the query
             $my_query = new WP_Query($args);
             if ($my_query->have_posts()) {
-                $buffy .= '<h4 class="block-title"><span>' . __td('SIMILAR ARTICLES') . '</span></h4>';
+                $buffy .= '<h4 class="block-title"><span>' . __("Similar Articles", "shareamerica") . '</span></h4>';
 
                 $td_template_layout = new td_template_layout(''); //invalid sidebar position, it will default to 2 + 1
 
@@ -935,7 +935,7 @@ class td_module_blog extends td_module {
             //do the query
             $my_query = new WP_Query($args);
             if ($my_query->have_posts()) {
-                $buffy .= '<h4 class="block-title"><span>' . __td('SIMILAR ARTICLES') . '</span></h4>';
+                $buffy .= '<h4 class="block-title"><span>' . __("Similar Articles", "shareamerica") . '</span></h4>';
 
                 $td_template_layout = new td_template_layout(''); //invalid sidebar position, it will default to 2 + 1
 

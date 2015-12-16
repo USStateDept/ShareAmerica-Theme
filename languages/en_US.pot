@@ -1,0 +1,165 @@
+# Copyright (C) 2015 Office of Design, Bureau of International Information Programs
+# This file is distributed under the same license as the ShareAmerica theme package.
+msgid ""
+msgstr ""
+"Project-Id-Version: ShareAmerica theme 1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/shareamerica\n"
+"POT-Creation-Date: 2015-12-15 15:56:45+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: 404.php:36
+msgid "or browse some of our recent posts below."
+msgstr ""
+
+#: footer.php:136
+msgid "This site is managed by the <a href=\"http://www.state.gov/r/iip\">Bureau of International Information Programs</a> within the  <a href=\"http://www.state.gov\">U.S. Department of State</a>. External links to other Internet sites should not be construed as an endorsement of the views or privacy policies contained therein."
+msgstr ""
+
+#: functions.php:226
+msgid "Install Required Plugins"
+msgstr ""
+
+#: functions.php:227
+msgid "Install Plugins"
+msgstr ""
+
+#: functions.php:228
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: functions.php:229
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: functions.php:230
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: functions.php:231
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: functions.php:232
+msgid "Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed."
+msgid_plural "Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed."
+msgstr[0] ""
+msgstr[1] ""
+
+#: functions.php:233
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: functions.php:234
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: functions.php:235
+msgid "Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated."
+msgid_plural "Sorry, but you do not have the correct permissions to activate the %s plugins. Contact the administrator of this site for help on getting the plugins activated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: functions.php:236
+msgid "The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s."
+msgid_plural "The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: functions.php:237
+msgid "Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated."
+msgid_plural "Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: functions.php:238
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: functions.php:239
+msgid "Activate installed plugin"
+msgid_plural "Activate installed plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: functions.php:240
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: functions.php:241
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: functions.php:242
+msgid "All plugins installed and activated successfully. %s"
+msgstr ""
+
+#: includes/modules/module_modifier/td_module_blog.php:183
+msgid "Next"
+msgstr ""
+
+#: includes/modules/module_modifier/td_module_blog.php:184
+msgid "Prev"
+msgstr ""
+
+#: includes/modules/module_modifier/td_module_blog.php:432
+msgid "Continue"
+msgstr ""
+
+#: includes/modules/module_modifier/td_module_blog.php:576
+msgid "VIA"
+msgstr ""
+
+#: includes/modules/module_modifier/td_module_blog.php:588
+msgid "SOURCE"
+msgstr ""
+
+#: includes/modules/module_modifier/td_module_blog.php:621
+msgid "Topics"
+msgstr ""
+
+#: includes/modules/module_modifier/td_module_blog.php:650
+msgid "Previous article"
+msgstr ""
+
+#: includes/modules/module_modifier/td_module_blog.php:660
+msgid "Next article"
+msgstr ""
+
+#: includes/modules/module_modifier/td_module_blog.php:827
+#: includes/modules/module_modifier/td_module_blog.php:938
+msgid "Similar Articles"
+msgstr ""
+#. Theme Name of the plugin/theme
+msgid "ShareAmerica theme"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://share.america.gov"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Child theme of the Newspaper theme"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Office of Design, Bureau of International Information Programs"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Homepage - blank */"
+msgstr ""
