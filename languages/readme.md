@@ -56,3 +56,11 @@ $ php makepot.php wp-theme /path/to/wp-content/themes/shareamerica en_US.pot
 4. To pull in new strings that you've added to your child theme templates, go to Catalog > Update from POT file...
 5. Select en_US.pot, and your new strings should be brought into the file.
 6. Translate and save.
+
+## Resources
+
+* [How to create .pot files with POedit?](http://wordpress.stackexchange.com/questions/149212/how-to-create-pot-files-with-poedit)
+* [I18n for WordPress Developers](https://codex.wordpress.org/I18n_for_WordPress_Developers)
+* [Wordpress Internationalization](https://developer.wordpress.org/themes/functionality/internationalization/)
+* [Wordpress Localization](https://developer.wordpress.org/themes/functionality/localization/)
+* [Polyglots channel on Slack](https://make.wordpress.org/chat/)
