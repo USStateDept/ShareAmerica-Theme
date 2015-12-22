@@ -68,6 +68,10 @@ body.rtl.single .toprelated .td_mod6 .thumb-wrap {
     font-size: 18px;
     margin: 0 0 8px;
 }
+:lang(es) .single .toprelated div.wpb_row.row-fluid:before {
+    content: "Te sugerimos";
+    direction: rtl;
+}
 :lang(fa) .single .toprelated div.wpb_row.row-fluid:before {
     content: "مطالب بیشتر";
     direction: rtl;
@@ -81,6 +85,10 @@ body.rtl.single .toprelated .td_mod6 .thumb-wrap {
 }
 :lang(ru) .single .toprelated div.wpb_row.row-fluid:before {
     content: "Подобрано для вас";
+}
+:lang(zh-hans) .single .toprelated div.wpb_row.row-fluid:before {
+    content: "推荐媒体";
+    direction: rtl;
 }
 :lang(id) .single .toprelated div.wpb_row.row-fluid:before {
     content: "Rekomendasi untuk Anda";
