@@ -70,7 +70,6 @@ body.rtl.single .toprelated .td_mod6 .thumb-wrap {
 }
 :lang(es) .single .toprelated div.wpb_row.row-fluid:before {
     content: "Te sugerimos";
-    direction: rtl;
 }
 :lang(fa) .single .toprelated div.wpb_row.row-fluid:before {
     content: "مطالب بیشتر";
@@ -88,7 +87,6 @@ body.rtl.single .toprelated .td_mod6 .thumb-wrap {
 }
 :lang(zh-hans) .single .toprelated div.wpb_row.row-fluid:before {
     content: "推荐媒体";
-    direction: rtl;
 }
 :lang(id) .single .toprelated div.wpb_row.row-fluid:before {
     content: "Rekomendasi untuk Anda";
