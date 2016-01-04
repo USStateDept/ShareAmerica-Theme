@@ -63,6 +63,19 @@ body {
     page-break-inside: avoid !important;
   }
 
+  figure.wp-caption.alignleft {
+      width: 250px !important;
+      display: left !important;
+  }
+
+  .wp-caption figcaption.wp-caption-text {
+      width: auto !important;
+  }
+
+  .post .td-post-text-content h2, .post .td-post-text-content p {
+      display: inline !important;
+  }
+
   .wp-caption .wp-caption-text {
     max-width: 200px !important;
   }
@@ -125,6 +138,7 @@ body {
   .post:before {
     content: url(/wp-content/uploads/2014/10/logox1.png);
     display: block;
+    margin:0 0 10px 0;
   }
 
   .post header {
@@ -152,7 +166,7 @@ body {
   }
 
   .post header .meta-info {
-    margin: 0 !important;
+    margin: 10px 0 25px !important;
   }
 
   .td-page-wrap:before  {
