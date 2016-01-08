@@ -17,50 +17,52 @@ $loop_module_id = td_util::get_option('tds_' . $template_id . '_page_layout', 1)
 
 get_header();
 
-echo td_page_generator::wrap_start();
-
 ?>
+<div class="td-main-content-wrap">
+    <div class="td-container">
+        <div class="td-pb-row">
+            <div class="td-pb-span12">
+                <div class="td-404-title">
+                    <?php _etd('Ooops... Error 404', TD_THEME_NAME); ?>
+                </div>
 
-    <div class="span12 column_container">
-        <div class="td-404-title">
-            <?php _etd('404 Error - page not found'); ?>
-        </div>
+                <div class="td-404-sub-title">
+                    <?php _etd('Sorry, but the page you are looking for doesn_t exist.', TD_THEME_NAME); ?>
+                </div>
 
-        <div class="td-404-sub-title">
-            <?php _etd("We_re sorry, but the page you are looking for doesn_t exist."); ?>
-        </div>
-
-        <div class="td-404-sub-sub-title">
-            <?php _etd('You can go to the', ''); ?>
-            <a href="<?php echo get_home_url(); ?>"><?php _etd('homepage', ''); ?></a>
-            <?php _e('or browse some of our recent posts below.', 'shareamerica'); ?>
-
-        </div>
-
-
-        <h4 class="block-title"><span><?php echo __td('OUR LATEST POSTS')?></span></h4>
-
-        <?php
+                <div class="td-404-sub-sub-title">
+                    <?php _etd('You can go to the', ''); ?>
+                    <a href="<?php echo esc_url(home_url( '/' )); ?>"><?php _etd('HOMEPAGE', TD_THEME_NAME); ?></a>
+                    <?php _e('or browse some of our recent posts below.', 'shareamerica'); ?>
+                </div>
 
 
-        $args = array(
-            'post_type'=> 'post',
-            'showposts' => 96
-        );
-        query_posts($args);
+                <h4 class="block-title"><span><?php echo __td('OUR LATEST POSTS', TD_THEME_NAME)?></span></h4>
+
+                <?php
 
 
-        $td_loop_block_module = td_util::get_option('tds_404_page_layout');
-        //$td_loop_block_module
+                $args = array(
+                    'post_type'=> 'post',
+                    'showposts' => 96
+                );
+                query_posts($args);
 
 
-        locate_template('loop.php', true);
-        //get_template_part('category', 'slider');
+                $td_loop_block_module = td_util::get_option('tds_404_page_layout');
+                //$td_loop_block_module
 
-        ?>
-    </div>
+
+                locate_template('loop.php', true);
+                //get_template_part('category', 'slider');
+                //wp_reset_query();
+
+                ?>
+            </div>
+        </div> <!-- /.td-pb-row -->
+    </div> <!-- /.td-container -->
+</div> <!-- /.td-main-content-wrap -->
+
 <?php
-
-echo td_page_generator::wrap_end();
 get_footer();
 ?>

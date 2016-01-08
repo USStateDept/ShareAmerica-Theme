@@ -1,80 +1,78 @@
 <?php
 /**
- * The single post loop for post template 1
+ * single Post template 1
  **/
 
 if (have_posts()) {
     the_post();
 
-    $td_mod_single = new td_module_1($post);
+    $td_mod_single = new td_module_single($post);
 
-
-
-    //show the breadcrumb
-    if (get_post_type($post) == 'post') {
-        echo td_page_generator::get_single_breadcrumbs($td_mod_single->title);
-    } else {
-        echo td_page_generator::get_page_breadcrumbs($td_mod_single->title);
-    }
     ?>
 
+
     <article id="post-<?php echo $td_mod_single->post->ID;?>" class="<?php echo join(' ', get_post_class());?>" <?php echo $td_mod_single->get_item_scope();?>>
+        <div class="td-post-header">
 
-        <header>
+            <?php echo $td_mod_single->get_category(); ?>
 
-
-
-            <?php echo $td_mod_single->get_title();?>
-
-            <div class="meta-info">
-                <?php echo $td_mod_single->get_date(false);?>
-                <?php echo $td_mod_single->get_author();?>
-            </div>
-        </header>
-            <?php echo $td_mod_single->get_social_sharing();?>
-            <?php echo $td_mod_single->get_social_like_tweet();?>
-
-        <?php if (!empty($td_mod_single->td_post_theme_settings['td_subtitle'])) { ?>
-            <p class="td-sub-title"><?php echo $td_mod_single->td_post_theme_settings['td_subtitle'];?></p>
-        <?php } ?>
+            <header class="td-post-title">
+                <?php echo $td_mod_single->get_title();?>
 
 
-        <?php
-        // override the default featured image by the templates (single.php and home.php/index.php - blog loop)
-        if (!empty(td_global::$load_featured_img_from_template)) {
-            echo $td_mod_single->get_image(td_global::$load_featured_img_from_template);
-        } else {
-            echo $td_mod_single->get_image('art-big-1col');
-        }
-        ?>
+                <?php if (!empty($td_mod_single->td_post_theme_settings['td_subtitle'])) { ?>
+                    <p class="td-post-sub-title"><?php echo $td_mod_single->td_post_theme_settings['td_subtitle'];?></p>
+                <?php } ?>
 
-        <div class="td-post-text-content">
-    <div class="toprelated"><?php echo $td_mod_single->related_posts();?></div>
+
+                <div class="td-module-meta-info">
+                    <?php echo $td_mod_single->get_author();?>
+                    <?php echo $td_mod_single->get_date(false);?>
+                    <?php echo $td_mod_single->get_comments();?>
+                    <?php echo $td_mod_single->get_views();?>
+                </div>
+
+            </header>
+
+
+        </div>
+
+        <?php echo $td_mod_single->get_social_sharing_top();?>
+
+
+        <div class="td-post-content">
+
+                <div class="td-featured-image-rec">
+                <?php
+                // override the default featured image by the templates (single.php and home.php/index.php - blog loop)
+                if (!empty(td_global::$load_featured_img_from_template)) {
+                    echo $td_mod_single->get_image(td_global::$load_featured_img_from_template);
+                } else {
+                    echo $td_mod_single->get_image('medium');
+                }
+
+                // ad spot
+                echo td_global_blocks::get_instance('td_block_ad_box')->render(array('spot_id' => 'post_style_1')); ?>
+
+                </div>
+
             <?php echo $td_mod_single->get_content();?>
         </div>
 
-        <div class="td-social-sharing-xdiv">
-            <?php echo $td_mod_single->get_social_sharing_bottom();?>
-            <?php echo $td_mod_single->get_social_like_tweet();?>
-        </div>
-
-
-
-	<div class="tags-info3">
-		<?php echo $td_mod_single->get_the_tags();?>
-	</div>
-
-        <div class="clearfix"></div>
 
         <footer>
             <?php echo $td_mod_single->get_post_pagination();?>
             <?php echo $td_mod_single->get_review();?>
-            <?php echo $td_mod_single->get_source_and_via();?>
+
+            <div class="td-post-source-tags">
+                <?php echo $td_mod_single->get_source_and_via();?>
+                <?php echo $td_mod_single->get_the_tags();?>
+            </div>
+
+            <?php echo $td_mod_single->get_social_sharing_bottom();?>
             <?php echo $td_mod_single->get_next_prev_posts();?>
-            <?php //echo $td_mod_single->get_author();?>
-
-
-            <?php echo $td_mod_single->get_item_scope_meta();?>
+            <?php echo $td_mod_single->get_author_box();?>
+	        <?php echo $td_mod_single->get_item_scope_meta();?>
         </footer>
 
     </article> <!-- /.post -->
@@ -85,4 +83,4 @@ if (have_posts()) {
 } else {
     //no posts
     echo td_page_generator::no_posts();
-}?>
+}
