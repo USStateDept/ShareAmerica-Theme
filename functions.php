@@ -14,6 +14,7 @@ if (!defined('TD_THEME_WP_BOOSTER')) {
 function share_add_scripts() {
   wp_enqueue_script( 'addthis', '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-548862977b7e4fe5', array(), '1.0.0', true );
   wp_enqueue_script( 'facebook', get_stylesheet_directory_uri() . '/js/facebook-sdk.js', array(), '1.0.0', true );
+  wp_enqueue_script( 'social', get_stylesheet_directory_uri() . '/js/social.js', array(), '1.0.0', true );
   wp_enqueue_script( 'track-page-refresh', get_stylesheet_directory_uri() . '/js/track-page-refresh.js', array(), '1.0.0', false );
 
   // Prints out the url under the page title on all browsers
