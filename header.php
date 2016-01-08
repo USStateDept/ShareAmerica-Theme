@@ -1,150 +1,49 @@
 <!doctype html >
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!--[if IE 9]>    <html class="no-js ie9 oldie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
+<!--[if IE 8]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
-    <title><?php wp_title( '|', true, 'right' ); ?></title>
+    <title><?php wp_title('|', true, 'right'); ?></title>
     <meta charset="<?php bloginfo( 'charset' );?>" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php td_util::author_meta(); ?>
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
     <meta name="google-site-verification" content="NDNB3oNz8Und1bThWM8mt3B0_fvwjeYta_cv_jp50Bo" />
     <?php
-
-    //facebook sharing fix for videos, we add the custom meta data
-    if (is_single()) {
-        global $post;
-        if (has_post_thumbnail($post->ID)) {
-            $td_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
-            if (!empty($td_image[0])) {
-                echo '<meta property="og:image" content="' .  $td_image[0] . '" />';
-            }
-        }
-    }
-
-
-    $tds_favicon_upload = td_util::get_option('tds_favicon_upload');
-    if (!empty($tds_favicon_upload)) {
-        echo '<link rel="icon" type="image/png" href="' . $tds_favicon_upload . '">';
-    }
-
-    $tds_ios_76 = td_util::get_option('tds_ios_icon_76');
-    $tds_ios_120 = td_util::get_option('tds_ios_icon_120');
-    $tds_ios_152 = td_util::get_option('tds_ios_icon_152');
-    $tds_ios_114 = td_util::get_option('tds_ios_icon_114');
-    $tds_ios_144 = td_util::get_option('tds_ios_icon_144');
-
-    if(!empty($tds_ios_76)) {
-        echo '<link rel="apple-touch-icon-precomposed" sizes="76x76" href="' . $tds_ios_76 . '"/>';
-    }
-
-    if(!empty($tds_ios_120)) {
-        echo '<link rel="apple-touch-icon-precomposed" sizes="120x120" href="' . $tds_ios_120 . '"/>';
-    }
-
-    if(!empty($tds_ios_152)) {
-        echo '<link rel="apple-touch-icon-precomposed" sizes="152x152" href="' . $tds_ios_152 . '"/>';
-    }
-
-
-    if(!empty($tds_ios_114)) {
-        echo '<link rel="apple-touch-icon-precomposed" sizes="114x114" href="' . $tds_ios_114 . '"/>';
-    }
-
-
-    if(!empty($tds_ios_144)) {
-        echo '<link rel="apple-touch-icon-precomposed" sizes="144x144" href="' . $tds_ios_144 . '"/>';
-    }
-
-
-    wp_head();
+    wp_head(); /** we hook up in wp_booster @see td_wp_booster_functions::hook_wp_head */
     ?>
 </head>
 
 <!-- Track Page Refresh -->
-<body onLoad="checkRefresh();" onUnload="prepareForRefresh();" <?php body_class() ?>>
+<body onLoad="checkRefresh();" onUnload="prepareForRefresh();" <?php body_class() ?> itemscope="itemscope" itemtype="<?php echo td_global::$http_or_https?>://schema.org/WebPage">
+
 <!-- Google Tag Manager -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MCRX2G"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-MCRX2G');</script>
-  <!-- End Google Tag Manager -->
+<!-- End Google Tag Manager -->
+
+<?php //this is closing in the footer.php file ?>
+
+<?php /* scroll to top */?>
+<div class="td-scroll-up"><i class="td-icon-menu-up"></i></div>
+
+<div id="td-outer-wrap">
+
+    <div class="td-transition-content-and-menu td-mobile-nav-wrap">
+        <?php locate_template('parts/menu-mobile.php', true);?>
+    </div>
+
+    <?php //this is closing in the footer.php file ?>
+    <div class="td-transition-content-and-menu td-content-wrap">
 
 
-<div id="outer-wrap">
-    <div id="inner-wrap">
+
 <?php
-
-// load the mobile menu
-locate_template('parts/menu-mobile.php', true);
-
-
-// show the black top menu if it's enabled
-if (td_util::get_option('tds_' . 'top_menu') != 'hide') {
-    locate_template('parts/menu-top.php', true);
-}
-
-
-
-
-$tds_header_style = td_util::get_option('tds_header_style');
-switch ($tds_header_style) {
-
-    default:
-        // this is the default header configuration
-        // (logo + ad) + menu
-        locate_template('parts/header-style-1.php', true);
-        locate_template('parts/menu-header.php', true);
-        break;
-
-    case '2':
-        // (text logo + ad) + menu
-        locate_template('parts/header-style-2.php', true);
-        locate_template('parts/menu-header.php', true);
-        break;
-
-    case '3':
-        // full width logo + menu
-        locate_template('parts/header-style-3-logo.php', true);
-        locate_template('parts/menu-header.php', true);
-        locate_template('parts/header-style-3-ad.php', true);
-        break;
-
-    case '4':
-        // menu + (logo + ad)
-        locate_template('parts/menu-header.php', true);
-        locate_template('parts/header-style-1.php', true);
-        break;
-
-    case '5':
-        // menu + (text logo + ad)
-        locate_template('parts/menu-header.php', true);
-        locate_template('parts/header-style-2.php', true);
-        break;
-
-    case '6':
-        // menu + full width logo
-        locate_template('parts/menu-header.php', true);
-        locate_template('parts/header-style-3-logo.php', true);
-        locate_template('parts/header-style-3-ad.php', true);
-        break;
-
-    case '7':
-        // full text logo + menu - used BLOG style
-        locate_template('parts/header-full-text-logo.php', true);
-        locate_template('parts/menu-header-center.php', true);
-        break;
-
-    case '8':
-        // logo + menu - on one line
-        locate_template('parts/header-style-8-one-line.php', true);
-        break;
-}
+td_api_header_style::_helper_show_header();
 
 do_action('td_wp_booster_after_header'); //used by unique articles
