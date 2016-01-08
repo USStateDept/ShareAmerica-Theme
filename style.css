@@ -78,3 +78,28 @@ end back up fonts  */
 .submenu-languages {
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
 }
+.td-big-slide-background {
+    height: 582px!important;
+}
+video#bgvid {
+margin:-150px 0 0 0;
+right: 0;
+bottom: 0;
+min-width: 100%;
+min-height: 100%;
+width: auto;
+height: auto;
+z-index: -100;
+background: none;
+background-size: cover;
+}
+.td_block_wrap.td_block_big_grid.hometitlewhite {
+    color: #fff;
+    font-family: 'Signika' !important;
+    font-size: 74px;
+    letter-spacing: -2px;
+    line-height: 1;
+    margin-top: 15%;
+    text-align: center;
+    text-shadow: 0 0 2px #000;
+}
