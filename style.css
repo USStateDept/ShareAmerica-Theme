@@ -33,7 +33,7 @@ end back up fonts  */
 }
 .td-header-style-7 .td-header-sp-logo img {
    line-height: 48px;
-    max-height: 44px!important;
+    max-height: 36px!important;
     padding: 3px 0;
 }
 .td-header-style-7 .sf-menu {
@@ -73,7 +73,7 @@ end back up fonts  */
 }
 .menu-item.menu-item-language.menu-item-language-current .sub-menu a:hover {
     color: #ffffff;
-    background-color: #4db2ec;
+    background-color: #80a3bc;
 }
 .submenu-languages {
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
@@ -82,16 +82,16 @@ end back up fonts  */
     height: 582px!important;
 }
 video#bgvid {
-margin:-150px 0 0 0;
-right: 0;
-bottom: 0;
-min-width: 100%;
-min-height: 100%;
-width: auto;
-height: auto;
-z-index: -100;
-background: none;
-background-size: cover;
+    margin:-150px 0 0 0;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    background: none;
+    background-size: cover;
 }
 .td_block_wrap.td_block_big_grid.hometitlewhite {
     color: #fff;
@@ -115,5 +115,8 @@ background-size: cover;
     }
     .td-big-slide-background {
         display: none;
+    }
+    .td-mobile-content li a:hover {
+        color: #80a3bc !important;
     }
 }
