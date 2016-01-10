@@ -103,3 +103,17 @@ background-size: cover;
     text-align: center;
     text-shadow: 0 0 2px #000;
 }
+#td-top-mobile-toggle i {
+    color: #000;
+}
+@media (max-width: 767px) {
+    .td-header-wrap .td-header-menu-wrap-full, .td-header-wrap .td-header-menu-wrap, .td-header-wrap .td-header-main-menu {
+        background-color: #fff !important;
+    }
+    .header-search-wrap .td-icon-search {
+        color: #000 !important;
+    }
+    .td-big-slide-background {
+        display: none;
+    }
+}
