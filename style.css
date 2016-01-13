@@ -106,6 +106,30 @@ video#bgvid {
 #td-top-mobile-toggle i {
     color: #000;
 }
+.mc4wp-form-122711 p {
+    font-size: 30px !important;
+    line-height: 1.25em;
+    padding-top: 9px;
+}
+.mc4wp-form-122711 input {
+    border: 1px solid #e2e2e2;
+    float: left;
+    font-family: 'Source Sans Pro' !important;
+    font-size: 16px;
+}
+.mc4wp-form-122711 label {
+    display: none;
+    visibility: hidden;
+}
+.mc4wp-form-122711 select {
+    border: 1px solid #ebebeb;
+    background-color: #fafafa;
+    font-size:16px;
+    color:#a7a7a7;
+}
+.mc4wp-form-122711 input[type=submit] {
+    background-color: #80a3bc;
+}
 @media (max-width: 767px) {
     .td-header-wrap .td-header-menu-wrap-full, .td-header-wrap .td-header-menu-wrap, .td-header-wrap .td-header-main-menu {
         background-color: #fff !important;
