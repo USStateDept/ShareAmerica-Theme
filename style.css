@@ -28,9 +28,6 @@ Text Domain:    share
 body {  font-family: 'Ubuntu', sans-serif;}
 end back up fonts  */
 
-.td-main-page-wrap {
-    background: url("images/share-bg.png") repeat scroll 0 0 #efefef !important;
-}
 .td-header-style-7 .td-header-sp-logo img {
    line-height: 48px;
     max-height: 36px!important;
@@ -41,17 +38,6 @@ end back up fonts  */
 }
 .td-header-style-7 #td-top-search {
     bottom: 0px;
-}
-.td-main-page-wrap .td_module_wrap {
-    min-height: 305px;
-    border: 1px solid #ccc;
-    padding: 20px 20px 10px;
-    box-shadow: 2px 2px 2px 0 #DFDFDF;
-    border-radius: 5px;
-    background-color: #ffffff;
-}
-.td_module_1 {
-    margin-bottom: 40px;
 }
 .td-header-style-7 .sf-menu > li > a {
     line-height: 48px;
@@ -78,6 +64,23 @@ end back up fonts  */
 .submenu-languages {
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
 }
+#td-top-mobile-toggle i {
+    color: #000;
+}
+/*.td-main-page-wrap {
+    background: url("images/share-bg.png") repeat scroll 0 0 #efefef !important;
+}*/
+/*.td-main-page-wrap .td_module_wrap {
+    min-height: 305px;
+    border: 1px solid #ccc;
+    padding: 20px 20px 10px;
+    box-shadow: 2px 2px 2px 0 #DFDFDF;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+.td_module_1 {
+    margin-bottom: 40px;
+}
 .td-big-slide-background {
     height: 582px!important;
 }
@@ -102,10 +105,7 @@ video#bgvid {
     margin-top: 15%;
     text-align: center;
     text-shadow: 0 0 2px #000;
-}
-#td-top-mobile-toggle i {
-    color: #000;
-}
+}*/
 .mc4wp-form-122711 p {
     font-size: 30px !important;
     line-height: 1.25em;
@@ -130,6 +130,10 @@ video#bgvid {
 .mc4wp-form-122711 input[type=submit] {
     background-color: #80a3bc;
 }
+#mailchimp-top-bar .mctb-email, #mailchimp-top-bar input[type=email] {
+    border-radius:18px;
+}
+
 @media (max-width: 767px) {
     .td-header-wrap .td-header-menu-wrap-full, .td-header-wrap .td-header-menu-wrap, .td-header-wrap .td-header-main-menu {
         background-color: #fff !important;
@@ -142,5 +146,8 @@ video#bgvid {
     }
     .td-mobile-content li a:hover {
         color: #80a3bc !important;
+    }
+    #mailchimp-top-bar .mctb-email, #mailchimp-top-bar input[type=email] {
+        border-radius:0px;
     }
 }
