@@ -150,9 +150,6 @@ video#bgvid {
 #mailchimp-top-bar.mctb-big .mctb-close {
     padding: 6px 18px 22px;
 }
-.mctb-icon-inside-bar .mctb-close {
-    top: -16px;
-}
 /*#mailchimp-top-bar .mctb-email, #mailchimp-top-bar input[type=email] {
     border-radius:18px;
 }*/
