@@ -144,6 +144,9 @@ video#bgvid {
 .td-scroll-up {
     bottom: 58px;
 }
+#mailchimp-top-bar.mctb-big .mctb-bar {
+    padding: 16px 9px;
+}
 /*#mailchimp-top-bar .mctb-email, #mailchimp-top-bar input[type=email] {
     border-radius:18px;
 }*/
