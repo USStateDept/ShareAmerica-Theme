@@ -133,6 +133,17 @@ video#bgvid {
 .mc4wp-form-122711 input[type=submit] {
     background-color: #80a3bc;
 }
+.td-container{
+    background: #fff;
+}
+.td-sub-footer-container .td-container {
+    padding: 20px 40px;
+    background: #000;
+    margin-bottom: 40px;
+}
+.td-scroll-up {
+    bottom: 58px;
+}
 /*#mailchimp-top-bar .mctb-email, #mailchimp-top-bar input[type=email] {
     border-radius:18px;
 }*/
