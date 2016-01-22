@@ -138,7 +138,7 @@ video#bgvid {
 }
 .td-sub-footer-container .td-container {
     padding: 20px 40px;
-    background: #000;
+    background: #222;
     margin-bottom: 40px;
 }
 .td-scroll-up {
@@ -149,12 +149,6 @@ video#bgvid {
 }
 #mailchimp-top-bar.mctb-big .mctb-close {
     padding: 6px 18px 22px;
-}
-.block-title {
-    border-color:# 222222;
-}
-.block-title > span {
-    background-color: #222;
 }
 /*#mailchimp-top-bar .mctb-email, #mailchimp-top-bar input[type=email] {
     border-radius:18px;
