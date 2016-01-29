@@ -49,9 +49,6 @@ window.twttr = (function (d, s, id) {
 
 <?php //this is closing in the footer.php file ?>
 
-<?php /* scroll to top */?>
-<div class="td-scroll-up"><i class="td-icon-menu-up"></i></div>
-
 <div id="td-outer-wrap">
 
     <div class="td-transition-content-and-menu td-mobile-nav-wrap">
