@@ -1,15 +1,5 @@
 <?php
 
-
-/*  ----------------------------------------------------------------------------
-    WordPress booster framework - this is our theme framework - all the content and settings are there
-    It is not necessary to include it in the child theme only if you want to use the API
-*/
-if (!defined('TD_THEME_WP_BOOSTER')) {
-  include TEMPLATEPATH . '/includes/td_wordpres_booster.php';
-}
-
-
 //* Child theme enqueued scripts
 function share_add_scripts() {
   wp_enqueue_script( 'addthis', '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-548862977b7e4fe5', array(), '1.0.0', true );
