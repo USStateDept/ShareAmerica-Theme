@@ -85,36 +85,36 @@ add_filter('wp_dropdown_users', 'author_override');
 
 
 // Fix WP < 4.0 ssl bug
-function ssl_post_thumbnail_urls( $url, $post_id ) {
-  //Skip file attachments
-  if( !wp_attachment_is_image( $post_id ) ) {
-    return $url;
-  }
+// function ssl_post_thumbnail_urls( $url, $post_id ) {
+//   //Skip file attachments
+//   if( !wp_attachment_is_image( $post_id ) ) {
+//     return $url;
+//   }
 
-  //Correct protocol for https connections
-  list( $protocol, $uri ) = explode( '://', $url, 2 );
+//   //Correct protocol for https connections
+//   list( $protocol, $uri ) = explode( '://', $url, 2 );
 
-  if( is_ssl() ) {
-    if( 'http' == $protocol ) {
-      $protocol = 'https';
-    }
-  } else {
-    if( 'https' == $protocol ) {
-      $protocol = 'http';
-    }
-  }
+//   if( is_ssl() ) {
+//     if( 'http' == $protocol ) {
+//       $protocol = 'https';
+//     }
+//   } else {
+//     if( 'https' == $protocol ) {
+//       $protocol = 'http';
+//     }
+//   }
 
-  return $protocol.'://'.$uri;
-}
+//   return $protocol.'://'.$uri;
+// }
 
-add_filter('wp_get_attachment_url', 'ssl_post_thumbnail_urls', 10, 2);
+// add_filter('wp_get_attachment_url', 'ssl_post_thumbnail_urls', 10, 2);
 
 
 // Remove unwanted wp-cron jobs
-function remove_cron_job() {
-   wp_clear_scheduled_hook("wsal_cleanup");
-}
-add_action("init", "remove_cron_job");
+// function remove_cron_job() {
+//    wp_clear_scheduled_hook("wsal_cleanup");
+// }
+// add_action("init", "remove_cron_job");
 
 
 // Disable All Wordpress/plugin/theme update notifications for non-admins
