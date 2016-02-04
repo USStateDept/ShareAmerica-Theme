@@ -143,9 +143,11 @@ end back up fonts  */
 }
 .rtl .td_block_big_grid_3 .td-big-thumb {
     margin-left: 3px;
+    margin-right: 0;
 }
 .rtl .td_block_big_grid_3 .td-big-grid-post-3 {
     margin-right: 3px;
+    margin-left: 0;
 }
 .rtl .td-grid-style-1 .td-big-thumb .td-big-grid-meta {
     margin: 0 20px 0 0;
