@@ -156,7 +156,7 @@ end back up fonts  */
     margin: 11px 20px 20px 0;
 }
 .rtl .td-grid-style-1 .td-medium-thumb .td-big-grid-meta {
-    margin: 20px 0 14px 19px;
+    margin: 20px 19px 14px 0;
 }
 .rtl .post .td-pb-row [class*="td-pb-span"] {
     float:right;
@@ -178,6 +178,10 @@ end back up fonts  */
     transform: scaleX(-1);
     filter: FlipH;
     -ms-filter: "FlipH";
+}
+.rtl .td-subcat-filter .td-subcat-dropdown ul {
+    left:0;
+    right:inherit;
 }
 
 @media (max-width: 767px) {
