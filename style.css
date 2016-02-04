@@ -70,45 +70,6 @@ end back up fonts  */
 .td_module_11 .td-excerpt {
     font-size: 16px;
 }
-/*.td-main-page-wrap {
-    background: url("images/share-bg.png") repeat scroll 0 0 #efefef !important;
-}*/
-/*.td-main-page-wrap .td_module_wrap {
-    min-height: 305px;
-    border: 1px solid #ccc;
-    padding: 20px 20px 10px;
-    box-shadow: 2px 2px 2px 0 #DFDFDF;
-    border-radius: 5px;
-    background-color: #ffffff;
-}
-.td_module_1 {
-    margin-bottom: 40px;
-}
-.td-big-slide-background {
-    height: 582px!important;
-}
-video#bgvid {
-    margin:-150px 0 0 0;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    background: none;
-    background-size: cover;
-}
-.td_block_wrap.td_block_big_grid.hometitlewhite {
-    color: #fff;
-    font-family: 'Signika' !important;
-    font-size: 74px;
-    letter-spacing: -2px;
-    line-height: 1;
-    margin-top: 15%;
-    text-align: center;
-    text-shadow: 0 0 2px #000;
-}*/
 .mc4wp-form-122711 p {
     font-size: 30px !important;
     line-height: 1.25em;
@@ -152,9 +113,70 @@ video#bgvid {
 #mailchimp-top-bar.mctb-big .mctb-close {
     padding: 6px 18px 22px;
 }
-/*#mailchimp-top-bar .mctb-email, #mailchimp-top-bar input[type=email] {
-    border-radius:18px;
-}*/
+
+/*RTL adjustments*/
+.rtl .td_module_11 .td-module-thumb { 
+    right:0;
+    left:inherit;
+}
+.rtl .td_module_11 .item-details {
+    margin-left: 0px;
+    margin-right: 350px;
+}
+.rtl .td-subcat-filter {
+    left:0;
+    right:inherit;
+}
+.rtl .td_module_6 .td-module-thumb {
+    right:0;
+    left:inherit;
+}
+.rtl .td_module_6 .item-details {
+    margin-left:0;
+    margin-right: 116px;
+}
+.rtl .td_block_1 .td-block-row [class*="td-block-span"] {
+    float:right;
+}
+.rtl .td_block_big_grid_3 .td-big-grid-post {
+    float: right;
+}
+.rtl .td_block_big_grid_3 .td-big-thumb {
+    margin-left: 3px;
+}
+.rtl .td_block_big_grid_3 .td-big-grid-post-3 {
+    margin-right: 3px;
+}
+.rtl .td-grid-style-1 .td-big-thumb .td-big-grid-meta {
+    margin: 0 20px 0 0;
+}
+.rtl .td-big-grid-post .td-module-meta-info {
+    margin: 11px 20px 20px 0;
+}
+.rtl .td-grid-style-1 .td-medium-thumb .td-big-grid-meta {
+    margin: 20px 0 14px 19px;
+}
+.rtl .post .td-pb-row [class*="td-pb-span"] {
+    float:right;
+}
+.rtl .td-post-template-default .td-pb-row [class*="td-pb-span"] {
+    float:right;
+}
+.rtl .td-tags li {
+    float:right;
+}
+.rtl .td-category-header .td-category-pulldown-filter {
+    left: 0;
+    right: inherit;
+}
+.rtl .td-icon-menu-right, .rtl .td-icon-menu-left {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
 
 @media (max-width: 767px) {
     .td-header-wrap .td-header-menu-wrap-full, .td-header-wrap .td-header-menu-wrap, .td-header-wrap .td-header-main-menu {
