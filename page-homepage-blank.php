@@ -2,11 +2,17 @@
 /* Template Name: Homepage - blank */
 
 get_header();
-
-if (have_posts()) { ?>
-    <?php while ( have_posts() ) : the_post(); ?>
+?>
 
 
+<!-- <div id="td-full-screen-header-image" class="td-big-slide-background" style="position: relative; z-index: 0; background: none repeat scroll 0% 0% transparent;">
+    <div class="container">
+        <div class="row">
+            
+        </div>
+    </div>
+
+</div> -->
 <div id="td-full-screen-header-image" class="td-big-slide-background" style="position: relative; z-index: 0; background: none repeat scroll 0% 0% transparent;">
             <div class="container">
                 <div class="row">
@@ -33,21 +39,30 @@ if (have_posts()) { ?>
   </div>
 </div>
 
-        <div class="container td-page-wrap">
-            <div class="row">
-                <div class="span12">
-                    <div class="td-grid-wrap">
-                        <div class="container-fluid">
-                            <?php the_content(); ?>
-                        </div>
+<div class="td-main-page-wrap">
+    <div class="td-container">
+        <div class="td-pb-row">
+            <div class="td-pb-span12 td-main-content" role="main" itemscope="itemscope" itemprop="mainContentOfPage" itemtype="<?php echo td_global::$http_or_https?>://schema.org/CreativeWork">
+
+                <?php
+                if (have_posts()) {
+                    while ( have_posts() ) : the_post();
+                    ?>
+                    <div class="td-page-content">
+                        <?php
+                        the_content();
+                            endwhile; //end loop
+                        }
+                        ?>
                     </div>
+                    <?php
+                    if($td_enable_or_disable_page_comments == 'show_comments') {
+                        comments_template('', true);
+                    }?>
                 </div>
-            </div>
-        </div>
+            </div> <!-- /.td-pb-row -->
+        </div> <!-- /.td-container -->
+    </div> <!-- /.td-main-content-wrap -->
 
-    <?php endwhile; ?>
-<?php } else {
-    echo td_page_generator::no_posts();
-}
-
-get_footer();
+    <?php
+    get_footer();
