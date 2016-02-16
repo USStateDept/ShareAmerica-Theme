@@ -204,6 +204,23 @@ end back up fonts  */
     margin-right: 20px;
 }
 
+/* Fix for captions */
+.td-post-template-3 .td-post-header-holder .wp-caption-text {
+display: block !important;
+float: right !important;
+margin-right: 10px;
+padding-bottom: 10px;
+}
+
+.td-post-featured-image figcaption.wp-caption-text {
+background: transparent !important;
+color: #fff !important;
+margin-top: -27px;
+margin-bottom: 0;
+position: relative;
+z-index: 1;
+}
+
 @media (max-width: 767px) {
     .td-header-wrap .td-header-menu-wrap-full, .td-header-wrap .td-header-menu-wrap, .td-header-wrap .td-header-main-menu {
         background-color: #fff !important;
@@ -219,5 +236,9 @@ end back up fonts  */
     }
     #mailchimp-top-bar .mctb-email, #mailchimp-top-bar input[type=email] {
         border-radius:0px;
+    }
+    /*** Hiding caption on Mobile ***/
+    .td-post-template-3 .td-post-header-holder .wp-caption-text, .td-post-featured-image figcaption.wp-caption-text { 
+        display: none !important;
     }
 }
