@@ -306,49 +306,49 @@ function share_filter_mctb_lists( $default_lists ) {
   $list_id_indonesian_list = '59d01344c7';
 
   $language_code = defined( 'ICL_LANGUAGE_CODE' ) ? strtolower( ICL_LANGUAGE_CODE ) : '';
-
+  
   if( $language_code === 'de' ) {
-    return array( $list_id_german_list );
+    return $list_id_german_list;
   }
 
   if( $language_code === 'en' ) {
-    return array( $list_id_english_list );
+    return $list_id_english_list;
   }
 
   if( $language_code === 'zh-hans' ) {
-    return array( $list_id_chinese_list );
+    return $list_id_chinese_list;
   }
 
   if( $language_code === 'fr' ) {
-    return array( $list_id_french_list );
+    return $list_id_french_list;
   }
 
   if( $language_code === 'ru' ) {
-    return array( $list_id_russian_list );
+    return $list_id_russian_list;
   }
 
   if( $language_code === 'es' ) {
-    return array( $list_id_spanish_list );
+    return $list_id_spanish_list;
   }
   
   if( $language_code === 'ar' ) {
-    return array( $list_id_arabic_list );
+    return $list_id_arabic_list;
   }
 
   if( $language_code === 'id' ) {
-    return array( $list_id_indonesian_list );
+    return $list_id_indonesian_list;
   }
 
   if( $language_code === 'fa' ) {
-    return array( $list_id_persian_list );
+    return $list_id_persian_list;
   }
 
   if( $language_code === 'pt-br' ) {
-    return array( $list_id_portuguese_list );
+    return $list_id_portuguese_list;
   }
   return $default_lists;
 }
 
-add_filter( 'mctb_lists', 'share_filter_mctb_lists' );
+add_filter( 'mctb_mailchimp_list', 'share_filter_mctb_lists' );
 
 
