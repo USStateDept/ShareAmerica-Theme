@@ -294,61 +294,24 @@ add_action( 'after_setup_theme', 'share_locale' );
 
 // Enable multiple language support for the Mailchimp Bar
 
-function share_filter_mctb_lists( $default_lists ) {
-  $list_id_portuguese_list = 'c27054beb5';
-  $list_id_russian_list = '954cd6a6fe';
-  $list_id_arabic_list = 'ae762c96e5';
-  $list_id_spanish_list = '33948f3033';
-  $list_id_chinese_list = 'a8cc0bf55f';
-  $list_id_persian_list = 'f9e72cb897';
-  $list_id_english_list = '294a7b0e3a';
-  $list_id_french_list = '7b0c8f6e2a';
-  $list_id_indonesian_list = '59d01344c7';
-
+function share_filter_mctb_list( $default_list ) {
+   $language_lists = array(
+      'en' => '294a7b0e3a',
+      'zh-hans' => 'a8cc0bf55f',
+      'fr' => '7b0c8f6e2a',
+      'ru' => '954cd6a6fe',
+      'es' => '33948f3033',
+      'ar' => 'ae762c96e5',
+      'id' => '59d01344c7',
+      'pt-br' => 'c27054beb5',
+      'fa' => 'f9e72cb897'
+   );
   $language_code = defined( 'ICL_LANGUAGE_CODE' ) ? strtolower( ICL_LANGUAGE_CODE ) : '';
-  
-  if( $language_code === 'de' ) {
-    return $list_id_german_list;
+  if( isset( $language_lists[ $language_code] ) ) {
+      return $language_lists[ $language_code ];
   }
-
-  if( $language_code === 'en' ) {
-    return $list_id_english_list;
-  }
-
-  if( $language_code === 'zh-hans' ) {
-    return $list_id_chinese_list;
-  }
-
-  if( $language_code === 'fr' ) {
-    return $list_id_french_list;
-  }
-
-  if( $language_code === 'ru' ) {
-    return $list_id_russian_list;
-  }
-
-  if( $language_code === 'es' ) {
-    return $list_id_spanish_list;
-  }
-  
-  if( $language_code === 'ar' ) {
-    return $list_id_arabic_list;
-  }
-
-  if( $language_code === 'id' ) {
-    return $list_id_indonesian_list;
-  }
-
-  if( $language_code === 'fa' ) {
-    return $list_id_persian_list;
-  }
-
-  if( $language_code === 'pt-br' ) {
-    return $list_id_portuguese_list;
-  }
-  return $default_lists;
+  return $default_list;
 }
-
-add_filter( 'mctb_mailchimp_list', 'share_filter_mctb_lists' );
+add_filter( 'mctb_mailchimp_list', 'share_filter_mctb_list' );
 
 
