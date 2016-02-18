@@ -203,6 +203,9 @@ end back up fonts  */
 .rtl .header-search-wrap .td-aj-search-results .td-module-thumb {
     margin-right: 20px;
 }
+.rtl .wp-caption-text, .wp-caption-dd {
+    text-align: right;
+}
 
 /* Fix for captions */
 .td-post-template-3 .td-post-header-holder .wp-caption-text {
