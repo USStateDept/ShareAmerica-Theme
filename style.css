@@ -220,6 +220,9 @@ end back up fonts  */
 .td-post-template-6 .wp-caption-text, .wp-caption-dd {
     margin: 6px 0;
 }
+.td-post-template-7 .wp-caption-text, .wp-caption-dd {
+    color: #aaa;
+}
 
 @media (max-width: 767px) {
     .td-header-wrap .td-header-menu-wrap-full, .td-header-wrap .td-header-menu-wrap, .td-header-wrap .td-header-main-menu {
