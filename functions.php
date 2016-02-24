@@ -314,4 +314,5 @@ function share_filter_mctb_list( $default_list ) {
 }
 add_filter( 'mctb_mailchimp_list', 'share_filter_mctb_list' );
 
-
+//* Add back old module_3 image size
+add_image_size( 'old_module_3', 326, 159, TRUE );
