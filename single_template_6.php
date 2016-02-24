@@ -42,10 +42,13 @@ if (!empty($td_post_featured_image)) {
         <div class="td-container td-post-header">
 
             <div class="td-post-header-holder">
-                <?php echo td_page_generator::get_single_breadcrumbs($td_mod_single->title); ?>
+
                 <div class="wp-caption-text">
                     <?php echo $featured_image_info['caption'];?>
                 </div>
+                
+                <?php echo td_page_generator::get_single_breadcrumbs($td_mod_single->title); ?>
+
                 <header class="td-post-title">
 
                     <?php echo $td_mod_single->get_category(); ?>
