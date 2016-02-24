@@ -9,6 +9,8 @@ get_header();
 global $loop_sidebar_position, $td_sidebar_position, $post;
 
 $td_mod_single = new td_module_single($post);
+$featured_image_id = get_post_thumbnail_id($post->ID);
+$featured_image_info = td_util::attachment_get_full_info($featured_image_id, $thumbType);
 
 ?>
 <article id="post-<?php echo $td_mod_single->post->ID;?>" class="<?php echo join(' ', get_post_class('td-post-template-3'));?>" <?php echo $td_mod_single->get_item_scope();?>>
@@ -37,8 +39,6 @@ $td_mod_single = new td_module_single($post);
             </header>
         </div>
         <div class="wp-caption-text">
-            <?php $featured_image_id = get_post_thumbnail_id($post->ID);?>
-            <?php $featured_image_info = td_util::attachment_get_full_info($featured_image_id, $thumbType);?>
             <?php echo $featured_image_info['caption'];?>
         </div>
     </div>
