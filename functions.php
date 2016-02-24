@@ -22,6 +22,8 @@ add_action( 'wp_enqueue_scripts', 'share_add_styles' );
 //* Additional Custom Image Sizes
 add_image_size('rss_featured_image', 700, 441, true);
 
+//* Add back old module_3 image size to prevent 404 errors. See https://iiphelp.zendesk.com/agent/tickets/4030
+add_image_size( 'old_module_3', 326, 159, TRUE );
 
 //* Visual Composer Settings
 function td_disable_visual_composer_features() {
@@ -314,5 +316,3 @@ function share_filter_mctb_list( $default_list ) {
 }
 add_filter( 'mctb_mailchimp_list', 'share_filter_mctb_list' );
 
-//* Add back old module_3 image size
-add_image_size( 'old_module_3', 326, 159, TRUE );
