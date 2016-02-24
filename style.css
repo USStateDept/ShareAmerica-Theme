@@ -214,6 +214,12 @@ end back up fonts  */
 .td-post-template-4 .td-post-header-holder {
     margin-bottom: 18px;
 }
+.td-post-template-6 .td-post-header-holder {
+    padding: 10px 30px 0 30px;
+}
+.td-post-template-6 .wp-caption-text, .wp-caption-dd {
+    margin: 6px 0;
+}
 
 @media (max-width: 767px) {
     .td-header-wrap .td-header-menu-wrap-full, .td-header-wrap .td-header-menu-wrap, .td-header-wrap .td-header-main-menu {
