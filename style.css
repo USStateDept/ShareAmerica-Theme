@@ -211,6 +211,9 @@ end back up fonts  */
 .td-post-template-3 .td-post-header-holder {
     margin-bottom: 6px;
 }
+.td-post-template-4 .td-post-header-holder {
+    margin-bottom: 18px;
+}
 
 @media (max-width: 767px) {
     .td-header-wrap .td-header-menu-wrap-full, .td-header-wrap .td-header-menu-wrap, .td-header-wrap .td-header-main-menu {
