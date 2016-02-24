@@ -4,7 +4,7 @@ Theme URI: 		  http://share.america.gov
 Description:    Child theme of the Newspaper theme
 Author:         Office of Design, Bureau of International Information Programs
 Template:       Newspaper
-Version:        2.0.6
+Version:        2.0.7
 Text Domain:    share
 */
 
@@ -208,20 +208,8 @@ end back up fonts  */
 }
 
 /* Fix for captions */
-.td-post-template-3 .td-post-header-holder .wp-caption-text {
-display: block !important;
-float: right !important;
-margin-right: 10px;
-padding-bottom: 10px;
-}
-
-.td-post-template-3 .td-post-featured-image figcaption.wp-caption-text {
-background: transparent !important;
-color: #fff !important;
-margin-top: -27px;
-margin-bottom: 0;
-position: relative;
-z-index: 1;
+.td-post-template-3 .td-post-header-holder {
+    margin-bottom: 6px;
 }
 
 @media (max-width: 767px) {
