@@ -231,6 +231,12 @@ end back up fonts  */
     padding-top: 8px;
 }
 
+/* Custom style changes */
+.td-post-template-3 .td-post-title {
+    width:100%;
+}
+
+/* Mobile adjustments */
 @media (max-width: 767px) {
     .td-header-wrap .td-header-menu-wrap-full, .td-header-wrap .td-header-menu-wrap, .td-header-wrap .td-header-main-menu {
         background-color: #fff !important;
@@ -250,5 +256,8 @@ end back up fonts  */
     /*** Hiding caption on Mobile ***/
     .td-post-template-3 .td-post-header-holder .wp-caption-text, .td-post-featured-image figcaption.wp-caption-text { 
         display: none !important;
+    }
+    .wp-caption-text, .wp-caption-dd {
+        padding:0 10px;
     }
 }
