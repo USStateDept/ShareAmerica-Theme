@@ -237,6 +237,11 @@ end back up fonts  */
     padding-top: 8px;
 }
 
+/* Fix for TimelineJS width issue */
+.tl-slide-content {
+    width: auto !important;
+}
+
 /* Mobile adjustments */
 @media (max-width: 767px) {
     .td-header-wrap .td-header-menu-wrap-full, .td-header-wrap .td-header-menu-wrap, .td-header-wrap .td-header-main-menu {
