@@ -36,7 +36,7 @@ if (!empty($td_post_featured_image)) {
     <div class="td-full-screen-header-image-wrap">
 
         <div id="td-full-screen-header-image" class="td-image-gradient-style6">
-            <img class="td-backstretch" src="<?php echo $td_post_featured_image; ?>">
+            <img class="td-backstretch" src="<?php echo $td_post_featured_image; ?>" alt="<?php echo $featured_image_info['alt']; ?>" title="<?php echo $featured_image_info['title']; ?>">
         </div>
 
         <div class="td-container td-post-header">

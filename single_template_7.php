@@ -81,7 +81,7 @@ if (!empty($td_post_featured_image)) {
         </div>
 
         <div id="td-full-screen-header-image" class="td-image-gradient-style7">
-            <img class="td-backstretch" src="<?php echo $td_post_featured_image; ?>">
+            <img class="td-backstretch" src="<?php echo $td_post_featured_image; ?>" alt="<?php echo $featured_image_info['alt']; ?>" title="<?php echo $featured_image_info['title']; ?>">
         </div>
     </div>
 
