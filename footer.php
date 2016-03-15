@@ -13,7 +13,7 @@ if (td_util::get_option('tds_footer') != 'no') {
         <div class="td-container">
             <div class="td-pb-row">
                 <div class="td-pb-span3">
-                    <img class="footer-logo" src="<?php echo( td_util::get_option('tds_logo_upload') ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
+                    <a itemprop="url" href="<?php echo esc_url(home_url( '/' )); ?>"><img class="footer-logo" src="<?php echo( td_util::get_option('tds_logo_upload') ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" /></a>    
                 </div>
                 <div class="td-pb-span9 td-sub-footer-copy">
                                 <?php
