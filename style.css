@@ -237,6 +237,14 @@ end back up fonts  */
     padding-top: 8px;
 }
 
+/* Template 8 lighten gradient */
+.td-image-gradient-style8:after {
+    box-shadow: inset 0 0 188px 0 #444;
+}
+.td-post-template-8 .td-post-header {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
 /* Fix for TimelineJS width issue */
 .tl-slide-content {
     width: auto !important;
@@ -252,6 +260,9 @@ end back up fonts  */
 }
 .td-sub-footer-container {
     color: #aaa;
+}
+.single_template_8 .td-sub-footer-container {
+    padding-bottom: 1px;
 }
 
 /* Mobile adjustments */
