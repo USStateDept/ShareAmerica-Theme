@@ -249,6 +249,16 @@ end back up fonts  */
 .tl-slide-content {
     width: auto !important;
 }
+.drive-viewer-carousel-slide {
+    background: #fff!important;
+}
+.drive-viewer-shadow {
+    background-color:#fff!importnat;
+}
+.drive-viewer.drive-viewer-embed .drive-viewer-shadow {
+    background-color: #fff!important;
+}
+
 
 /* Custom footer */
 .footer-logo{
@@ -263,6 +273,12 @@ end back up fonts  */
 }
 .single_template_8 .td-sub-footer-container {
     padding-bottom: 1px;
+}
+
+/* Blank Landing Page - Wide */
+.td-container-wide {
+    width: 85%;
+    margin: 0 auto;
 }
 
 /* Mobile adjustments */
@@ -291,5 +307,10 @@ end back up fonts  */
     }
     .td-sub-footer-container .td-container {
         width:96%;
+    }
+    /* Blank Landing Page - Wide */
+    .td-container-wide {
+        width: 100%;
+        padding: 0 10px;
     }
 }
