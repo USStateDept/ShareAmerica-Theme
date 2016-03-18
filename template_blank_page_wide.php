@@ -10,7 +10,7 @@
 <?php wp_head(); ?>
 </head>
 
-<body>
+<body class="blank-wide">
   <!-- Google Tag Manager -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MCRX2G"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
