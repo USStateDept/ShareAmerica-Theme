@@ -316,3 +316,13 @@ function share_filter_mctb_list( $default_list ) {
 }
 add_filter( 'mctb_mailchimp_list', 'share_filter_mctb_list' );
 
+function addUploadMimes($mimes) {
+
+  $mimes = array_merge($mimes, array(
+  'epub|mobi' => 'application/octet-stream'
+  ));
+  return $mimes;
+
+}
+
+add_filter('upload_mimes', 'addUploadMimes');
