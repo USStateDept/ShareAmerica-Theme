@@ -252,6 +252,9 @@ end back up fonts  */
 .tl-timeline {
     border: 1px solid #eee;
 }
+.tl-timeline p {
+    margin-top: 8px;
+}
 
 
 /* Custom footer */
