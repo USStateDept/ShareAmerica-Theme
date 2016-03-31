@@ -253,7 +253,7 @@ end back up fonts  */
     border: 1px solid #eee;
 }
 .tl-timeline p {
-    margin-top: 8px;
+    margin-top: 8px!important;
 }
 
 
