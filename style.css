@@ -292,6 +292,9 @@ end back up fonts  */
     .td-header-wrap .td-header-menu-wrap-full, .td-header-wrap .td-header-menu-wrap, .td-header-wrap .td-header-main-menu {
         background-color: #fff !important;
     }
+    .menu-item-language-current {
+        position: relative;
+    }
     .header-search-wrap .td-icon-search {
         color: #000 !important;
     }
