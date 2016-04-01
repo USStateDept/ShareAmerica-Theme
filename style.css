@@ -33,29 +33,32 @@ end back up fonts  */
     width:100%;
     padding: 0 20px 9px 20px;
 }
-
+.td-header-style-7 .td-affix .td-header-sp-logo img {
+    max-height: 106px;
+}
 .td-header-style-7 .td-header-sp-logo img {
-   line-height: 48px;
-    max-height: 36px!important;
-    padding: 3px 0;
+    top: -24px
 }
 .td-header-style-7 .sf-menu {
     margin-top: 0px;
+    float: left;
 }
 .td-header-style-7 #td-top-search {
     bottom: 0px;
 }
 .td-header-style-7 .sf-menu > li > a {
     line-height: 48px;
-}
+} 
 .td-header-style-7 #td-header-menu {
     min-height: 48px;
-}
+} 
 .td-header-style-7 .td-header-sp-logo {
     height: 48px;
-}
-.td-header-style-7 .td-header-sp-logo a {
-    line-height: 48px;
+} 
+.menu-item-language-current {
+    position: absolute!important;
+    top: 0;
+    right: 0;
 }
 .sf-menu ul .menu-item-language > a {
     padding: 7px 14px 8px 14px;
