@@ -33,6 +33,9 @@ end back up fonts  */
     width:100%;
     padding: 0 20px 9px 20px;
 }
+.td-header-style-7 .td-header-main-menu {
+    padding-right:0;
+}
 .td-header-style-7 .td-affix .td-header-sp-logo img {
     max-height: 106px;
 }
@@ -44,7 +47,10 @@ end back up fonts  */
     float: left;
 }
 .td-header-style-7 #td-top-search {
-    bottom: 0px;
+    top: 0px;
+}
+.td-header-style-7 .header-search-wrap .td-drop-down-search {
+    top:48px;
 }
 .td-header-style-7 .sf-menu > li > a {
     line-height: 48px;
@@ -53,12 +59,12 @@ end back up fonts  */
     min-height: 48px;
 } 
 .td-header-style-7 .td-header-sp-logo {
-    height: 48px;
+    width: 100%;
 } 
 .menu-item-language-current {
     position: absolute!important;
     top: 0;
-    right: 0;
+    right: 48px;
 }
 .sf-menu ul .menu-item-language > a {
     padding: 7px 14px 8px 14px;
@@ -131,9 +137,44 @@ end back up fonts  */
 }
 
 /*RTL adjustments*/
+.rtl .td-header-style-7 .sf-menu {
+    float: right;
+}
+.rtl .td-header-style-7 #td-top-search {
+    left: 0;
+    right: inherit;
+}
+.rtl .td-header-style-7 .header-search-wrap .td-drop-down-search {
+    left: 0;
+    right: inherit;
+}
+.rtl .td-header-style-7 .header-search-wrap .td-drop-down-search:before {
+    left: 19px;
+    right: inherit;
+}
+.rtl .td-header-style-7 .menu-item-language-current {
+    left: 48px;
+    right: inherit;
+}
+.rtl .td-header-style-7 .menu-item-language img.iclflag {
+    margin-left: 4px;
+    margin-right: 0;
+}
+.rtl .td-header-style-7 .sf-menu a.sf-with-ul {
+    padding-left: 31px;
+    padding-right: 14px;
+}
+.rtl .td-header-style-7 .td-mega-span {
+    margin-right: 22px;
+    margin-left: 0;
+}
+.rtl .td-header-style-7 .sf-menu .td-icon-menu-down {
+    padding-right: 7px;
+    padding-left: 0;
+}
 .rtl .td_module_11 .td-module-thumb { 
-    right:0;
-    left:inherit;
+    right: 0;
+    left: inherit;
 }
 .rtl .td_module_11 .item-details {
     margin-left: 0px;
@@ -294,6 +335,13 @@ end back up fonts  */
     }
     .menu-item-language-current {
         position: relative!important;
+        right: inherit;
+        left: inherit;
+    }
+    .rtl .td-mobile-content .td-icon-menu-down {
+        left: 5px;
+        right: inherit;
+        padding: 12px 13px 8px 28px;
     }
     .header-search-wrap .td-icon-search {
         color: #000 !important;
