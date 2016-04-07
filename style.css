@@ -33,6 +33,9 @@ end back up fonts  */
     width:100%;
     padding: 0 20px 9px 20px;
 }
+.td-header-style-7 {
+    height: 96px;
+}
 .td-header-style-7 .td-header-main-menu {
     padding-right:0;
 }
