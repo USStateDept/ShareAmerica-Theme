@@ -37,7 +37,7 @@ end back up fonts  */
     padding-right:0;
 }
 .td-header-style-7 .td-affix .td-header-sp-logo img {
-    max-height: 106px;
+    max-height: 96px;
 }
 .td-header-style-7 .td-header-sp-logo img {
     top: -24px
@@ -57,9 +57,10 @@ end back up fonts  */
 } 
 .td-header-style-7 #td-header-menu {
     min-height: 48px;
-} 
+}
 .td-header-style-7 .td-header-sp-logo {
     width: 100%;
+    padding-right: 0;
 } 
 .menu-item-language-current {
     position: absolute!important;
@@ -127,6 +128,9 @@ end back up fonts  */
 }
 .td-post-views {    
     display: none!important;
+}
+.td-sub-footer-copy {
+    margin-top: 30px;
 }
 
 #mailchimp-top-bar.mctb-big .mctb-bar {
@@ -322,7 +326,17 @@ end back up fonts  */
     margin: 0 auto;
 }
 
-/* Mobile adjustments */
+
+/* Mobile and breakpoint adjustments */
+@media (max-width: 1018px) and (min-width: 768px){
+    .td-header-style-7 .td-header-sp-logo img {
+        max-width: inherit;
+    }
+    .td-sub-footer-copy {
+        margin-top: 8px;
+    }
+}
+
 @media (max-width: 767px) {
     .td-header-wrap .td-header-menu-wrap-full, .td-header-wrap .td-header-menu-wrap, .td-header-wrap .td-header-main-menu {
         background-color: #fff !important;
