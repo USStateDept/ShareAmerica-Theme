@@ -62,6 +62,7 @@ end back up fonts  */
     min-height: 48px;
 }
 .td-header-style-7 .td-header-sp-logo {
+    height: 48px;
     width: 100%;
     padding-right: 0;
 } 
@@ -132,10 +133,8 @@ end back up fonts  */
 .td-post-views {    
     display: none!important;
 }
-.td-sub-footer-copy {
-    margin-top: 30px;
-}
 
+/*Mailchimp adjustments*/
 #mailchimp-top-bar.mctb-big .mctb-bar {
     padding: 16px 9px;
 }
@@ -263,7 +262,13 @@ end back up fonts  */
 .rtl .wp-caption-text, .wp-caption-dd {
     text-align: right;
 }
-
+.rtl .td-pb-row [class*="td-pb-span"] {
+    float: right;
+}
+.rtl .bottomMenu {
+    border-right: none;
+    border-left: 1px solid #ccc;
+}
 /* Fix for captions */
 .td-post-template-3 .td-post-header-holder {
     margin-bottom: 6px;
@@ -310,7 +315,8 @@ end back up fonts  */
 
 /* Custom footer */
 .footer-logo{
-    margin-top:16px;
+    position: relative;
+    top: -8px;
 }
 .td-sub-footer-container .td-container {
     background: #fff;
@@ -321,6 +327,16 @@ end back up fonts  */
 }
 .single_template_8 .td-sub-footer-container {
     padding-bottom: 1px;
+}
+.bottomMenu {
+    border-right: 1px solid #ccc;
+}
+#menu-footer {
+    text-transform: uppercase;
+    list-style: none;
+}
+.td-sub-footer-copy {
+    margin: 1em 0;
 }
 
 /* Blank Landing Page - Wide */
@@ -337,9 +353,9 @@ end back up fonts  */
 
 
 /* Mobile and breakpoint adjustments */
-@media (max-width: 1018px) and (min-width: 768px){
+@media (max-width: 1018px) and (min-width: 768px) {
     .td-header-style-7 .td-header-sp-logo img {
-        max-width: inherit;
+        top: inherit;
     }
     .td-sub-footer-copy {
         margin-top: 8px;
@@ -371,6 +387,10 @@ end back up fonts  */
     }
     #mailchimp-top-bar .mctb-email, #mailchimp-top-bar input[type=email] {
         border-radius:0px;
+    }
+    .bottomMenu {
+        border-right: none;
+        border-left: none;
     }
     /*** Hiding caption on Mobile ***/
     .td-post-template-3 .td-post-header-holder .wp-caption-text, .td-post-featured-image figcaption.wp-caption-text { 
