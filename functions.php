@@ -333,3 +333,7 @@ function addUploadMimes($mimes) {
 }
 
 add_filter('upload_mimes', 'addUploadMimes');
+
+register_nav_menus( array(  
+  'sharefooter' => __( 'Footer Navigation', 'shareamerica' )
+) );
