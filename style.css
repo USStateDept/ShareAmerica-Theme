@@ -331,7 +331,7 @@ end back up fonts  */
 .bottomMenu {
     border-right: 1px solid #ccc;
 }
-#menu-footer {
+.bottomMenu ul {
     text-transform: uppercase;
     list-style: none;
 }
