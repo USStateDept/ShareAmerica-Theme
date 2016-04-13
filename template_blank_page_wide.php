@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
     <title><?php wp_title( '|', true, 'right' ); bloginfo('url'); ?></title>
     <?php wp_head(); ?>
+    <script type="text/javascript">
+    window.onerror = function(message, url, lineNumber) {
+        return true; // prevents browser error messages due to missing header.
+    };
+    </script> 
   </head>
 
   <body class="blank-wide">
@@ -28,5 +33,6 @@
         </div>
       </div>
     </div>
+    <?php wp_footer(); ?>
   </body>
 </html>
