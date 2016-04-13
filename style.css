@@ -273,9 +273,15 @@ end back up fonts  */
 }
 
 /* Blank Landing Page - Wide */
-.td-container-wide {
+.blank .td-container-wide, .blank-wide .td-container-wide {
     width: 85%;
     margin: 0 auto;
+}
+.blank #mailchimp-top-bar, .blank-wide #mailchimp-top-bar {
+    display:none;
+}
+.blank .at4-share-outer, .blank-wide .at4-share-outer {
+    display: none;
 }
 
 /* Mobile adjustments */
