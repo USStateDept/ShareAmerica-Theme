@@ -340,6 +340,7 @@ end back up fonts  */
 }
 .bottomMenu ul {
     list-style: none;
+    text-align: center;
 }
 .bottomMenu ul li {
     margin-left: 0;
