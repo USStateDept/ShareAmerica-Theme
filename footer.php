@@ -15,7 +15,7 @@ if (td_util::get_option('tds_footer') != 'no') {
                 <div class="td-pb-span3 bottomMenu">
                     <?php wp_nav_menu( array( 'theme_location' => 'sharefooter' ) ); ?>  
                 </div>
-                <div class="td-pb-span3 td-sub-footer-copy">
+                <div class="td-pb-span3 td-sub-footer-logo">
                     <a itemprop="url" href="<?php echo esc_url(home_url( '/' )); ?>"><img class="footer-logo" src="<?php echo( td_util::get_option('tds_logo_upload') ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" /></a>    
                 </div>
                 <div class="td-pb-span6 td-sub-footer-copy">

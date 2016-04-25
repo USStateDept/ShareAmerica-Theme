@@ -346,6 +346,10 @@ end back up fonts  */
     margin-left: 0;
 }
 .td-sub-footer-copy {
+    padding: 0!important;
+    margin: 1em 0;
+}
+.td-sub-footer-logo {
     margin: 1em 0;
 }
 
