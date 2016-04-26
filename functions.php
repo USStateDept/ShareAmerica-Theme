@@ -2,7 +2,7 @@
 
 //* Child theme enqueued scripts
 function share_add_scripts() {
-  wp_enqueue_script( 'addthis', '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-548862977b7e4fe5', array(), '1.0.0', true );
+  wp_enqueue_script( 'addthis', '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-571e3cf05c3fa72e', array(), '1.0.0', true );
   wp_enqueue_script( 'facebook', get_stylesheet_directory_uri() . '/js/facebook-sdk.js', array(), '1.0.0', true );
   wp_enqueue_script( 'track-page-refresh', get_stylesheet_directory_uri() . '/js/track-page-refresh.js', array(), '1.0.0', false );
 
