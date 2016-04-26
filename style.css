@@ -365,7 +365,6 @@ end back up fonts  */
     display: none;
 }
 
-
 /* Mobile and breakpoint adjustments */
 @media (max-width: 1018px) and (min-width: 768px) {
     .td-header-style-7 .td-header-sp-logo img {
