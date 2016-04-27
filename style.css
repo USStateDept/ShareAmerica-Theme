@@ -182,6 +182,39 @@ end back up fonts  */
     padding-right: 7px;
     padding-left: 0;
 }
+.rtl .td-social-sharing-buttons {
+    margin-right: inherit;
+    margin-left: 10px;
+}
+.rtl .td-social-but-text {
+    padding-left: 0;
+    margin-right: 0;
+    padding-right: 10px;
+    margin-right: 12px;
+}
+.rtl .td_block_social_counter .td-sp:after {
+    right: 31px;
+}
+.rtl .td_social_type .td_social_button {
+    float: left;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: none;
+}
+.rtl .td-social-twitter .td-social-but-text {
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: none;
+}
+.rtl .td-social-facebook .td-social-but-text {
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: none;
+}
+.rtl .td-social-google .td-icon-googleplus {
+    right: -4px;
+}
+.rtl .td-post-share-title {
+    margin-left: 20px;
+    margin-right: 0;
+}
 .rtl .td_module_11 .td-module-thumb { 
     right: 0;
     left: inherit;
@@ -400,6 +433,8 @@ end back up fonts  */
     }
     .bottomMenu {
         border-right: none;
+    }
+    .rtl .bottomMenu {
         border-left: none;
     }
     /*** Hiding caption on Mobile ***/
