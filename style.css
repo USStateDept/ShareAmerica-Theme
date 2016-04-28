@@ -320,7 +320,7 @@ end back up fonts  */
     left: inherit;
     right: 2px;
 }
-.rtl .page-nav a, .page-nav span {
+.rtl .page-nav a, .rtl .page-nav span {
     float: right;
 }
 .rtl .page-nav .pages {
