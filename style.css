@@ -306,6 +306,21 @@ end back up fonts  */
     border-right: none;
     border-left: 1px solid #ccc;
 }
+.rtl .td-search-form-widget .wpb_button {
+    left: 0;
+    right: inherit;
+    min-width: 5%;
+}
+.rtl .td-search-form-widget .td-widget-search-input {
+    border-left: 0;
+    margin-left: 5%;
+    border-right: 1px solid #e1e1e1;;
+}
+.rtl .td_search_subtitle {
+    left: inherit;
+    right: 2px;
+}
+
 /* Fix for captions */
 .td-post-template-3 .td-post-header-holder {
     margin-bottom: 6px;
