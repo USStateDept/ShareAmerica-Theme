@@ -320,6 +320,12 @@ end back up fonts  */
     left: inherit;
     right: 2px;
 }
+.rtl .page-nav a, .page-nav span {
+    float: right;
+}
+.rtl .page-nav .pages {
+    float: left;
+}
 
 /* Fix for captions */
 .td-post-template-3 .td-post-header-holder {
