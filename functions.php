@@ -1,8 +1,21 @@
 <?php
 
+//* Load the child theme version number instead of the Newspaper version number. This will help cache bust during upgrades.
+function _fix_child_css_version( $src ) {
+  $parts = explode( '?', $src );
+  if ( stristr( $parts[0], 'shareamerica/style.css' ) ) {
+    $child_ver = wp_get_theme()->get('Version');
+    return $parts[0] . '?v=' . $child_ver;
+  }
+  else {
+    return $src;
+  }
+}
+add_filter( 'style_loader_src', '_fix_child_css_version', 15, 1 );
+
 //* Child theme enqueued scripts
 function share_add_scripts() {
-  wp_enqueue_script( 'addthis', '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-548862977b7e4fe5', array(), '1.0.0', true );
+  wp_enqueue_script( 'addthis', '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-571e3cf05c3fa72e', array(), '1.0.0', true );
   wp_enqueue_script( 'facebook', get_stylesheet_directory_uri() . '/js/facebook-sdk.js', array(), '1.0.0', true );
   wp_enqueue_script( 'track-page-refresh', get_stylesheet_directory_uri() . '/js/track-page-refresh.js', array(), '1.0.0', false );
 
@@ -333,3 +346,7 @@ function addUploadMimes($mimes) {
 }
 
 add_filter('upload_mimes', 'addUploadMimes');
+
+register_nav_menus( array(  
+  'sharefooter' => __( 'Footer Navigation', 'shareamerica' )
+) );

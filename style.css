@@ -4,7 +4,7 @@ Theme URI: 		  http://share.america.gov
 Description:    Child theme of the Newspaper theme
 Author:         Office of Design, Bureau of International Information Programs
 Template:       Newspaper
-Version:        2.3.1
+Version:        2.4.1
 Text Domain:    share
 */
 
@@ -33,35 +33,53 @@ end back up fonts  */
     width:100%;
     padding: 0 20px 9px 20px;
 }
-
+.td-header-style-7 .td-header-main-menu {
+    padding-right:0;
+}
+.td-header-style-7 .td-affix .td-header-sp-logo img {
+    max-height: 96px;
+}
 .td-header-style-7 .td-header-sp-logo img {
-   line-height: 48px;
-    max-height: 36px!important;
-    padding: 3px 0;
+    top: -24px
 }
 .td-header-style-7 .sf-menu {
     margin-top: 0px;
-}
-.td-header-style-7 #td-top-search {
-    bottom: 0px;
+    float: left;
 }
 .td-header-style-7 .sf-menu > li > a {
+    padding: 0 8px;
     line-height: 48px;
+}
+.td-header-style-7 .sf-menu ul .menu-item-language > a {
+    padding: 7px 14px 8px 14px;
+    font-size: 13px;
+    color: #111;
+    display:block;
+}
+.td-header-style-7 .sf-menu a.sf-with-ul {
+    padding-right: 22px;
+}
+.td-header-style-7 .sf-menu .td-icon-menu-down {
+    padding-left: 4px;
+}
+.td-header-style-7 #td-top-search {
+    top: 0px;
+}
+.td-header-style-7 .header-search-wrap .td-drop-down-search {
+    top: 48px;
 }
 .td-header-style-7 #td-header-menu {
     min-height: 48px;
 }
 .td-header-style-7 .td-header-sp-logo {
     height: 48px;
-}
-.td-header-style-7 .td-header-sp-logo a {
-    line-height: 48px;
-}
-.sf-menu ul .menu-item-language > a {
-    padding: 7px 14px 8px 14px;
-    font-size: 13px;
-    color: #111;
-    display:block;
+    width: 100%;
+    padding-right: 0;
+} 
+.menu-item-language-current {
+    position: absolute!important;
+    top: 0;
+    right: 48px;
 }
 .menu-item.menu-item-language.menu-item-language-current .sub-menu a:hover {
     color: #ffffff;
@@ -120,6 +138,7 @@ end back up fonts  */
     display: none!important;
 }
 
+/*Mailchimp adjustments*/
 #mailchimp-top-bar.mctb-big .mctb-bar {
     padding: 16px 9px;
 }
@@ -128,9 +147,77 @@ end back up fonts  */
 }
 
 /*RTL adjustments*/
+.rtl .td-header-style-7 .sf-menu {
+    float: right;
+}
+.rtl .td-header-style-7 #td-top-search {
+    left: 0;
+    right: inherit;
+}
+.rtl .td-header-style-7 .header-search-wrap .td-drop-down-search {
+    left: 0;
+    right: inherit;
+}
+.rtl .td-header-style-7 .header-search-wrap .td-drop-down-search:before {
+    left: 19px;
+    right: inherit;
+}
+.rtl .td-header-style-7 .menu-item-language-current {
+    left: 48px;
+    right: inherit;
+}
+.rtl .td-header-style-7 .menu-item-language img.iclflag {
+    margin-left: 4px;
+    margin-right: 0;
+}
+.rtl .td-header-style-7 .sf-menu a.sf-with-ul {
+    padding-left: 31px;
+    padding-right: 14px;
+}
+.rtl .td-header-style-7 .td-mega-span {
+    margin-right: 22px;
+    margin-left: 0;
+}
+.rtl .td-header-style-7 .sf-menu .td-icon-menu-down {
+    padding-right: 7px;
+    padding-left: 0;
+}
+.rtl .td-social-sharing-buttons {
+    margin-right: inherit;
+    margin-left: 10px;
+}
+.rtl .td-social-but-text {
+    padding-left: 0;
+    margin-right: 0;
+    padding-right: 10px;
+    margin-right: 12px;
+}
+.rtl .td_block_social_counter .td-sp:after {
+    right: 31px;
+}
+.rtl .td_social_type .td_social_button {
+    float: left;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: none;
+}
+.rtl .td-social-twitter .td-social-but-text {
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: none;
+}
+.rtl .td-social-facebook .td-social-but-text {
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: none;
+}
+.rtl .td-social-google .td-icon-googleplus {
+    right: -4px;
+}
+.rtl .td-post-share-title {
+    margin-left: 20px;
+    margin-right: 0;
+}
 .rtl .td_module_11 .td-module-thumb { 
-    right:0;
-    left:inherit;
+    right: 0;
+    left: inherit;
 }
 .rtl .td_module_11 .item-details {
     margin-left: 0px;
@@ -212,6 +299,33 @@ end back up fonts  */
 .rtl .wp-caption-text, .wp-caption-dd {
     text-align: right;
 }
+.rtl .td-pb-row [class*="td-pb-span"] {
+    float: right;
+}
+.rtl .bottomMenu {
+    border-right: none;
+    border-left: 1px solid #ccc;
+}
+.rtl .td-search-form-widget .wpb_button {
+    left: 0;
+    right: inherit;
+    min-width: 5%;
+}
+.rtl .td-search-form-widget .td-widget-search-input {
+    border-left: 0;
+    margin-left: 5%;
+    border-right: 1px solid #e1e1e1;;
+}
+.rtl .td_search_subtitle {
+    left: inherit;
+    right: 2px;
+}
+.rtl .page-nav a, .rtl .page-nav span {
+    float: right;
+}
+.rtl .page-nav .pages {
+    float: left;
+}
 
 /* Fix for captions */
 .td-post-template-3 .td-post-header-holder {
@@ -259,7 +373,8 @@ end back up fonts  */
 
 /* Custom footer */
 .footer-logo{
-    margin-top:16px;
+    position: relative;
+    top: -8px;
 }
 .td-sub-footer-container .td-container {
     background: #fff;
@@ -270,6 +385,23 @@ end back up fonts  */
 }
 .single_template_8 .td-sub-footer-container {
     padding-bottom: 1px;
+}
+.bottomMenu {
+    border-right: 1px solid #ccc;
+}
+.bottomMenu ul {
+    list-style: none;
+    text-align: center;
+}
+.bottomMenu ul li {
+    margin-left: 0;
+}
+.td-sub-footer-copy {
+    padding: 0!important;
+    margin: 1em 0;
+}
+.td-sub-footer-logo {
+    margin: 1em 0;
 }
 
 /* Blank Landing Page - Wide */
@@ -284,10 +416,29 @@ end back up fonts  */
     display: none;
 }
 
-/* Mobile adjustments */
+/* Mobile and breakpoint adjustments */
+@media (max-width: 1018px) and (min-width: 768px) {
+    .td-header-style-7 .td-header-sp-logo img {
+        top: inherit;
+    }
+    .td-sub-footer-copy {
+        margin-top: 8px;
+    }
+}
+
 @media (max-width: 767px) {
     .td-header-wrap .td-header-menu-wrap-full, .td-header-wrap .td-header-menu-wrap, .td-header-wrap .td-header-main-menu {
         background-color: #fff !important;
+    }
+    .menu-item-language-current {
+        position: relative!important;
+        right: inherit;
+        left: inherit;
+    }
+    .rtl .td-mobile-content .td-icon-menu-down {
+        left: 5px;
+        right: inherit;
+        padding: 12px 13px 8px 28px;
     }
     .header-search-wrap .td-icon-search {
         color: #000 !important;
@@ -300,6 +451,12 @@ end back up fonts  */
     }
     #mailchimp-top-bar .mctb-email, #mailchimp-top-bar input[type=email] {
         border-radius:0px;
+    }
+    .bottomMenu {
+        border-right: none;
+    }
+    .rtl .bottomMenu {
+        border-left: none;
     }
     /*** Hiding caption on Mobile ***/
     .td-post-template-3 .td-post-header-holder .wp-caption-text, .td-post-featured-image figcaption.wp-caption-text { 

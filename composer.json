@@ -1,7 +1,7 @@
 {
     "name": "usstatedept/shareamerica",
     "description": "ShareAmerica's theme, a child of Newspaper",
-    "version": "2.3.1",
+    "version": "2.4.1",
     "license": "MIT",
     "minimum-stability": "stable",
     "type": "wordpress-theme",
