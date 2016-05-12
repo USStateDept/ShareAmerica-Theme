@@ -144,6 +144,11 @@ end back up fonts  */
     display: none!important;
 }
 
+/*Social counter adjustment*/
+.td_social_info {
+    display: none;
+}
+
 /*Mailchimp adjustments*/
 #mailchimp-top-bar.mctb-big .mctb-bar {
     padding: 16px 9px;
