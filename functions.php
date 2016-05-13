@@ -355,7 +355,7 @@ function youtube_enable_js_api( $html, $url, $args ) {
 
     /* Modify video parameters. */
     if ( strstr( $html,'youtube.com/' ) ) {
-        $html = str_replace( '?feature=oembed', '?feature=oembed&enablejsapi=1', $html );
+        $html = str_replace( 'feature=oembed', 'feature=oembed&enablejsapi=1', $html );
     }
 
     return $html;
