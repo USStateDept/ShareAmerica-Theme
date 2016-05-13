@@ -350,3 +350,14 @@ add_filter('upload_mimes', 'addUploadMimes');
 register_nav_menus( array(  
   'sharefooter' => __( 'Footer Navigation', 'shareamerica' )
 ) );
+
+function youtube_enable_js_api( $html, $url, $args ) {
+
+    /* Modify video parameters. */
+    if ( strstr( $html,'youtube.com/' ) ) {
+        $html = str_replace( '?feature=oembed', '?feature=oembed&enablejsapi=1', $html );
+    }
+
+    return $html;
+}
+add_filter( 'embed_oembed_html', 'youtube_enable_js_api', 10, 3 );
