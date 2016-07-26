@@ -362,6 +362,11 @@ end back up fonts  */
     padding-top: 8px;
 }
 
+/* Smart List Adjustments */
+.td_smart_list_1 .td-sml-description {
+    margin-top: 4px;
+}
+
 /* Template 8 lighten gradient */
 .td-image-gradient-style8:after {
     box-shadow: inset 0 0 188px 0 #444;

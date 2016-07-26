@@ -61,7 +61,11 @@ class td_smart_list_1 extends td_smart_list {
             } else {
                 $first_img_info = wp_get_attachment_image_src($item_array['first_img_id'], 'td_696x0');
             }
-
+            
+            //adding description
+            if(!empty($item_array['description'])) {
+                $buffy .= '<span class="td-sml-description">' . $item_array['description'] . '</span>';
+            }
 
             if (!empty($first_img_info[0])) {
                 $buffy .= '
@@ -74,10 +78,6 @@ class td_smart_list_1 extends td_smart_list {
                         ';
             }
 
-            //adding description
-            if(!empty($item_array['description'])) {
-                $buffy .= '<span class="td-sml-description">' . $item_array['description'] . '</span>';
-            }
         $buffy .= '</div>';
 
         $this->nr_slide_on_smart_list++;
