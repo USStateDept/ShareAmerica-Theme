@@ -13,6 +13,12 @@
   #mailchimp-top-bar {
     display:none;
   }
+  .td-post-template-4 .td-post-title {
+    position: absolute;
+  }
+  .td-image-gradient:before { 
+    display:none!important;
+  }
   .td-post-content:after {
     content: "ShareAmerica is the U.S. Department of State's site for engaging foreign audiences on important global issues. Follow us on Facebook at facebook.com/ShareAmerica and on Twitter at twitter.com/shareamerica.";
     display: block;
@@ -47,9 +53,6 @@
 
   html[lang=ar] .td-post-content:after {
     content: "ShareAmerica تارنمای وزارت امور خارجه ایالات متحده به منظور تعامل و گفتگو با خوانندگان ما در خارج از آمریکا درباره مسائل مهم جهانی است.  ما را در فیس بوک به نشانی facebook.com/ShareAmericaو در توئیتر به نشانی twitter.com/ShareAmerica دنبال کنید.";
-  }
-  .td-image-gradient:before { 
-    display:none!important;
   }
   @page {
       margin: 2cm;
