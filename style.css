@@ -246,6 +246,14 @@ end back up fonts  */
     margin-left:0;
     margin-right: 116px;
 }
+.rtl .td-post-template-11 .td_block_related_posts .td-next-prev-wrap {
+    left: 0;
+    right: inherit;
+}
+.rtl .td-post-template-11 .td_block_related_posts .td-next-prev-wrap a {
+    margin-right: 10px;
+    margin-left: 0;
+}
 .rtl .td_block_1 .td-block-row [class*="td-block-span"] {
     float:right;
 }
@@ -367,12 +375,42 @@ end back up fonts  */
     margin-top: 4px;
 }
 
+/* Template 4 title adjustment */
+.td-post-template-4 .td-post-title {
+    padding:21px 21px 0 21px;
+    background-color: transparent;
+}
+.td-post-template-4 .td-post-title h1.entry-title {
+    display: inline;
+    background: #fff;
+    font-weight: bold;
+}
+.td-post-template-4 .td-post-title .td-module-meta-info {
+    margin-bottom: 8px;
+    bottom: 0; 
+}
+.td-post-template-4 header .td-post-date, .td-post-template-4 header .td-post-author-name { 
+    background: #fff;
+    padding: 1px 2px;
+}
+
 /* Template 8 lighten gradient */
 .td-image-gradient-style8:after {
     box-shadow: inset 0 0 188px 0 #444;
 }
 .td-post-template-8 .td-post-header {
     background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Template 10 and 11 caption adjustments */
+.td-post-template-10 .td-post-featured-video {
+    margin-bottom: 0;
+}
+.td-post-template-10 .td-post-featured-image .wp-caption-text {
+    display:none;
+}
+.td-post-template-11 .td-post-featured-image .wp-caption-text {
+    color: #fff;
 }
 
 /* Fix for TimelineJS issues */
@@ -473,6 +511,13 @@ end back up fonts  */
     }
     .rtl .bottomMenu {
         border-left: none;
+    }
+    /*Style 10 caption adjustments */
+    .td-post-template-10 .td-post-featured-video {
+        padding-top: 15px;
+    }
+    .td-post-template-10 .wp-caption-text {
+        padding: 0;
     }
     /*** Hiding caption on Mobile ***/
     /*.td-post-template-3 .td-post-header-holder .wp-caption-text, .td-post-featured-image figcaption.wp-caption-text { 
