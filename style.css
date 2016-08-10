@@ -475,9 +475,9 @@ end back up fonts  */
         border-left: none;
     }
     /*** Hiding caption on Mobile ***/
-    .td-post-template-3 .td-post-header-holder .wp-caption-text, .td-post-featured-image figcaption.wp-caption-text { 
-        display: none !important;
-    }
+    /*.td-post-template-3 .td-post-header-holder .wp-caption-text, .td-post-featured-image figcaption.wp-caption-text { 
+        display: none;
+    }*/
     .wp-caption-text, .wp-caption-dd {
         padding:0 10px;
     }
