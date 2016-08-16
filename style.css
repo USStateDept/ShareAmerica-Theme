@@ -374,6 +374,28 @@ end back up fonts  */
 .td_smart_list_1 .td-sml-description {
     margin-top: 4px;
 }
+.rtl .td-left-smart-list {
+    left: inherit;
+    right: 0;
+}
+.rtl .td-right-smart-list {
+    right: inherit;
+    left: 0;
+}
+.rtl .td-left-smart-list .td-icon-left {
+    padding-right: 0;
+    padding-left: 11px;
+}
+.rtl .td-right-smart-list .td-icon-right {
+    padding-left: 0;
+    padding-right: 11px;
+}
+.rtl .td-icon-left:before {
+    content: '\e803';
+}
+.rtl .td-icon-right:before {
+    content: '\e802';
+}
 
 /* Template 4 title adjustment */
 .td-post-template-4 .td-post-title {
