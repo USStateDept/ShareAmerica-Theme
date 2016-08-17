@@ -154,6 +154,16 @@ end back up fonts  */
     padding: 6px 18px 22px;
 }
 
+/* Formidable styles */
+.td-main-sidebar .frm_forms fieldset {
+    border: 1px solid #ccc;
+    margin: 0;
+    padding: 0 20px;
+}
+.td-main-sidebar .frm_forms h3 {
+    font-size: 24px;
+}
+
 /*RTL adjustments*/
 .rtl .td-header-style-7 .sf-menu {
     float: right;
