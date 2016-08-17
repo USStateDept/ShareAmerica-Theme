@@ -163,6 +163,18 @@ end back up fonts  */
 .td-main-sidebar .frm_forms h3 {
     font-size: 24px;
 }
+.td-main-sidebar .frm_forms input[type=email] {
+    margin-bottom: 21px;
+}
+.td-main-sidebar .frm_forms input[type=submit] {
+    width: 100%;
+    background: #80a3bc;
+    margin-bottom: 21px;
+    padding: 12px;
+}
+.td-main-sidebar .frm_forms input[type=submit]:hover {
+    background: #6c8fa8;
+}
 
 /*RTL adjustments*/
 .rtl .td-header-style-7 .sf-menu {
