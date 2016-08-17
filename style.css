@@ -169,11 +169,22 @@ end back up fonts  */
 .td-main-sidebar .frm_forms input[type=submit] {
     width: 100%;
     background: #80a3bc;
-    margin-bottom: 21px;
     padding: 12px;
 }
 .td-main-sidebar .frm_forms input[type=submit]:hover {
     background: #6c8fa8;
+}
+.frm_message {
+    padding: 20px 20px 0 20px;
+    border: 1px solid #D6E9C6;
+    background-color: #DFF0D8;
+    color: #468847;
+}
+.frm_error_style {
+    padding: 20px 20px 0 20px;
+    background-color: #F2DEDE;
+    border: 1px solid #EBCCD1;
+    color: #B94A48;
 }
 
 /*RTL adjustments*/
