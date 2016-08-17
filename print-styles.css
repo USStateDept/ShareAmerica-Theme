@@ -45,10 +45,38 @@
     position: relative!important;
     transform: inherit!important;
   }
+  .td-slide-smart-list-figure {
+    float: none!important;
+  }
+  .td_smart_list_3 .td-sml-current-item-nr {
+    position: relative!important;
+    margin-right: 10px!important;
+  }
+  .td_smart_list_4 .td-sml-current-item-nr {
+    position: relative!important;
+    top: 0!important;
+  }
+  .td_smart_list_4 .td-slide-smart-list-figure {
+    margin-left: 0!important;
+  }
+  .td_smart_list_4 .td-sml-current-item-title {
+    display: inline-block!important;
+  }
+  .td_smart_list_5 figcaption div:before {
+    display: none!important;
+  }
+  .td_smart_list_5 .td-sml-caption {
+    position: relative!important;
+    color: #000!important;
+  }
   .td-content-wrap:before {
     content: attr(data-post-url) !important;
     display: block;
     margin-bottom: 10px;
+  }
+  .rtl .td-content-wrap:before {
+    direction: ltr;
+    text-align: right;
   }
   .td-post-content:after {
     content: "ShareAmerica is the U.S. Department of State's site for engaging foreign audiences on important global issues. Follow us on Facebook at facebook.com/ShareAmerica and on Twitter at twitter.com/shareamerica.";
