@@ -160,11 +160,11 @@ end back up fonts  */
     margin: 0;
     padding: 0 20px;
 }
+.td-main-sidebar fieldset div {
+    margin-bottom: 21px;
+}
 .td-main-sidebar .frm_forms h3 {
     font-size: 24px;
-}
-.td-main-sidebar .frm_forms input[type=email] {
-    margin-bottom: 21px;
 }
 .td-main-sidebar .frm_forms input[type=submit] {
     width: 100%;
@@ -179,6 +179,9 @@ end back up fonts  */
     border: 1px solid #D6E9C6;
     background-color: #DFF0D8;
     color: #468847;
+}
+.frm_error {
+    color: #B94A48;
 }
 .frm_error_style {
     padding: 20px 20px 0 20px;
