@@ -462,6 +462,15 @@ end back up fonts  */
     padding-top: 8px;
 }
 
+/* Template 12 adjustment */
+.td-post-template-12 article {
+    padding-top: 40px;
+}
+.td-post-template-12 .td-module-meta-info {
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
 /* Smart List Adjustments */
 .td_smart_list_1 .td-sml-description {
     margin-top: 4px;
