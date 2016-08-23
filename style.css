@@ -123,6 +123,7 @@ end back up fonts  */
 }
 .td-sub-footer-container {
     background-color: #fff;
+    margin-bottom: 94px;
 }
 .td-sub-footer-container .td-container {
     padding: 20px 40px;
@@ -153,6 +154,9 @@ end back up fonts  */
 #mailchimp-top-bar.mctb-big .mctb-close {
     padding: 6px 18px 22px;
 }
+#mailchimp-top-bar {
+    display:none;
+}
 
 /* Formidable styles */
 .td-main-sidebar .frm_forms fieldset {
@@ -165,32 +169,84 @@ end back up fonts  */
 }
 .td-main-sidebar .frm_forms h3 {
     font-size: 24px;
+    margin-top: 21px;
 }
 .td-main-sidebar .frm_forms .frm_hidden {
     display: none; /* Note: Safari doesn't seem to respect the frm_hidden class so adding here */
 }
-.td-main-sidebar .frm_forms input[type=submit] {
+.td-main-sidebar .frm_forms input[type=submit]:hover {
+    background: #6c8fa8;
+}
+.td-main-sidebar .frm_forms .frm_ajax_loading {
+    margin-top: 5px;
+    position: absolute;
+    right: 21px;
+}
+.frm_forms input[type=submit] {
     width: 100%;
     background: #80a3bc;
     padding: 12px;
 }
-.td-main-sidebar .frm_forms input[type=submit]:hover {
-    background: #6c8fa8;
+.frm_forms label {
+    display: none;
 }
-.frm_message {
+.frm_forms .frm_message {
     padding: 20px 20px 0 20px;
     border: 1px solid #D6E9C6;
     background-color: #DFF0D8;
     color: #468847;
 }
-.frm_error {
+.frm_forms .frm_error {
     color: #B94A48;
 }
-.frm_error_style {
+.frm_forms .frm_error_style {
     padding: 20px 20px 0 20px;
     background-color: #F2DEDE;
     border: 1px solid #EBCCD1;
     color: #B94A48;
+}
+.td-footer-wrapper {
+    padding: 0;
+    height: 64px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background: #333;
+}
+.td-footer-wrapper .widget_frm_show_form {
+    margin-bottom: 0;
+}
+.td-footer-wrapper .frm_form_widget .block-title {
+    display: none;
+}
+.td-footer-wrapper .frm_forms fieldset {
+    line-height: 60px;
+    padding: 0;
+    border: none;
+}
+.td-footer-wrapper .frm_forms .frm_description {
+    display: inline-block;
+}
+.td-footer-wrapper .frm_forms .frm_description p {
+    font-size: 17px;
+}
+.td-footer-wrapper .frm_forms .form-field {
+    position: absolute;
+    width: 350px;
+    right: 108px;
+    top: 0;
+}
+.td-footer-wrapper .frm_forms .frm_submit {
+    display: inline-block;
+    float: right;
+    width: 82px;
+}
+.td-footer-wrapper .frm_forms input[type=submit] {
+    width: auto;
+    height: 34px;
+    padding: 8px 12px;
 }
 
 /*RTL adjustments*/
