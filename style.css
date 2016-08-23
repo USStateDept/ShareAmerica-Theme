@@ -437,6 +437,9 @@ end back up fonts  */
 .rtl .page-nav .pages {
     float: left;
 }
+.rtl .at4-arrow {
+    text-align: right;
+}
 
 /* Fix for captions */
 .td-post-template-3 .td-post-header-holder {
