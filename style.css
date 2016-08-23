@@ -154,9 +154,6 @@ end back up fonts  */
 #mailchimp-top-bar.mctb-big .mctb-close {
     padding: 6px 18px 22px;
 }
-#mailchimp-top-bar {
-    display:none;
-}
 
 /* Formidable styles */
 .td-main-sidebar .frm_forms fieldset {
