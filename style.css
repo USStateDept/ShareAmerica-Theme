@@ -4,7 +4,7 @@ Theme URI: 		  http://share.america.gov
 Description:    Child theme of the Newspaper theme
 Author:         Office of Design, Bureau of International Information Programs
 Template:       Newspaper
-Version:        2.4.3
+Version:        2.5.0
 Text Domain:    share
 */
 
@@ -123,6 +123,7 @@ end back up fonts  */
 }
 .td-sub-footer-container {
     background-color: #fff;
+    margin-bottom: 94px;
 }
 .td-sub-footer-container .td-container {
     padding: 20px 40px;
@@ -152,6 +153,97 @@ end back up fonts  */
 }
 #mailchimp-top-bar.mctb-big .mctb-close {
     padding: 6px 18px 22px;
+}
+
+/* Formidable styles */
+.td-main-sidebar .frm_forms fieldset {
+    border: 1px solid #ccc;
+    margin: 0;
+    padding: 0 20px;
+}
+.td-main-sidebar .frm_forms fieldset div {
+    margin-bottom: 21px;
+}
+.td-main-sidebar .frm_forms h3 {
+    font-size: 24px;
+    margin-top: 21px;
+}
+.td-main-sidebar .frm_forms .frm_hidden {
+    display: none; /* Note: Safari doesn't seem to respect the frm_hidden class so adding here */
+}
+.td-main-sidebar .frm_forms input[type=submit]:hover {
+    background: #6c8fa8;
+}
+.td-main-sidebar .frm_forms .frm_ajax_loading {
+    margin-top: 5px;
+    position: absolute;
+    right: 21px;
+}
+.frm_forms input[type=submit] {
+    width: 100%;
+    background: #80a3bc;
+    padding: 12px;
+}
+.frm_forms label {
+    display: none;
+}
+.frm_forms .frm_message {
+    padding: 20px 20px 0 20px;
+    border: 1px solid #D6E9C6;
+    background-color: #DFF0D8;
+    color: #468847;
+}
+.frm_forms .frm_error {
+    color: #B94A48;
+}
+.frm_forms .frm_error_style {
+    padding: 20px 20px 0 20px;
+    background-color: #F2DEDE;
+    border: 1px solid #EBCCD1;
+    color: #B94A48;
+}
+.td-footer-wrapper {
+    padding: 0;
+    height: 64px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background: #333;
+}
+.td-footer-wrapper .widget_frm_show_form {
+    margin-bottom: 0;
+}
+.td-footer-wrapper .frm_form_widget .block-title {
+    display: none;
+}
+.td-footer-wrapper .frm_forms fieldset {
+    line-height: 60px;
+    padding: 0;
+    border: none;
+}
+.td-footer-wrapper .frm_forms .frm_description {
+    display: inline-block;
+}
+.td-footer-wrapper .frm_forms .frm_description p {
+    font-size: 17px;
+}
+.td-footer-wrapper .frm_forms .form-field {
+    position: absolute;
+    width: 350px;
+    right: 108px;
+    top: 0;
+}
+.td-footer-wrapper .frm_forms .frm_submit {
+    display: inline-block;
+    float: right;
+    width: 82px;
+}
+.td-footer-wrapper .frm_forms input[type=submit] {
+    width: auto;
+    height: 34px;
+    padding: 8px 12px;
 }
 
 /*RTL adjustments*/
@@ -246,6 +338,14 @@ end back up fonts  */
     margin-left:0;
     margin-right: 116px;
 }
+.rtl .td-post-template-11 .td_block_related_posts .td-next-prev-wrap {
+    left: 0;
+    right: inherit;
+}
+.rtl .td-post-template-11 .td_block_related_posts .td-next-prev-wrap a {
+    margin-right: 10px;
+    margin-left: 0;
+}
 .rtl .td_block_1 .td-block-row [class*="td-block-span"] {
     float:right;
 }
@@ -337,6 +437,9 @@ end back up fonts  */
 .rtl .page-nav .pages {
     float: left;
 }
+.rtl .at4-arrow {
+    text-align: right;
+}
 
 /* Fix for captions */
 .td-post-template-3 .td-post-header-holder {
@@ -362,9 +465,59 @@ end back up fonts  */
     padding-top: 8px;
 }
 
+/* Template 12 adjustment */
+.td-post-template-12 article {
+    padding-top: 40px;
+}
+.td-post-template-12 .td-module-meta-info {
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
 /* Smart List Adjustments */
 .td_smart_list_1 .td-sml-description {
     margin-top: 4px;
+}
+.rtl .td-left-smart-list {
+    left: inherit;
+    right: 0;
+}
+.rtl .td-right-smart-list {
+    right: inherit;
+    left: 0;
+}
+.rtl .td-left-smart-list .td-icon-left {
+    padding-right: 0;
+    padding-left: 11px;
+}
+.rtl .td-right-smart-list .td-icon-right {
+    padding-left: 0;
+    padding-right: 11px;
+}
+.rtl .td-icon-left:before {
+    content: '\e803';
+}
+.rtl .td-icon-right:before {
+    content: '\e802';
+}
+
+/* Template 4 title adjustment */
+.td-post-template-4 .td-post-title {
+    padding:21px 21px 0 21px;
+    background-color: transparent;
+}
+.td-post-template-4 .td-post-title h1.entry-title {
+    display: inline;
+    background: #fff;
+    font-weight: bold;
+}
+.td-post-template-4 .td-post-title .td-module-meta-info {
+    margin-bottom: 8px;
+    bottom: 0; 
+}
+.td-post-template-4 header .td-post-date, .td-post-template-4 header .td-post-author-name { 
+    background: #fff;
+    padding: 1px 2px;
 }
 
 /* Template 8 lighten gradient */
@@ -373,6 +526,17 @@ end back up fonts  */
 }
 .td-post-template-8 .td-post-header {
     background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Template 10 and 11 caption adjustments */
+.td-post-template-10 .td-post-featured-video {
+    margin-bottom: 0;
+}
+.td-post-template-10 .td-post-featured-image .wp-caption-text {
+    display:none;
+}
+.td-post-template-11 .td-post-featured-image .wp-caption-text {
+    color: #fff;
 }
 
 /* Fix for TimelineJS issues */
@@ -474,10 +638,17 @@ end back up fonts  */
     .rtl .bottomMenu {
         border-left: none;
     }
-    /*** Hiding caption on Mobile ***/
-    .td-post-template-3 .td-post-header-holder .wp-caption-text, .td-post-featured-image figcaption.wp-caption-text { 
-        display: none !important;
+    /*Style 10 caption adjustments */
+    .td-post-template-10 .td-post-featured-video {
+        padding-top: 15px;
     }
+    .td-post-template-10 .wp-caption-text {
+        padding: 0;
+    }
+    /*** Hiding caption on Mobile ***/
+    /*.td-post-template-3 .td-post-header-holder .wp-caption-text, .td-post-featured-image figcaption.wp-caption-text { 
+        display: none;
+    }*/
     .wp-caption-text, .wp-caption-dd {
         padding:0 10px;
     }
