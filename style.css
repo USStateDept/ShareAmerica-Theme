@@ -147,14 +147,6 @@ end back up fonts  */
     display: none;
 }
 
-/*Mailchimp adjustments*/
-#mailchimp-top-bar.mctb-big .mctb-bar {
-    padding: 16px 9px;
-}
-#mailchimp-top-bar.mctb-big .mctb-close {
-    padding: 6px 18px 22px;
-}
-
 /* Formidable styles */
 .td-main-sidebar .frm_forms fieldset {
     border: 1px solid #ccc;
@@ -589,7 +581,7 @@ end back up fonts  */
     width: 85%;
     margin: 0 auto;
 }
-.blank #mailchimp-top-bar, .blank-wide #mailchimp-top-bar {
+.blank .td-footer-wrapper, .blank-wide .td-footer-wrapper {
     display:none;
 }
 .blank .at4-share-outer, .blank-wide .at4-share-outer {
@@ -628,9 +620,6 @@ end back up fonts  */
     }
     .td-mobile-content li a:hover {
         color: #80a3bc !important;
-    }
-    #mailchimp-top-bar .mctb-email, #mailchimp-top-bar input[type=email] {
-        border-radius:0px;
     }
     .bottomMenu {
         border-right: none;
