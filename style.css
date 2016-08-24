@@ -179,7 +179,7 @@ end back up fonts  */
 .frm_forms label {
     display: none;
 }
-.frm_forms .frm_message {
+.td-main-sidebar .frm_forms .frm_message {
     padding: 20px 20px 0 20px;
     border: 1px solid #D6E9C6;
     background-color: #DFF0D8;
@@ -255,7 +255,39 @@ end back up fonts  */
 .td-footer-wrapper .formidable-close:hover {
     color: #80a3bc;
 }
-
+.td-footer-wrapper .frm_forms .frm_message {
+    padding: 0;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+.td-footer-wrapper .frm_forms .frm_message p {
+    line-height: 60px;
+    font-size: 17px;
+}
+.td-footer-wrapper .frm_forms .frm_error {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    line-height: 14px;
+    top: -12px;
+    font-size: 10px;
+}
+.td-footer-wrapper .frm_forms .frm_error_style {
+    width: 700px;
+    height: 40px;
+    padding: 0;
+    position: fixed;
+    left: 50%;
+    bottom: 70px;
+    margin-left: -350px;
+    text-align: center;
+}
+.td-footer-wrapper .frm_forms .frm_error_style p {
+    font-size: 12px;
+    line-height: 35px;
+}
 /*RTL adjustments*/
 .rtl .td-header-style-7 .sf-menu {
     float: right;
