@@ -9,7 +9,7 @@ jQuery(window).load(function(){
 
   if ( frmClosed == "false" ) {
     jQuery('.td-footer-wrapper .frm_form_fields fieldset').append("<i class='fa fa-times-circle-o formidable-close' aria-hidden='true'></i>");
-    jQuery('.td-footer-wrapper').slideUp();
+    jQuery('.td-footer-wrapper').show();
   }
   
   jQuery('.formidable-close').click(function(){
