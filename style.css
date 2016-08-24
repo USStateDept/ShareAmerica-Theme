@@ -203,6 +203,7 @@ end back up fonts  */
     width: 100%;
     z-index: 9999;
     background: #333;
+    display: none;
 }
 .td-footer-wrapper .widget_frm_show_form {
     margin-bottom: 0;
@@ -236,6 +237,13 @@ end back up fonts  */
     width: auto;
     height: 34px;
     padding: 8px 12px;
+}
+.td-footer-wrapper .formidable-close {
+    position: fixed;
+    right: 20px;
+    line-height: 60px;
+    font-size: 24px;
+    cursor: pointer;
 }
 
 /*RTL adjustments*/

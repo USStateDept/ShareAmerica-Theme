@@ -22,6 +22,10 @@ function share_add_scripts() {
   // Prints out the url under the page title on all browsers
   wp_enqueue_script( 'print-page-url', get_stylesheet_directory_uri() . '/js/print-page-url.js', array('jquery'), '1.0.0', false );
 
+  // Hide the formidable bottom bar
+  wp_enqueue_script( 'formidable-js', get_stylesheet_directory_uri() . '/js/formidable-js.js', array('jquery'), '1.0.0', false );
+
+
   // If Timeline plugin is active, load the opacity 0 image fix
   // This fix is necessary because Tagdiv's lazy loading causes photos in the timeline to not display properly.
   // Uses the ready_init: function() in tagdiv_theme.js - if this code is updated, timelinefix.js must be updated.
