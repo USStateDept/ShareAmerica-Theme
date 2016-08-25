@@ -163,9 +163,6 @@ end back up fonts  */
 .td-main-sidebar .frm_forms .frm_hidden {
     display: none; /* Note: Safari doesn't seem to respect the frm_hidden class so adding here */
 }
-.td-main-sidebar .frm_forms input[type=submit]:hover {
-    background: #6c8fa8;
-}
 .td-main-sidebar .frm_forms .frm_ajax_loading {
     margin-top: 5px;
     position: absolute;
@@ -175,6 +172,9 @@ end back up fonts  */
     width: 100%;
     background: #80a3bc;
     padding: 12px;
+}
+.frm_forms input[type=submit]:hover {
+    background: #6c8fa8;
 }
 .frm_forms label {
     display: none;
