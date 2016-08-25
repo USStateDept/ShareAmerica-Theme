@@ -220,7 +220,7 @@ end back up fonts  */
     display: inline-block;
 }
 .td-footer-wrapper .frm_forms .frm_description p {
-    font-size: 17px;
+    font-size: 15px;
 }
 .td-footer-wrapper .frm_forms .form-field {
     position: absolute;
@@ -293,6 +293,17 @@ end back up fonts  */
     position: absolute;
     right: 0;
     top: 34px;
+}
+.rtl .td-footer-wrapper .formidable-close {
+    right: inherit;
+    left: 20px;
+}
+.rtl .td-footer-wrapper .frm_forms .frm_submit {
+    float: left;
+}
+.rtl .td-footer-wrapper .frm_forms .form-field {
+    right: inherit;
+    left: 108px;
 }
 
 /*RTL adjustments*/
