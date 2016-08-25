@@ -196,7 +196,7 @@ end back up fonts  */
 }
 .td-footer-wrapper {
     padding: 0;
-    height: 64px;
+    height: 80px;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -212,7 +212,7 @@ end back up fonts  */
     display: none;
 }
 .td-footer-wrapper .frm_forms fieldset {
-    line-height: 60px;
+    line-height: 80px;
     padding: 0;
     border: none;
 }
@@ -248,7 +248,7 @@ end back up fonts  */
 .td-footer-wrapper .formidable-close {
     position: fixed;
     right: 20px;
-    line-height: 60px;
+    line-height: 80px;
     font-size: 24px;
     cursor: pointer;
 }
@@ -263,7 +263,7 @@ end back up fonts  */
     text-align: center;
 }
 .td-footer-wrapper .frm_forms .frm_message p {
-    line-height: 60px;
+    line-height: 80px;
     font-size: 17px;
 }
 .td-footer-wrapper .frm_forms .frm_error {
@@ -271,8 +271,9 @@ end back up fonts  */
     margin: 0;
     padding: 0;
     line-height: 14px;
-    top: -12px;
+    top: -19px;
     font-size: 10px;
+    color: #F2DF0E;
 }
 .td-footer-wrapper .frm_forms .frm_error_style {
     width: 700px;
@@ -288,6 +289,12 @@ end back up fonts  */
     font-size: 12px;
     line-height: 35px;
 }
+.td-footer-wrapper .frm_forms .frm_ajax_loading {
+    position: absolute;
+    right: 0;
+    top: 34px;
+}
+
 /*RTL adjustments*/
 .rtl .td-header-style-7 .sf-menu {
     float: right;
