@@ -305,6 +305,10 @@ end back up fonts  */
     right: inherit;
     left: 108px;
 }
+.rtl .td-footer-wrapper .frm_forms .frm_ajax_loading {
+    right: inherit;
+    left: 0;
+}
 
 /*RTL adjustments*/
 .rtl .td-header-style-7 .sf-menu {
@@ -674,8 +678,15 @@ end back up fonts  */
     .td-footer-wrapper .frm_forms .form-field {
         right: 104px;
     }
+    .rtl .td-footer-wrapper .frm_forms .form-field {
+        left: 104px;
+    }
     .td-footer-wrapper .formidable-close {
         right: 10px;
+    }
+    .rtl .td-footer-wrapper .formidable-close {
+        left: 10px;
+    }
 }
 
 @media (max-width: 1018px) and (min-width: 768px) {
@@ -687,6 +698,9 @@ end back up fonts  */
     }
     .td-footer-wrapper .frm_forms .form-field {
         right: 98px;
+    }
+    .rtl .td-footer-wrapper .frm_forms .form-field {
+        left: 98px;
     }
 }
 
@@ -725,12 +739,20 @@ end back up fonts  */
         padding: 0;
         width: 80%;
     }
+    .rtl .td-footer-wrapper .frm_forms .form-field {
+        left: inherit;
+        float: right;
+    }
     .td-footer-wrapper .frm_forms .frm_submit {
         display: inline-block;
         float: left;
         height: 68px;
         width: 20%;
     }
+    .rtl .td-footer-wrapper .frm_forms .frm_submit {
+        float: right;
+    }
+
     .td-footer-wrapper .frm_forms input[type=submit] {
         margin: 0;
         padding: 0;
@@ -741,6 +763,10 @@ end back up fonts  */
         position: absolute;
         right: -4px;
         top: 52px;
+    }
+    .rtl .td-footer-wrapper .frm_forms .frm_ajax_loading {
+        right: inherit;
+        left: -4px;
     }
     .td-footer-wrapper .frm_forms fieldset {
         line-height: inherit;
@@ -806,12 +832,19 @@ end back up fonts  */
     .td-footer-wrapper .frm_forms .frm_description p {
         text-align: left;
     }
+    .rtl .td-footer-wrapper .frm_forms .frm_description p {
+        text-align: right;
+    }    
     .td-footer-wrapper .formidable-close {
         bottom: 22px;
     }
     .td-footer-wrapper .frm_forms .frm_ajax_loading {
         right: 6px;
         top: 62px;
+    }
+    .rtl .td-footer-wrapper .frm_forms .frm_ajax_loading {
+        right: inherit;
+        left: 6px;
     }
 }
 @media (max-width: 500px) {
