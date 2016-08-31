@@ -727,7 +727,7 @@ end back up fonts  */
     .td-footer-wrapper .frm_forms .frm_description p {
         font-size: 15px;
         margin-bottom: 0;
-        padding: 10px 0;
+        padding: 8px 0;
         text-align: center;
     }
     .td-footer-wrapper .frm_forms .form-field {
@@ -852,7 +852,6 @@ end back up fonts  */
         font-size: 11px;
     }
     .td-footer-wrapper .formidable-close {
-        bottom: 19px;
         font-size: 20px;
     }
 }
@@ -863,5 +862,10 @@ end back up fonts  */
     .td-footer-wrapper .frm_forms input[type=submit] {
         font-size: 10px;
     }
-
+}
+@media (max-width: 325px) {
+    .td-footer-wrapper .frm_forms .frm_description p {
+        width: 90%;
+        padding: 0;
+    }
 }
