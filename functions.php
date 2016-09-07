@@ -371,3 +371,9 @@ function hook_td_global_after() {
   td_api_single_template::update_key('single_template_12', 'img' , get_stylesheet_directory_uri() . '/images/panel/single_templates/single_template_12.png');
 }
 add_action('td_global_after','hook_td_global_after');
+
+/* Enable excerpts for pages */
+add_action( 'init', 'my_add_excerpts_to_pages' );
+function my_add_excerpts_to_pages() {
+     add_post_type_support( 'page', 'excerpt' );
+}
