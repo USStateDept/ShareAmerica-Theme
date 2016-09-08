@@ -319,6 +319,14 @@ end back up fonts  */
     left: 0;
 }
 
+/* Hide Urdu */
+html[lang="ur"] .td-main-sidebar .widget_text_icl {
+    display: none;
+}
+html[lang="ur"] .td-footer-wrapper {
+    display: none!important;
+}
+
 /*RTL adjustments*/
 .rtl .td-header-style-7 .sf-menu {
     float: right;
@@ -671,6 +679,7 @@ end back up fonts  */
 .blank .at4-share-outer, .blank-wide .at4-share-outer {
     display: none;
 }
+
 
 /* Mobile and breakpoint adjustments */
 @media (max-width: 1140px) {
