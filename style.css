@@ -327,6 +327,25 @@ html[lang="ur"] .td-footer-wrapper {
     display: none!important;
 }
 
+/* Pull quote style changes */
+blockquote.td_quote_box {
+    border-color: #343c6c!important;
+    background-color: transparent!important;
+}
+blockquote.td_quote_box p {
+    font-size: 19px!important;
+}
+.rtl blockquote.td_quote_box {
+  border-left: none!important;
+  border-right: 2px solid #343c6c;
+}
+blockquote.td_box_center {
+    border-left: none!important;
+    border-right: none!important;
+    border-top: 2px solid #343c6c;
+    border-bottom: 2px solid #343c6c;
+}
+
 /*RTL adjustments*/
 .rtl .td-header-style-7 .sf-menu {
     float: right;
