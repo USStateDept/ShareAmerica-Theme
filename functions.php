@@ -369,6 +369,11 @@ add_filter( 'embed_oembed_html', 'youtube_enable_js_api', 10, 3 );
 /* Use the TD API to change the icon for template 12 */
 function hook_td_global_after() {
   td_api_single_template::update_key('single_template_12', 'img' , get_stylesheet_directory_uri() . '/images/panel/single_templates/single_template_12.png');
+  td_api_tinymce_formats::delete('td_blockquote_1');
+  td_api_tinymce_formats::delete('td_blockquote_2');
+  td_api_tinymce_formats::delete('td_blockquote_6');
+  td_api_tinymce_formats::delete('td_blockquote_7');
+  td_api_tinymce_formats::delete('td_blockquote_8');
 }
 add_action('td_global_after','hook_td_global_after');
 
