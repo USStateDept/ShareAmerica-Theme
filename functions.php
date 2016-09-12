@@ -366,7 +366,7 @@ function youtube_enable_js_api( $html, $url, $args ) {
 }
 add_filter( 'embed_oembed_html', 'youtube_enable_js_api', 10, 3 );
 
-/* Use the TD API to change the icon for template 12 */
+/* Use the TD API to change the icon for template 12 and remove pull quote styles */
 function hook_td_global_after() {
   td_api_single_template::update_key('single_template_12', 'img' , get_stylesheet_directory_uri() . '/images/panel/single_templates/single_template_12.png');
   td_api_tinymce_formats::delete('td_blockquote_1');
