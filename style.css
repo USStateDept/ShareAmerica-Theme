@@ -334,6 +334,7 @@ blockquote.td_quote_box {
 }
 blockquote.td_quote_box p {
     font-size: 19px!important;
+    line-height: 36px!important;
 }
 .rtl blockquote.td_quote_box {
   border-left: none!important;
