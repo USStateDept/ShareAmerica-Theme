@@ -320,10 +320,14 @@ end back up fonts  */
 }
 
 /* Hide Urdu */
-html[lang="ur"] .td-main-sidebar .widget_text_icl {
+html[lang="ur"] .td-main-sidebar .widget_text_icl,
+html[lang="id-ID"] .td-main-sidebar .widget_text_icl,
+html[lang="fa-IR"] .td-main-sidebar .widget_text_icl {
     display: none;
 }
-html[lang="ur"] .td-footer-wrapper {
+html[lang="ur"] .td-footer-wrapper,
+html[lang="id-ID"] .td-footer-wrapper,
+html[lang="fa-IR"] .td-footer-wrapper {
     display: none!important;
 }
 
@@ -331,6 +335,7 @@ html[lang="ur"] .td-footer-wrapper {
 blockquote.td_quote_box {
     border-color: #343c6c!important;
     background-color: transparent!important;
+    padding-right: 0!important;
 }
 blockquote.td_quote_box p {
     font-size: 19px!important;
@@ -339,12 +344,16 @@ blockquote.td_quote_box p {
 .rtl blockquote.td_quote_box {
   border-left: none!important;
   border-right: 2px solid #343c6c;
+  padding-right: 23px!important;
 }
 blockquote.td_box_center {
     border-left: none!important;
     border-right: none!important;
     border-top: 2px solid #343c6c;
     border-bottom: 2px solid #343c6c;
+}
+blockquote.td_box_right {
+    width: 40%!important;
 }
 
 /*RTL adjustments*/
