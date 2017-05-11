@@ -13,7 +13,7 @@ $featured_image_id = get_post_thumbnail_id($post->ID);
 $featured_image_info = td_util::attachment_get_full_info($featured_image_id, $thumbType);
 
 ?>
-<article id="post-<?php echo $td_mod_single->post->ID;?>" class="<?php echo join(' ', get_post_class('td-post-template-4'));?>" <?php echo $td_mod_single->get_item_scope();?>>
+<article id="post-<?php echo $td_mod_single->post->ID;?>" class="<?php echo join(' ', get_post_class('td-post-template-4'));?> td-container-wrap" <?php echo $td_mod_single->get_item_scope();?>>
     <div class="td-post-header td-container">
         <div class="td-crumb-container"><?php echo td_page_generator::get_single_breadcrumbs($td_mod_single->title); ?></div>
         <div class="td-post-header-holder td-image-gradient">
@@ -39,7 +39,7 @@ $featured_image_info = td_util::attachment_get_full_info($featured_image_id, $th
             </header>
         </div>
         <div class="wp-caption-text">
-            <?php echo $featured_image_info['caption'];?>
+          <?php echo $featured_image_info['caption'];?>
         </div>
     </div>
 

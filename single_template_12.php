@@ -11,10 +11,7 @@ global $loop_sidebar_position, $td_sidebar_position, $post;
 $td_mod_single = new td_module_single($post);
 
 ?>
-<div class="td-main-content-wrap">
-
-    <div class="td-container td-post-template-12">
-        <article id="post-<?php echo $td_mod_single->post->ID;?>" class="<?php echo join(' ', get_post_class());?>" <?php echo $td_mod_single->get_item_scope();?>>
+<div class="td-main-content-wrap td-container-wrap">
 
             <div class="td-pb-row">
                 <?php

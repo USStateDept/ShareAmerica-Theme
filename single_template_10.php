@@ -14,7 +14,7 @@ $featured_image_id = get_post_thumbnail_id($post->ID);
 $featured_image_info = td_util::attachment_get_full_info($featured_image_id, $thumbType);
 
 ?>
-<article id="post-<?php echo $td_mod_single->post->ID;?>" class="<?php echo join(' ', get_post_class('td-post-template-10'));?>" <?php echo $td_mod_single->get_item_scope();?>>
+<article id="post-<?php echo $td_mod_single->post->ID;?>" class="<?php echo join(' ', get_post_class('td-post-template-10'));?> td-container-wrap" <?php echo $td_mod_single->get_item_scope();?>>
     <div class="td-video-template-bg">
         <div class="td-container">
             <div class="td-crumb-container"><?php echo td_page_generator::get_single_breadcrumbs($td_mod_single->title); ?></div>
@@ -30,13 +30,14 @@ $featured_image_info = td_util::attachment_get_full_info($featured_image_id, $th
             </div>
         </div>
     </div>
+
     <div class="td-container">
         <div class="td-pb-row">
-            <div class="td-pb-span12">
-                <div class="wp-caption-text">
-                    <?php echo $featured_image_info['caption'];?>
-                </div>
-            </div>
+          <div class="td-pb-span12">
+              <div class="wp-caption-text">
+                  <?php echo $featured_image_info['caption'];?>
+              </div>
+          </div>
         </div>
         <div class="td-pb-row">
             <?php

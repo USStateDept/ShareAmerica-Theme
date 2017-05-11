@@ -57,29 +57,41 @@ class td_smart_list_3 extends td_smart_list {
         $buffy .= '<div class="td-item" id="' . $this->smart_list_tip_3_unique_id . '_item_' . $current_item_id . '">';
             $buffy .= '<div class="td-number-and-title"><h2><span class="td-sml-current-item-nr">' . $current_item_number. '</span><span class="td-sml-current-item-title">' . $smart_list_3_title . '</span></h2></div>';
 
-        //get image info
-        $first_img_all_info = td_util::attachment_get_full_info($item_array['first_img_id']);
+            //get image info
+            $first_img_all_info = td_util::attachment_get_full_info($item_array['first_img_id']);
 
+            //get image link target
+            $first_img_link_target = $item_array['first_img_link_target'];
 
-        //image caption
-        $first_img_caption = '';
-        if(!empty($first_img_all_info['caption'])) {
-            $first_img_caption = $first_img_all_info['caption'];
-        }
+            //image caption
+            $first_img_caption = $item_array['first_img_caption'];
 
-        $first_img_info = wp_get_attachment_image_src($item_array['first_img_id'], 'medium');
-
+            $first_img_info = wp_get_attachment_image_src($item_array['first_img_id'], 'medium');
 
             //image and caption
             $buffy_image = '';
             if (!empty($first_img_info[0])) {
+
+                // class used by magnific popup
+                $smart_list_lightbox = " td-lightbox-enabled";
+
+                // if a custom link is set use it
+                if (!empty($item_array['first_img_link']) && $first_img_all_info['src'] != $item_array['first_img_link']) {
+                    $first_img_all_info['src'] = $item_array['first_img_link'];
+
+                    // remove the magnific popup class for custom links
+                    $smart_list_lightbox = "";
+                }
+
                 $buffy_image = '
-                           <figure class="td-sml3-display-image td-slide-smart-list-figure">
-                                <a class="td-sml-link-to-image" href="' . $first_img_all_info['src'] . '" id="td-sml3-slide_' . $this->nr_slide_on_smart_list . '" data-caption="' . esc_attr($first_img_all_info['caption'], ENT_QUOTES) . '" >
-                                    <img src="' . $first_img_info[0] . '" alt="' . esc_attr($first_img_all_info['alt'], ENT_QUOTES) . '" title="' . esc_attr($first_img_all_info['title'], ENT_QUOTES) . '" />
-                                </a>
-                                <figcaption class="td-sml-caption"><div>' . $first_img_caption . '</div></figcaption>
-                           </figure>';
+                <div class="td-sml-figure">
+                   <figure class="td-sml3-display-image td-slide-smart-list-figure' . $smart_list_lightbox . '">
+                        <a class="td-sml-link-to-image" href="' . $first_img_all_info['src'] . '" id="td-sml3-slide_' . $this->nr_slide_on_smart_list . '" data-caption="' . esc_attr($first_img_caption, ENT_QUOTES) . '" ' . $first_img_link_target . ' >
+                            <img src="' . $first_img_info[0] . '" alt="' . esc_attr($first_img_all_info['alt'], ENT_QUOTES) . '" title="' . esc_attr($first_img_all_info['title'], ENT_QUOTES) . '"/>
+                        </a>
+                   </figure>
+                   <figcaption class="td-sml-caption"><div>' . $first_img_caption . '</div></figcaption>
+                </div>';
             }
 
             if(!empty($item_array['description'])) {

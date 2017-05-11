@@ -41,20 +41,21 @@ if (have_posts()) {
 
 
         <div class="td-post-content">
+            <div class="td-featured-image-rec">
 
-                <div class="td-featured-image-rec">
-                <?php
-                // override the default featured image by the templates (single.php and home.php/index.php - blog loop)
-                if (!empty(td_global::$load_featured_img_from_template)) {
-                    echo $td_mod_single->get_image(td_global::$load_featured_img_from_template);
-                } else {
-                    echo $td_mod_single->get_image('medium');
-                }
+            <?php
+            // override the default featured image by the templates (single.php and home.php/index.php - blog loop)
+            if (!empty(td_global::$load_featured_img_from_template)) {
+                echo $td_mod_single->get_image(td_global::$load_featured_img_from_template);
+            } else {
+                echo $td_mod_single->get_image('td_696x0');
+            }
 
-                // ad spot
-                echo td_global_blocks::get_instance('td_block_ad_box')->render(array('spot_id' => 'post_style_1')); ?>
+            $tds_post_style_1_title = td_util::get_option('tds_post_style_1_title');
 
-                </div>
+            // ad spot
+            echo td_global_blocks::get_instance('td_block_ad_box')->render(array('spot_id' => 'post_style_1', 'spot_title' => $tds_post_style_1_title)); ?>
+            </div>
 
             <?php echo $td_mod_single->get_content();?>
         </div>

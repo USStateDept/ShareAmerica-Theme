@@ -40,7 +40,7 @@ if (!empty($td_post_featured_image)) {
 
 ?>
 
-<article id="post-<?php echo $td_mod_single->post->ID;?>" class="<?php echo join(' ', get_post_class('td-post-template-7'));?>" <?php echo $td_mod_single->get_item_scope();?>>
+<article id="post-<?php echo $td_mod_single->post->ID;?>" class="<?php echo join(' ', get_post_class('td-post-template-7'));?> td-container-wrap" <?php echo $td_mod_single->get_item_scope();?>>
 
     <div class="td-full-screen-header-image-wrap">
 
@@ -68,11 +68,11 @@ if (!empty($td_post_featured_image)) {
 	                        <?php echo $td_mod_single->get_comments();?>
 	                    </div>
 
-                        <div class="wp-caption-text">
-                            <?php echo $featured_image_info['caption'];?>
-                        </div>
+										<div class="wp-caption-text">
+											<?php echo $featured_image_info['caption'];?>
+										</div>
 
-                    </header>
+	                </header>
 
 		            <div class="td-read-down"><a href="#"><i class="td-icon-read-down"></i></a></div>
 		        </div>
@@ -81,7 +81,7 @@ if (!empty($td_post_featured_image)) {
         </div>
 
         <div id="td-full-screen-header-image" class="td-image-gradient-style7">
-            <img class="td-backstretch" src="<?php echo $td_post_featured_image; ?>" alt="<?php echo $featured_image_info['alt']; ?>" title="<?php echo $featured_image_info['title']; ?>">
+					<img class="td-backstretch" src="<?php echo $td_post_featured_image; ?>" alt="<?php echo $featured_image_info['alt']; ?>" title="<?php echo $featured_image_info['title']; ?>">
         </div>
     </div>
 

@@ -5,7 +5,6 @@
 <head>
     <title><?php wp_title('|', true, 'right'); ?></title>
     <meta charset="<?php bloginfo( 'charset' );?>" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
     <meta name="google-site-verification" content="NDNB3oNz8Und1bThWM8mt3B0_fvwjeYta_cv_jp50Bo" />
@@ -15,9 +14,6 @@
     ?>
     <script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOS&siteplatform=ShareAmerica" id="_fed_an_ua_tag"></script>
 </head>
-
-<!-- Track Page Refresh -->
-<body onLoad="checkRefresh();" onUnload="prepareForRefresh();" <?php body_class() ?> itemscope="itemscope" itemtype="<?php echo td_global::$http_or_https?>://schema.org/WebPage">
 
 <!-- Google Tag Manager -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MCRX2G"
@@ -49,20 +45,16 @@ window.twttr = (function (d, s, id) {
 </script>
 <!-- End Facebook Sidebar Share -->
 
-<?php //this is closing in the footer.php file ?>
+<body <?php body_class() ?> itemscope="itemscope" itemtype="<?php echo td_global::$http_or_https?>://schema.org/WebPage">
 
-<div id="td-outer-wrap">
-
-    <div class="td-transition-content-and-menu td-mobile-nav-wrap">
-        <?php locate_template('parts/menu-mobile.php', true);?>
-    </div>
-
+    <div id="td-outer-wrap" class="td-theme-wrap">
     <?php //this is closing in the footer.php file ?>
-    <div class="td-transition-content-and-menu td-content-wrap">
 
+        <?php
+        /*
+         * loads the header template set in Theme Panel -> Header area
+         * the template files are located in ../parts/header
+         */
+        td_api_header_style::_helper_show_header();
 
-
-<?php
-td_api_header_style::_helper_show_header();
-
-do_action('td_wp_booster_after_header'); //used by unique articles
+        do_action('td_wp_booster_after_header'); //used by unique articles

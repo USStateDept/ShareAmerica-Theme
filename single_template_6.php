@@ -31,23 +31,23 @@ if (!empty($td_post_featured_image)) {
 }
 
 ?>
-<article id="post-<?php echo $td_mod_single->post->ID;?>" class="<?php echo join(' ', get_post_class('td-post-template-6'));?>" <?php echo $td_mod_single->get_item_scope();?>>
+<article id="post-<?php echo $td_mod_single->post->ID;?>" class="<?php echo join(' ', get_post_class('td-post-template-6'));?> td-container-wrap" <?php echo $td_mod_single->get_item_scope();?>>
 
     <div class="td-full-screen-header-image-wrap">
 
         <div id="td-full-screen-header-image" class="td-image-gradient-style6">
-            <img class="td-backstretch" src="<?php echo $td_post_featured_image; ?>" alt="<?php echo $featured_image_info['alt']; ?>" title="<?php echo $featured_image_info['title']; ?>">
+					<img class="td-backstretch" src="<?php echo $td_post_featured_image; ?>" alt="<?php echo $featured_image_info['alt']; ?>" title="<?php echo $featured_image_info['title']; ?>">
         </div>
 
         <div class="td-container td-post-header">
 
             <div class="td-post-header-holder">
 
-                <div class="wp-caption-text">
-                    <?php echo $featured_image_info['caption'];?>
-                </div>
-                
-                <?php echo td_page_generator::get_single_breadcrumbs($td_mod_single->title); ?>
+								<div class="wp-caption-text">
+									<?php echo $featured_image_info['caption'];?>
+								</div>
+
+								<?php echo td_page_generator::get_single_breadcrumbs($td_mod_single->title); ?>
 
                 <header class="td-post-title">
 
