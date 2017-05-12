@@ -49,6 +49,7 @@ end back up fonts  */
 .td-header-style-7 .sf-menu > li > a {
     padding: 0 8px;
     line-height: 48px;
+    font-size: 11px;
 }
 .td-header-style-7 .sf-menu ul .menu-item-language > a {
     padding: 7px 14px 8px 14px;
@@ -75,9 +76,6 @@ end back up fonts  */
     height: 48px;
     width: 100%;
     padding-right: 0;
-}
-.td-header-style-7 ul.sf-menu > .td-menu-item > a {
-    font-size: 11px;
 }
 .menu-item-language-current {
     position: absolute!important;
