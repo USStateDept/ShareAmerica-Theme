@@ -51,7 +51,7 @@ end back up fonts  */
     line-height: 48px;
     font-size: 11px;
 }
-.td-header-style-7 .sf-menu ul .menu-item-language > a {
+.td-header-style-7 .sf-menu .menu-item-language > a {
     padding: 7px 14px 8px 14px;
     font-size: 13px;
     color: #111;
@@ -572,6 +572,9 @@ blockquote.td_box_right {
     margin: 0;
     padding-top: 8px;
 }
+.td-post-template-9 .td-post-featured-image img {
+    margin-bottom: 0;
+}
 
 /* Template 12 adjustment */
 .td-post-template-12 article {
@@ -676,6 +679,7 @@ blockquote.td_box_right {
 }
 .bottomMenu {
     border-right: 1px solid #ccc;
+    margin: 1em 0;
 }
 .bottomMenu ul {
     list-style: none;
@@ -865,6 +869,9 @@ blockquote.td_box_right {
     }
     .td-post-template-10 .wp-caption-text {
         padding: 0;
+    }
+    .td-post-template-10 .td-container .td-pb-row {
+        padding-top: 0;
     }
     .wp-caption-text, .wp-caption-dd {
         padding:0 10px;
