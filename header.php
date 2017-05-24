@@ -46,7 +46,11 @@ window.twttr = (function (d, s, id) {
 <!-- End Facebook Sidebar Share -->
 
 <body <?php body_class() ?> itemscope="itemscope" itemtype="<?php echo td_global::$http_or_https?>://schema.org/WebPage">
-
+    
+    <?php locate_template('parts/menu-mobile.php', true);?>
+    <?php locate_template('parts/search.php', true);?>
+    
+    
     <div id="td-outer-wrap" class="td-theme-wrap">
     <?php //this is closing in the footer.php file ?>
 
