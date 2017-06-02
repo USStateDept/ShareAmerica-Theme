@@ -8,8 +8,8 @@ Version:        2.6.6
 Text Domain:    share
 */
 
-@import url("../Newspaper/style.css");
-
+/*@import url("../Newspaper/style.css");
+*/
 
 /*  ----------------------------------------------------------------------------
     Your custom style.... here :)
@@ -28,11 +28,14 @@ Text Domain:    share
 body {  font-family: 'Ubuntu', sans-serif;}
 end back up fonts  */
 
+
 /* Custom style changes */
 .td-post-template-3 .td-post-title {
-    width:100%;
+    width: 100%;
     padding: 0 20px 9px 20px;
 }
+
+/* Header adjustments */
 .td-header-style-7 .td-header-main-menu {
     padding-right:0;
 }
@@ -43,7 +46,7 @@ end back up fonts  */
     top: -24px
 }
 .td-header-style-7 .sf-menu {
-    margin-top: 0px;
+    margin-top: 0;
     float: left;
 }
 .td-header-style-7 .sf-menu > li > a {
@@ -52,10 +55,12 @@ end back up fonts  */
     font-size: 11px;
 }
 .td-header-style-7 .sf-menu .menu-item-language > a {
-    padding: 7px 14px 8px 14px;
     font-size: 13px;
     color: #111;
     display:block;
+}
+.td-header-style-7 .sf-menu .menu-item-language li > a {
+    padding: 7px 14px 8px 14px;
 }
 .td-header-style-7 .sf-menu a.sf-with-ul {
     padding-right: 22px;
@@ -63,8 +68,16 @@ end back up fonts  */
 .td-header-style-7 .sf-menu .td-icon-menu-down {
     padding-left: 4px;
 }
+.td-header-style-7 .td-affix .sf-menu {
+    max-width: 940px;
+}
+@media (min-width: 768px) and (max-width: 1016px) {
+  .td-header-style-7 .td-affix .sf-menu {
+    max-width: 700px;
+  }
+}
 .td-header-style-7 #td-top-search {
-    top: 0px;
+    top: 0;
 }
 .td-header-style-7 .header-search-wrap .td-drop-down-search {
     top: 48px;
@@ -78,7 +91,7 @@ end back up fonts  */
     padding-right: 0;
 }
 .menu-item-language-current {
-    position: absolute!important;
+    position: absolute !important;
     top: 0;
     right: 48px;
 }
@@ -95,6 +108,69 @@ end back up fonts  */
 .td_module_11 .td-excerpt {
     font-size: 16px;
 }
+
+/* Grid spacing adjustments */
+.wpb_column.vc_column_container.td-pb-span12 {
+    padding-left: 0;
+    padding-right: 0;
+}
+.vc_row {
+    margin-left: 0;
+    margin-right: 0;
+}
+.vc_column_container>.vc_column-inner {
+    padding-left: 0;
+    padding-right: 0;
+}
+.td-sub-footer-container {
+    background-color: #fff;
+    margin-bottom: 94px;
+}
+.td-sub-footer-container .td-container {
+    padding: 20px 40px;
+    background: #222;
+    margin-bottom: 40px;
+}
+.td-scroll-up {
+    position: relative;
+    bottom: -6px;
+    right: 0;
+}
+.td-category-pulldown-filter {
+    display: none;
+}
+.td-post-views {
+    display: none;
+}
+
+/* Mobile nav */
+.td-menu-background:before {
+    background: #f5f5f5;
+}
+.td-mobile-content li a {
+    color: #1e1e1e;
+    border-bottom: 1px solid #e8e8e8;
+}
+.td-mobile-content li > a:hover {
+    background-color: #fafafa;
+}
+.td-mobile-content .td-icon-menu-right {
+    color: #666666;
+    font-size: 16px;
+}
+.td-menu-socials-wrap {
+    background-color: #80a3bc;
+}
+.td-mobile-content ul.sub-menu.submenu-languages {
+    box-shadow: none;
+}
+
+/*Social counter adjustment*/
+.td_social_info {
+    display: none;
+}
+
+/*Mailchimp adjustments*/
 .mc4wp-form-122711 p {
     font-size: 30px !important;
     line-height: 1.25em;
@@ -119,40 +195,12 @@ end back up fonts  */
 .mc4wp-form-122711 input[type=submit] {
     background-color: #80a3bc;
 }
-.td-sub-footer-container {
-    background-color: #fff;
-    margin-bottom: 94px;
-}
-.td-sub-footer-container .td-container {
-    padding: 20px 40px;
-    background: #222;
-    margin-bottom: 40px;
-}
-.td-scroll-up {
-    position: relative;
-    bottom: -6px;
-    right: 0px;
-}
-.td-category-pulldown-filter {
-    display: none;
-}
-.td-post-views {
-    display: none!important;
-}
-
-/*Social counter adjustment*/
-.td_social_info {
-    display: none;
-}
-
-/*Mailchimp adjustments*/
 #mailchimp-top-bar.mctb-big .mctb-bar {
     padding: 16px 9px;
 }
 #mailchimp-top-bar.mctb-big .mctb-close {
     padding: 6px 18px 22px;
 }
-
 
 /* Formidable styles */
 .td-main-sidebar .frm_forms fieldset {
@@ -399,7 +447,6 @@ blockquote.td_box_right {
 }
 .rtl .td-social-but-text {
     padding-left: 0;
-    margin-right: 0;
     padding-right: 10px;
     margin-right: 12px;
 }
@@ -431,7 +478,7 @@ blockquote.td_box_right {
     left: inherit;
 }
 .rtl .td_module_11 .item-details {
-    margin-left: 0px;
+    margin-left: 0;
     margin-right: 350px;
 }
 .rtl .td-subcat-filter {
@@ -649,6 +696,13 @@ blockquote.td_box_right {
 .td-post-template-11 .td-post-featured-image .wp-caption-text {
     color: #fff;
 }
+.td-post-template-10 .td-container .td-pb-row {
+    padding: 0;
+}
+.td-post-template-10 figcaption.wp-caption-text {
+    margin-bottom: 0;
+}
+
 
 /* Fix for TimelineJS issues */
 .tl-slide-content {
@@ -693,12 +747,15 @@ blockquote.td_box_right {
     margin: 1em 0;
 }
 .td-sub-footer-logo {
-    margin: 1em 0;
+    margin: 1.5em 0 1em;
+}
+.td-sub-footer-copy {
+    margin-top: 20px;
 }
 
 /* Blank Landing Page - Wide */
 .blank .td-container-wide, .blank-wide .td-container-wide {
-    width: 85%;
+    width: 100%;
     margin: 0 auto;
 }
 .blank #mailchimp-top-bar, .blank-wide #mailchimp-top-bar {
@@ -855,7 +912,7 @@ blockquote.td_box_right {
         color: #80a3bc !important;
     }
     #mailchimp-top-bar .mctb-email, #mailchimp-top-bar input[type=email] {
-        border-radius:0px;
+        border-radius: 0;
     }
     .bottomMenu {
         border-right: none;
@@ -870,9 +927,7 @@ blockquote.td_box_right {
     .td-post-template-10 .wp-caption-text {
         padding: 0;
     }
-    .td-post-template-10 .td-container .td-pb-row {
-        padding-top: 0;
-    }
+
     .wp-caption-text, .wp-caption-dd {
         padding:0 10px;
     }
