@@ -34,6 +34,15 @@ end back up fonts  */
     width: 100%;
     padding: 0 20px 9px 20px;
 }
+.vc_column_container.td-pb-span6 {
+    width: 50%;
+}
+.vc_column_container.td-pb-span8 {
+    width: 66.66666667%;
+}
+.vc_column_container.td-pb-span4 {
+    width: 33.33333333%;
+}
 
 /* Header adjustments */
 .td-header-style-7 .td-header-main-menu {
