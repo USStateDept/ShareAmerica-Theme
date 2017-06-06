@@ -693,6 +693,20 @@ blockquote.td_box_right {
     -o-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
+.rtl .td-post-template-8 .td-post-title .td-post-date {
+    margin-right: 4px;
+}
+.rtl .td-post-template-8 .td-post-header header .entry-title {
+    text-align: right;
+}
+.rtl .td-stretch-height {
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    -moz-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    -o-transform: translateX(50%);
+    transform: translateX(50%);
+}
 
 /* Fix for captions */
 .td-post-template-3 .td-post-header-holder {
