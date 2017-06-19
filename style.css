@@ -716,7 +716,7 @@ blockquote.td_box_right {
     margin-bottom: 6px;
 }
 .td-post-template-4 .td-post-header-holder {
-    margin-bottom: 18px;
+    margin-bottom: 8px;
 }
 .td-post-template-6 .td-post-header-holder {
     padding: 10px 30px 0 30px;
@@ -734,14 +734,25 @@ blockquote.td_box_right {
     margin-top: 24px;
 }
 .td-post-template-8 .wp-caption-text {
-    margin: 0;
     padding-top: 8px;
 }
 .td-post-template-9 .td-post-featured-image img {
     margin-bottom: 0;
 }
+.td-post-template-4 .td-post-featured-image .entry-thumb {
+    margin-bottom: 0;
+}
 .iframe-class {
     margin-bottom: 26px;
+}
+figure + h2 {
+    margin-top: 0;
+}
+.wpb_text_column figcaption.wp-caption-text {
+    margin-bottom: 26px;
+}
+.td-post-template-9 .td-post-featured-video {
+    margin-bottom: 0;
 }
 
 /* Template 12 adjustment */
@@ -820,16 +831,6 @@ blockquote.td_box_right {
 .td-post-template-10 .td-container .td-pb-row {
     padding: 0;
 }
-figure + h2 {
-    margin-top: 0;
-}
-.wpb_text_column figcaption.wp-caption-text {
-    margin-bottom: 26px;
-}
-.td-post-template-9 .td-post-featured-video {
-    margin-bottom: 0;
-}
-
 
 /* Fix for TimelineJS issues */
 .tl-slide-content {
