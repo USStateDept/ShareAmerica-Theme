@@ -820,11 +820,14 @@ blockquote.td_box_right {
 .td-post-template-10 .td-container .td-pb-row {
     padding: 0;
 }
-/* figcaption.wp-caption-text {
-    margin-bottom: 0;
-} */
+figure + h2 {
+    margin-top: 0;
+}
 .wpb_text_column figcaption.wp-caption-text {
     margin-bottom: 26px;
+}
+.td-post-template-9 .td-post-featured-video {
+    margin-bottom: 0;
 }
 
 
