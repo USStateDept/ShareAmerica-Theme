@@ -39,7 +39,6 @@ add_action( 'wp_enqueue_scripts', 'share_add_scripts' );
 //* Child theme equeued styles
 function share_add_styles() {
   wp_enqueue_style('parent-theme', get_template_directory_uri() .'/style.css');
-  wp_enqueue_style('child-theme', get_stylesheet_directory_uri(), array('parent-theme'));
 
   wp_enqueue_style( 'print-styles', get_stylesheet_directory_uri() . '/print-styles.css', array(), '1.0.0', 'print' );
 }
