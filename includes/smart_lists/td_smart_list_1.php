@@ -95,7 +95,7 @@ class td_smart_list_1 extends td_smart_list {
                             <a class="td-sml-link-to-image" href="' . $first_img_all_info['src'] . '" id="td-sml1-slide_' . $this->nr_slide_on_smart_list . '" data-caption="' . esc_attr($first_img_caption, ENT_QUOTES) . '" ' . $first_img_link_target . ' >
                                 <img src="' . $first_img_info[0] . '" alt="' . esc_attr($first_img_all_info['alt'], ENT_QUOTES) . '" title="' . esc_attr($first_img_all_info['title'], ENT_QUOTES) . '" ' . $srcset_sizes . ' />
                             </a>
-                        </figure>q
+                        </figure>
                         <figcaption class="td-sml-caption"><div>' . $first_img_caption . '</div></figcaption>
                         ';
             }
