@@ -236,3 +236,12 @@ add_action( 'init', 'my_add_excerpts_to_pages' );
 function my_add_excerpts_to_pages() {
      add_post_type_support( 'page', 'excerpt' );
 }
+
+function remove_theme_scripts() {
+  if ( is_page_template('template_blank_page_wide.php') || is_page_template('template_blank_page.php') ) {
+    wp_dequeue_script( 'td-site' );
+    wp_deregister_script( 'td-site' );
+  }
+}
+add_action('wp_print_scripts', 'remove_theme_scripts', 100);
+

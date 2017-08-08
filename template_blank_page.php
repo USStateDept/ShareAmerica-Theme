@@ -8,11 +8,6 @@
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
     <title><?php wp_title( '|', true, 'right' ); bloginfo('url'); ?></title>
     <?php wp_head(); ?>
-    <script type="text/javascript">
-    window.onerror = function(message, url, lineNumber) {
-        return true; // prevents browser error messages due to missing header.
-    };
-    </script> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- We participate in the US government's analytics program. See the data at analytics.usa.gov. -->
     <script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOS&siteplatform=ShareAmerica" id="_fed_an_ua_tag"></script>
