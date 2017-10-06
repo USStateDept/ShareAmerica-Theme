@@ -245,3 +245,41 @@ function remove_theme_scripts() {
 }
 add_action('wp_print_scripts', 'remove_theme_scripts', 100);
 
+
+/**
+ * Require badge generation class
+ *
+ * @since 3.0.6
+ */
+include( get_stylesheet_directory() . '/badge/class-america-badge-generation.php');
+
+/**
+ * Add attachment using the Formidable 'frm_notification_attachment' hook
+ *
+ * @since 3.0.6
+ */
+
+function share_add_attachment( $attachments, $form, $args ) {
+	if ( $form->form_key == 'get_certificate' ) {
+
+		$params = array (
+			'key'				=>  $form->form_key,				// form identifier (i.e. project id used to find config)
+			'metas'			=>  $args['entry']->metas		// formidable metas passed in via $args that hold field values
+		);
+
+		$generator = new America_Badge_Generation ();
+    $attachments[] =  $generator->create_image( $params );
+ }
+  return $attachments;
+}
+
+// Formidable email hooks that enables adding attachments
+add_filter( 'frm_notification_attachment', 'share_add_attachment', 10, 3 );
+
+// Keep email subject from being encode twice
+add_filter('frm_encode_subject', '__return_false');
+
+/*
+// Allow multiple consecutive submissions during image testing
+add_filter( 'frm_time_to_check_duplicates', '__return_false' );
+ */
