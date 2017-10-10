@@ -171,7 +171,7 @@ class America_Badge_Generation {
 	 */
 	private function add_text( &$image,
 	        $text, $x, $y, $color,
-	        $family = 'Futuri Condensed Extra Bold.ttf',  // default font family
+	        $family = 'FuturaCondensed Extra Bold.ttf',  // default font family
 	        $align = 'left',
 	        $size = 50 ) {
 

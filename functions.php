@@ -260,7 +260,7 @@ include( get_stylesheet_directory() . '/badge/class-america-badge-generation.php
  */
 
 function share_add_attachment( $attachments, $form, $args ) {
-	if ( $form->form_key == 'get_certificate' ) {
+	if ( $form->form_key == 'ytili_certificate' ) {
 
 		$params = array (
 			'key'				=>  $form->form_key,				// form identifier (i.e. project id used to find config)

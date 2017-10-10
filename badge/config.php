@@ -52,13 +52,13 @@
  */
 
 return array(
-	'get_certificate' 	=>  array (   					// Form that is sending certificate -- MUST match form key
-		'prefix'					=> 'ylai_certificate_',
-		'src_path'				=> 'images/ylai_certificate_bkgrd.png',
-		'save_path'				=> 'generated-images/',
-		'font'	  				=> 'fonts/Oxygen-Bold.otf',
-		'font_size'				=> 32,
-		'color'						=> '#009bdc',
+	'ytili_certificate' 	=>  array (   					// Form that is sending certificate -- MUST match form key
+		'prefix'					=> 'ytili_certificate_',
+		'src_path'				=> 'images/ytili_certificate_bkgrd.jpg',
+		'save_path'				=> '../../../uploads/sites/1/badges/ytili_certs/',
+		'font'	  				=> 'fonts/RobotoCondensed-Regular.ttf',
+		'font_size'				=> 65,
+		'color'						=> '#085573',
 		'align'						=> 'center',
 		'line_max_chars' 	=> 40,
 		'line_height' 		=> 42,
@@ -66,84 +66,20 @@ return array(
 			array (
 				'content' 		=> 'FIELD',
 				'field_id'		=> 'course_name', 			// course name (formidable field key) -- MUST match
-				'x'		  			=> 549,
-				'y'		  			=> 345
+				'x'		  			=> 550,
+				'y'		  			=> 300
 			),
 			array (
 				'content' 		=> 'FIELD',
 				'field_id'		=> 'full_name_course', 	// Name to appear on certificate (formidable field key)  -- MUST match
-				'x'		  			=> 542,
-				'y'		  			=> 580
+				'x'		  			=> 550,
+				'y'		  			=> 520
 			),
 			array (
 				'content' 		=> date("F j, Y"),      // Date, static field
-				'x'		  			=> 550,
-				'y'		  			=> 680,
-				'font_size' 	=> 18
-			)
-		)
-	),
-	'get_membership_badge' 	=>  array (   					// Form that is sending certificate -- MUST match form key
-		'prefix'					=> 'ylai_membership_card_',
-		'src_path'				=> 'images/ylai_membership_card_bkgrd.jpg',
-		'save_path'				=> 'generated-images/',
-		'font'	  				=> 'fonts/futura-condensed-medium.ttf',
-		'font_size'				=> 70,
-		'color'						=> '#2f78ab',
-		'align'						=> 'center',
-		'line_max_chars' 	=> 40,
-		'line_height' 		=> 80,
-		'text'						=> array (
-			array (
-				'content' 		=> 'FIELD',
-				'field_id'		=> 'full_name', 			// Full name (formidable field key) -- MUST match
-				'x'		  			=> 750,
-				'y'		  			=> 250,
-				'font'				=> 'fonts/Futuri Condensed Extra Bold.ttf'
-			),
-			array (
-				'content' 		=> 'FIELD',
-				'field_id'		=> 'country', 	// Country (formidable field key)  -- MUST match
-				'x'		  			=> 750,
-				'y'		  			=> 350
-			),
-			array (
-				'content' 		=> 'FIELD',      // Year (formidable field key)  -- MUST match
-				'field_id'		=> 'year',
-				'align'				=> 'left',
-				'x'		  			=> 1048,
-				'y'		  			=> 452
-			)
-		)
-	),
-	'get_certificate_es' 	=>  array (   					// Form that is sending certificate -- MUST match form key
-		'prefix'					=> 'ylai_certificate_es_',
-		'src_path'				=> 'images/ylai_certificate_es_bkgrd.jpg',
-		'save_path'				=> 'generated-images/',
-		'font'	  				=> 'fonts/Oxygen-Bold.otf',
-		'font_size'				=> 35,
-		'color'						=> '#009bdc',
-		'align'						=> 'center',
-		'line_max_chars' 	=> 40,
-		'line_height' 		=> 42,
-		'text'						=> array (
-			array (
-				'content' 		=> 'FIELD',
-				'field_id'		=> 'course_name_es', 			// course name (formidable field key) -- MUST match
-				'x'		  			=> 550,
-				'y'		  			=> 345
-			),
-			array (
-				'content' 		=> 'FIELD',
-				'field_id'		=> 'full_name_course_es', 	// Name to appear on certificate (formidable field key)  -- MUST match
-				'x'		  			=> 550,
-				'y'		  			=> 580
-			),
-			array (
-				'content' 		=> date("d/m/Y"),      // Date, static field
-				'x'		  			=> 550,
-				'y'		  			=> 680,
-				'font_size' 	=> 22
+				'x'		  			=> 300,
+				'y'		  			=> 670,
+				'font_size' 	=> 15
 			)
 		)
 	)
