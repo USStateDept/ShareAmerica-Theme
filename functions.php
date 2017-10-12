@@ -25,7 +25,7 @@ function share_add_scripts() {
   // Hide the formidable bottom bar
   wp_enqueue_script( 'formidable-js', get_stylesheet_directory_uri() . '/js/formidable-js.js', array('jquery'), '1.0.0', false );
 
-
+  wp_enqueue_script( 'share-js', get_stylesheet_directory_uri() . '/js/dist/script.js', array());
   // If Timeline plugin is active, load the opacity 0 image fix
   // This fix is necessary because Tagdiv's lazy loading causes photos in the timeline to not display properly.
   // Uses the ready_init: function() in tagdiv_theme.js - if this code is updated, timelinefix.js must be updated.
@@ -283,3 +283,56 @@ add_filter('frm_encode_subject', '__return_false');
 // Allow multiple consecutive submissions during image testing
 add_filter( 'frm_time_to_check_duplicates', '__return_false' );
  */
+
+
+ /**
+   * Validate token data for Course
+   *
+   * @since 3.0.6
+   */
+
+ add_filter('frm_validate_entry', 'check_nonce', 20, 2);
+ function check_nonce( $errors, $values ) {
+
+   include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+   $requiredplugin = 'wp-simple-nonce/wp-simple-nonce.php';
+
+   if ( is_plugin_active($requiredplugin) ) {
+
+     if( $values['form_key'] == 'ytili_certificate' ) {
+
+       $result = WPSimpleNonce::checkNonce($_GET['tokenName'], $_GET['tokenValue']);
+
+       if ( ! $result ) {
+          $errors['my_error'] = 'This certificate page has expired. Please return to the quiz and complete it again to generate your certificate.';
+       }
+
+     }
+
+   }
+
+   return $errors;
+ }
+
+ /**
+   * Send token data for Course
+   *
+   * @since 3.0.6
+   */
+
+ function localize_nonce() {
+
+   include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+   $requiredplugin = 'wp-simple-nonce/wp-simple-nonce.php';
+
+   if ( is_plugin_active($requiredplugin) ) {
+     global $post;
+
+     if ( is_a( $post, 'WP_Post' ) && has_shortcode( $post->post_content, 'course' ) ) {
+       $nonce = WPSimpleNonce::init( 'certificate', 2592000, true );
+       wp_localize_script( 'share-js', 'token', $nonce );
+     }
+   }
+ }
+
+ add_action('wp_enqueue_scripts', 'localize_nonce');
