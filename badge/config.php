@@ -57,7 +57,7 @@ return array(
 		'src_path'				=> 'images/ytili_certificate_bkgrd.jpg',
 		'save_path'				=> '../../../uploads/sites/1/badges/ytili_certs/',
 		'font'	  				=> 'fonts/RobotoCondensed-Regular.ttf',
-		'font_size'				=> 65,
+		'font_size'				=> 62,
 		'color'						=> '#085573',
 		'align'						=> 'center',
 		'line_max_chars' 	=> 40,
@@ -67,7 +67,7 @@ return array(
 				'content' 		=> 'FIELD',
 				'field_id'		=> 'course_name', 			// course name (formidable field key) -- MUST match
 				'x'		  			=> 550,
-				'y'		  			=> 300
+				'y'		  			=> 270
 			),
 			array (
 				'content' 		=> 'FIELD',
