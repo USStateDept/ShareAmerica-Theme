@@ -57,11 +57,11 @@ return array(
 		'src_path'				=> 'images/ytili_certificate_bkgrd.jpg',
 		'save_path'				=> '../../../uploads/sites/1/badges/ytili_certs/',
 		'font'	  				=> 'fonts/RobotoCondensed-Regular.ttf',
-		'font_size'				=> 62,
+		'font_size'				=> 60,
 		'color'						=> '#085573',
 		'align'						=> 'center',
 		'line_max_chars' 	=> 40,
-		'line_height' 		=> 42,
+		'line_height' 		=> 70,
 		'text'						=> array (
 			array (
 				'content' 		=> 'FIELD',
