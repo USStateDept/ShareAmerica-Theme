@@ -19,6 +19,10 @@ $featured_image_info = td_util::attachment_get_full_info($featured_image_id, $th
         <div class="td-post-header-holder td-image-gradient">
             <?php echo $td_mod_single->get_image('td_1068x0'); ?>
 
+            <div class="sm-screen wp-caption-text">
+                <?php echo $featured_image_info['caption'];?>
+            </div>
+
             <header class="td-post-title">
                 <?php echo $td_mod_single->get_category(); ?>
                 <?php echo $td_mod_single->get_title();?>
@@ -38,7 +42,7 @@ $featured_image_info = td_util::attachment_get_full_info($featured_image_id, $th
 
             </header>
         </div>
-        <div class="wp-caption-text">
+        <div class="lg-screen wp-caption-text">
           <?php echo $featured_image_info['caption'];?>
         </div>
     </div>

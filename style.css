@@ -750,6 +750,25 @@ blockquote.td_box_right {
 .td-post-template-4 .td-post-header-holder {
     margin-bottom: 8px;
 }
+@media (max-width: 767px) {
+    .td-post-template-4 .lg-screen.wp-caption-text {
+        display: none;
+    }
+}
+.td-post-template-4 .sm-screen.wp-caption-text {
+    display: block;
+    margin-bottom: 0;
+}
+@media (min-width: 768px) {
+    .td-post-template-4 .sm-screen.wp-caption-text {
+        display: none;
+    }
+}
+@media (max-width: 767px) {
+    .td-post-template-4 .td-post-featured-image {
+        margin-bottom: 0;
+    }
+}
 .td-post-template-6 .td-post-header-holder {
     padding: 10px 30px 0 30px;
 }
