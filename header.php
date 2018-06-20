@@ -66,12 +66,29 @@ window.twttr = (function (d, s, id) {
   (function() {
     var categoryList = dataLayer[0].pageCategory;
     var tagList = dataLayer[0].pageAttributes;
-    var sectionList = categoryList.concat(tagList);
+
+    if ( categoryList !== undefined && tagList !== undefined) {
+      sectionList = categoryList.concat(tagList);
+    } else if ( categoryList === undefined && tagList !== undefined ) {
+      sectionList = tagList;
+    } else if ( categoryList !== undefined && tagList === undefined ) {
+      sectionList = categoryList;
+    } else {
+      sectionList = 'none';
+    }
+
+    var authorMeta = document.querySelector('meta[name="author"]');
+
+    if ( authorMeta === null ) {
+      author = 'none';
+    } else {
+      author = authorMeta.getAttribute("content");
+    }
 
     /** CONFIGURATION START **/
     var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
     _sf_async_config.sections = sectionList;
-    _sf_async_config.authors = document.querySelector('meta[name="author"]').getAttribute("content");
+    _sf_async_config.authors = author;
     var _cbq = window._cbq = (window._cbq || []);
     _cbq.push(['_acct', 'anon']);
     /** CONFIGURATION END **/
