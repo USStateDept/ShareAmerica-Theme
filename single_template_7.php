@@ -49,7 +49,15 @@ if (!empty($td_post_featured_image)) {
 
 	        <div class="td-post-header-holder">
 
-		        <div class="td-parallax-header">
+                <?php
+                /**
+                 * Replace default .td-parallax-header
+                 * with .td-parallax-header-no-fade to
+                 * prevent header fade on scroll
+                 * (IIPNET-102)
+                 */
+                ?>
+		        <div class="td-parallax-header-no-fade">
 
 	                <header class="td-post-title">
 
