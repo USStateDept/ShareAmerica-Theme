@@ -1,0 +1,15 @@
+# Changelog
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
+and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+
+## [3.0.14] - 2018-07-12
+### Added
+- Changelog
+- Styling for YTILI courses for better compatibility with America API Client version 2.2.13
+
+## [3.0.13] - 2018-07-11
+### Changed
+- Template 7 parallax header `class` value to prevent fade on scroll
+- Template 7 header text content styles for improved visibility
