@@ -159,7 +159,7 @@ function feedFilter($query) {
     add_filter( 'get_enclosed', 'delete_enclosure' );
     add_filter( 'rss_enclosure', 'delete_enclosure' );
     add_filter( 'atom_enclosure', 'delete_enclosure' );
-    add_filter('rss2_item', 'feedContentFilter');
+    add_filter( 'rss2_item', 'feedContentFilter' );
   }
 
   return $query;
@@ -171,28 +171,6 @@ function share_locale() {
     load_child_theme_textdomain( 'shareamerica', get_stylesheet_directory() . '/languages' );
 }
 add_action( 'after_setup_theme', 'share_locale' );
-
-// Enable multiple language support for the Mailchimp Bar
-
-function share_filter_mctb_list( $default_list ) {
-   $language_lists = array(
-      'en' => '294a7b0e3a',
-      'zh-hans' => 'a8cc0bf55f',
-      'fr' => '7b0c8f6e2a',
-      'ru' => '954cd6a6fe',
-      'es' => '33948f3033',
-      'ar' => 'ae762c96e5',
-      'id' => '59d01344c7',
-      'pt-br' => 'c27054beb5',
-      'fa' => 'f9e72cb897'
-   );
-  $language_code = defined( 'ICL_LANGUAGE_CODE' ) ? strtolower( ICL_LANGUAGE_CODE ) : '';
-  if( isset( $language_lists[ $language_code] ) ) {
-      return $language_lists[ $language_code ];
-  }
-  return $default_list;
-}
-add_filter( 'mctb_mailchimp_list', 'share_filter_mctb_list' );
 
 function addUploadMimes($mimes) {
 

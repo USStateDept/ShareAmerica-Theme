@@ -4,7 +4,7 @@ Theme URI: 		  http://share.america.gov
 Description:    Child theme of the Newspaper theme
 Author:         Office of Design, Bureau of International Information Programs
 Template:       Newspaper
-Version:        3.0.15
+Version:        3.0.16
 Text Domain:    share
 */
 
@@ -117,8 +117,11 @@ end back up fonts  */
     max-width: 700px;
   }
 }
-.td-header-style-7 #td-top-search {
+.td-header-style-7 .header-search-wrap {
     top: 0;
+}
+.td-header-style-7 .header-search-wrap #td-header-search-button .td-icon-search {
+  line-height: 48px;
 }
 .td-header-style-7 .header-search-wrap .td-drop-down-search {
     top: 48px;
@@ -360,6 +363,7 @@ end back up fonts  */
     float: right;
     height: 68px;
     width: 82px;
+    transform: translateY(-80px);
 }
 .td-footer-wrapper .frm_forms input[type=submit] {
     margin: 0;
@@ -374,6 +378,15 @@ end back up fonts  */
     line-height: 80px;
     font-size: 24px;
     cursor: pointer;
+    transform: translateY(-80px);
+}
+@media screen and (max-width: 980px) {
+  .td-footer-wrapper .formidable-close {
+    transform: none;
+  }
+  .td-footer-wrapper .frm_forms .frm_submit {
+    transform: none;
+  }
 }
 .td-footer-wrapper .formidable-close:hover {
     color: #80a3bc;
@@ -474,7 +487,7 @@ blockquote.td_box_right {
 .rtl .td-header-style-7 .sf-menu {
     float: right;
 }
-.rtl .td-header-style-7 #td-top-search {
+.rtl .td-header-style-7 .header-search-wrap {
     left: 0;
     right: inherit;
 }
