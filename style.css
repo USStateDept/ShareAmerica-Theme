@@ -326,10 +326,12 @@ end back up fonts  */
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 100%;
     z-index: 9999;
     background: #333;
     display: none;
+}
+.td-footer-wrapper.td-container-wrap {
+    width: 100%;
 }
 .td-footer-wrapper .widget_frm_show_form {
     margin-bottom: 0;

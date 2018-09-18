@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [3.0.16]
 ## Changed
 - Updated to styles to work with update of parent theme (Newspaper 9.0.1)
+- Tweak signup bar to remain full width when utilizing post style template 8
 - Remove multi-language support for no longer used MailChimp Bar plugin
 
 ## [3.0.15] - 2018-07-25
