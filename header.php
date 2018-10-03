@@ -13,22 +13,7 @@
     wp_head(); /** we hook up in wp_booster @see td_wp_booster_functions::hook_wp_head */
     ?>
     <script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOS&siteplatform=ShareAmerica" id="_fed_an_ua_tag"></script>
-
-    <!-- Chartbeat head tag -->
-    <script type="text/javascript">
-      (function() {
-        /** CONFIGURATION START **/
-        var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-        _sf_async_config.uid = 65772;
-        _sf_async_config.domain = 'share.america.gov';
-        _sf_async_config.useCanonical = true;
-        _sf_async_config.useCanonicalDomain = true;
-        /** CONFIGURATION END **/
-      })();
-    </script>
-
-    <script async="true" src="//static.chartbeat.com/js/chartbeat_mab.js"></script>
-    <!-- End Chartbeat head tag -->
+    
 </head>
 
 <!-- Google Tag Manager -->
@@ -61,52 +46,9 @@ window.twttr = (function (d, s, id) {
 </script>
 <!-- End Facebook Sidebar Share -->
 
-<!-- Chartbeat body tag -->
-<script type="text/javascript">
-  (function() {
-    var categoryList = dataLayer[0].pageCategory;
-    var tagList = dataLayer[0].pageAttributes;
-
-    if ( categoryList !== undefined && tagList !== undefined) {
-      sectionList = categoryList.concat(tagList);
-    } else if ( categoryList === undefined && tagList !== undefined ) {
-      sectionList = tagList;
-    } else if ( categoryList !== undefined && tagList === undefined ) {
-      sectionList = categoryList;
-    } else {
-      sectionList = 'none';
-    }
-
-    var authorMeta = document.querySelector('meta[name="author"]');
-
-    if ( authorMeta === null ) {
-      author = 'none';
-    } else {
-      author = authorMeta.getAttribute("content");
-    }
-
-    /** CONFIGURATION START **/
-    var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
-    _sf_async_config.sections = sectionList;
-    _sf_async_config.authors = author;
-    var _cbq = window._cbq = (window._cbq || []);
-    _cbq.push(['_acct', 'anon']);
-    /** CONFIGURATION END **/
-    function loadChartbeat() {
-        var e = document.createElement('script');
-        var n = document.getElementsByTagName('script')[0];
-        e.type = 'text/javascript';
-        e.async = true;
-        e.src = '//static.chartbeat.com/js/chartbeat_video.js';;
-        n.parentNode.insertBefore(e, n);
-    }
-    loadChartbeat();
-  })();
-</script>
-<!-- End Chartbeat body tag -->
-
 <body <?php body_class() ?> itemscope="itemscope" itemtype="<?php echo td_global::$http_or_https?>://schema.org/WebPage">
 
+    <?php do_action('after_body_open_tag'); ?>
     <?php locate_template('parts/menu-mobile.php', true);?>
     <?php locate_template('parts/search.php', true);?>
 

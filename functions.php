@@ -314,3 +314,83 @@ add_filter( 'frm_time_to_check_duplicates', '__return_false' );
  }
 
  add_action('wp_enqueue_scripts', 'localize_nonce');
+
+function add_chartbeat_body_code() {
+
+  if ( ! is_admin_bar_showing() ) {
+    
+    ?> 
+      <!-- Chartbeat body tag -->
+      <script type="text/javascript">
+        (function() {
+          var categoryList = dataLayer[0].pageCategory;
+          var tagList = dataLayer[0].pageAttributes;
+      
+          if ( categoryList !== undefined && tagList !== undefined) {
+            sectionList = categoryList.concat(tagList);
+          } else if ( categoryList === undefined && tagList !== undefined ) {
+            sectionList = tagList;
+          } else if ( categoryList !== undefined && tagList === undefined ) {
+            sectionList = categoryList;
+          } else {
+            sectionList = 'none';
+          }
+      
+          var authorMeta = document.querySelector('meta[name="author"]');
+      
+          if ( authorMeta === null ) {
+            author = 'none';
+          } else {
+            author = authorMeta.getAttribute("content");
+          }
+      
+          /** CONFIGURATION START **/
+          var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
+          _sf_async_config.sections = sectionList;
+          _sf_async_config.authors = author;
+          var _cbq = window._cbq = (window._cbq || []);
+          _cbq.push(['_acct', 'anon']);
+          /** CONFIGURATION END **/
+          function loadChartbeat() {
+              var e = document.createElement('script');
+              var n = document.getElementsByTagName('script')[0];
+              e.type = 'text/javascript';
+              e.async = true;
+              e.src = '//static.chartbeat.com/js/chartbeat_video.js';;
+              n.parentNode.insertBefore(e, n);
+          }
+          loadChartbeat();
+        })();
+      </script>
+      <!-- End Chartbeat body tag -->
+    <?php
+  }
+}
+
+add_action('after_body_open_tag', 'add_chartbeat_body_code');
+
+function add_chartbeat_head_code() {
+
+  if ( ! is_admin_bar_showing() ) {
+    
+    ?>
+      <!-- Chartbeat head tag -->
+      <script type="text/javascript">
+        (function() {
+          /** CONFIGURATION START **/
+          var _sf_async_config = window._sf_async_config = (window._sf_async_config || {});
+          _sf_async_config.uid = 65772;
+          _sf_async_config.domain = 'share.america.gov';
+          _sf_async_config.useCanonical = true;
+          _sf_async_config.useCanonicalDomain = true;
+          /** CONFIGURATION END **/
+        })();
+      </script>
+
+      <script async="true" src="//static.chartbeat.com/js/chartbeat_mab.js"></script>
+      <!-- End Chartbeat head tag -->
+    <?php
+  }
+}
+
+add_action('wp_head', 'add_chartbeat_head_code');
