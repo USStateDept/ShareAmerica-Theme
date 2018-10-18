@@ -1185,14 +1185,14 @@ figure + h2 {
 
     /*Custom CSS Sidebars*/
     [class*="share-sidebar-c-"] {
-        border-left: none;
+        border-left: none !important;
         margin-top: 0;
         padding-left: 0;
     }
     
      [class*="share-sidebar-t-"] {
         margin-top: 0;
-        border-left: none;
+        border-left: none !important;
         border-top: 1px solid black;
         padding-top: 30px !important;
         padding-left: 0;
