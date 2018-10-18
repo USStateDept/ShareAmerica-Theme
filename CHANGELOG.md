@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [3.0.18]
+## Added
+- Created styles to format a sidebar in a WPBakery Span
+- Adjusted padding in WPBakery Spans for Mobile
+## Changed
+- Updated SmartList Styles to Remove the Numbers
+
+
 ## [3.0.16]
 ## Changed
 - Updated to styles to work with update of parent theme (Newspaper 9.0.1)
