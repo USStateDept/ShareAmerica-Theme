@@ -74,7 +74,6 @@ class td_smart_list_5 extends td_smart_list {
                     $buffy .= '
                     <div class="td-sml-figure">
                             <figure class="td-slide-smart-list-figure td-slide-smart-list-5' . $smart_list_lightbox . '">
-                            <span class="td-sml-current-item-nr">' . $current_item_number. '</span>
                                 <a class="td-sml-link-to-image" href="' . $first_img_all_info['src'] . '" data-caption="' . esc_attr($first_img_caption, ENT_QUOTES) . '" ' . $first_img_link_target . ' >
                                     <img src="' . $first_img_info[0] . '" alt="' . esc_attr($first_img_all_info['alt'], ENT_QUOTES) . '" title="' . esc_attr($first_img_all_info['title'], ENT_QUOTES) . '" ' . $srcset_sizes . '/>
                                 </a>

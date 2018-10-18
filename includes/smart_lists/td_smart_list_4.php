@@ -73,7 +73,7 @@ class td_smart_list_4 extends td_smart_list {
 
                 //adding description
                 if(!empty($item_array['description'])) {
-                    $buffy .= '<div class="td-number-and-title"><h2><span class="td-sml-current-item-nr">' . $current_item_number. '</span><span class="td-sml-current-item-title">' . $smart_list_4_title . '</span></h2></div>
+                    $buffy .= '<div class="td-number-and-title"><h2><span class="td-sml-current-item-title">' . $smart_list_4_title . '</span></h2></div>
                               <span class="td-sml-description">' . $item_array['description'] . '</span>';
                 }
 

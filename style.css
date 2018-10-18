@@ -835,6 +835,20 @@ figure + h2 {
 .td_smart_list_1 .td-sml-description {
     margin-top: 4px;
 }
+.td_smart_list_2 .td-sml-current-item-title {
+    padding-left: 0;
+  }
+.td_smart_list_3 .td-number-and-title {
+    padding-left: 0;
+  }
+.td_smart_list_4 .td-sml-current-item-title {
+    padding-left: 0;
+  }
+.td_smart_list_6 .td-sml-current-item-title {
+    padding-left: 0;
+  }
+  
+/* Smart List Adjustments - RTL */
 .rtl .td-left-smart-list {
     left: inherit;
     right: 0;
