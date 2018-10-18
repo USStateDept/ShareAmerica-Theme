@@ -1098,6 +1098,9 @@ figure + h2 {
     .td-header-wrap .td-header-menu-wrap-full, .td-header-wrap .td-header-menu-wrap, .td-header-wrap .td-header-main-menu {
         background-color: #fff !important;
     }
+    .td-pb-row [class*="td-pb-span"] {
+        width: 100% !important;
+    }
     .menu-item-language-current {
         position: relative!important;
         right: inherit;
