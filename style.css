@@ -1186,16 +1186,16 @@ figure + h2 {
     /*Custom CSS Sidebars*/
     [class*="share-sidebar-c-"] {
         border-left: none !important;
-        margin-top: 0;
-        padding-left: 0;
+        margin-top: 0 !important;
+        padding-left: 0 !important;
     }
     
      [class*="share-sidebar-t-"] {
-        margin-top: 0;
+        margin-top: 0 !important;
         border-left: none !important;
         border-top: 1px solid black;
         padding-top: 30px !important;
-        padding-left: 0;
+        padding-left: 0 !important;
      }
    
    }
