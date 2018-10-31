@@ -4,15 +4,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [3.0.18]
+## [3.0.19] - 2018-10-31
+## Added
+- Frontend support for IIP Second Author plugin
+
+## [3.0.18] - 2018-10-18
 ## Added
 - Created styles to format a sidebar in a WPBakery Span
 - Adjusted padding in WPBakery Spans for Mobile
 ## Changed
 - Updated SmartList Styles to Remove the Numbers
 
+## [3.0.17] - 2018-10-03
+## Changed
+- Add check so Chartbeat code does not fire on admin pages
 
-## [3.0.16]
+## [3.0.16] - 2018-09-18
 ## Changed
 - Updated to styles to work with update of parent theme (Newspaper 9.0.1)
 - Tweak signup bar to remain full width when utilizing post style template 8
