@@ -62,7 +62,7 @@ if (td_util::get_option('tds_footer') != 'no') {
               <div class="td-pb-span6 td-sub-footer-copy">
                   <span>
                   <?php // Hard coded the Footer and added it to the en_US.pot file because WPML String translation isn't finding it from the Theme Panel
-                      _e('This site is managed by the <a href="http://www.state.gov/r/iip">Bureau of International Information Programs</a> within the  <a href="http://www.state.gov">U.S. Department of State</a>. External links to other Internet sites should not be construed as an endorsement of the views or privacy policies contained therein.', 'shareamerica');
+                      _e('This site is managed by the <a href="https://www.state.gov/bureaus-offices/under-secretary-for-public-diplomacy-and-public-affairs/bureau-of-global-public-affairs/">Bureau of Global Public Affairs</a> within the  <a href="http://www.state.gov">U.S. Department of State</a>. External links to other Internet sites should not be construed as an endorsement of the views or privacy policies contained therein.', 'shareamerica');
                   ?>
                   </span>
               </div>
