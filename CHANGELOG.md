@@ -5,6 +5,12 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [3.0.24] - 2019.07.29
+
+**Fixed:**
+
+- Add right to left styling for sidebar border
+
 ## [3.0.23] - 2019.07.22
 
 **Changed:**
