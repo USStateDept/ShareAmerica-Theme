@@ -4,7 +4,7 @@ Theme URI: 		  http://share.america.gov
 Description:    Child theme of the Newspaper theme
 Author:         Office of Design, Bureau of International Information Programs
 Template:       Newspaper
-Version:        3.0.24
+Version:        3.0.25
 Text Domain:    share
 */
 
@@ -134,6 +134,7 @@ end back up fonts  */
     max-width: 700px;
   }
 }
+
 .td-header-style-7 .header-search-wrap {
   top: 0;
 }
@@ -1362,4 +1363,117 @@ figure + h2 {
 }
 .share-sidebar-t-12 {
   margin-top: 8em;
+}
+
+.td-header-style-7 .td-affix .sf-menu-media {
+  max-width: 700px;
+}
+
+.menu-item-subscribe-position {
+  position: absolute !important;
+  top: 0;
+  right: 136px;
+}
+
+.td-header-style-7 .sf-menu .menu-item-subscribe > a {
+  font-size: 13px;
+  color: #111;
+  display: block;
+  padding-right: 22px;
+}
+
+.sf-menu .menu-item-subscribe > a > i {
+  position: absolute;
+  top: 50%;
+  margin-top: -4px;
+  padding-left: 4px;
+  font-size: 9.6px;
+}
+
+/* For Subscribe button items in Footer */
+.td-footer-wrapper.subscribeActive {
+  display: inline-block !important;
+  height: 100%;
+  transition: height 1s;
+  background: rgba(51,51,51,.95);
+}
+
+.subscribeActive > .td-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.subscribeActive > .td-icon-menu-down {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 18pt;
+  cursor: pointer;
+}
+
+.subscribeActive .frm_forms .fa-times-circle-o {
+  display: none;
+}
+
+.subscribeActive .frm_forms .frm_fields_container {
+  text-align: center;
+}
+
+.subscribeActive .frm_forms fieldset {
+  line-height: 20px;
+}
+
+.subscribeActive .frm_forms .frm_description {
+  width: 100%;
+}
+
+.subscribeActive .frm_forms .frm_description p {
+  display: block !important;
+  text-align: center;
+}
+
+.subscribeActive .frm_forms #frm_field_68_container {
+  position: relative !important;
+  display: inline-block;
+  right: 0 !important;
+}
+
+.subscribeActive .frm_forms .frm_submit {
+  float: none;
+  transform: translateY(0);
+}
+
+@media (max-width: 979px) {
+  .subscribeActive .frm_forms #frm_field_68_container {
+      float: none;
+      width: 350px;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-item-subscribe-position {
+      position: relative !important;
+      right: 0;
+  }
+
+  .td-mobile-content .fa {
+      position: absolute;
+      top: 15px;
+      right: 5px;
+      margin-right: 0;
+  }
+
+  .subscribeActive .frm_forms .frm_description {
+      padding-left: 0;
+  }
+
+  .subscribeActive .frm_forms .frm_description p {
+      text-align: center;
+  }
+
+  .menu-item-subscribe-position  > a {
+      font-size: 21px !important;
+  }
 }

@@ -25,6 +25,9 @@ function share_add_scripts() {
   // Hide the formidable bottom bar
   wp_enqueue_script( 'formidable-js', get_stylesheet_directory_uri() . '/js/formidable-js.js', array('jquery'), '1.0.0', false );
 
+  // Subscribe button functionality
+  wp_enqueue_script( 'subscribe-js', get_stylesheet_directory_uri() . '/js/subscribe-js.js', array('jquery'), '1.0.1', false );
+
   wp_enqueue_script( 'share-js', get_stylesheet_directory_uri() . '/js/script.js', array());
   // If Timeline plugin is active, load the opacity 0 image fix
   // This fix is necessary because Tagdiv's lazy loading causes photos in the timeline to not display properly.
@@ -394,3 +397,16 @@ function add_chartbeat_head_code() {
 }
 
 add_action('wp_head', 'add_chartbeat_head_code');
+
+// Adding Subscribe menu item
+function new_nav_menu_items( $items, $args ) {
+  
+  if ( $args->theme_location == 'header-menu') {
+    $subscribelink .= '<li class="menu-item-subscribe menu-item-subscribe-position menu-item"><a href="' . home_url( '/' ) . '">' . __('Subscribe') . '<i class="fa fa-envelope-open-o" aria-hidden="true"></i></a></li>';
+  
+    // add the home link to the end of the menu
+    $items = $items . $subscribelink;
+  }
+  return $items;
+}
+add_filter( 'wp_nav_menu_items', 'new_nav_menu_items', 10, 2 );
