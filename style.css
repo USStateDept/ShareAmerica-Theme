@@ -470,18 +470,37 @@ end back up fonts  */
   left: 0;
 }
 
-/* Hide Urdu */
-html[lang="ur"] .td-main-sidebar .widget_text_icl,
+/* Hide newsleter signups from languages missing form (Farsi, Indonesian, Urdu) */
+html[lang="fa-IR"] .td-main-sidebar .widget_text_icl,
+html[lang="he-IL"] .td-main-sidebar .widget_text_icl,
 html[lang="id-ID"] .td-main-sidebar .widget_text_icl,
-html[lang="fa-IR"] .td-main-sidebar .widget_text_icl {
+html[lang="ja"] .td-main-sidebar .widget_text_icl,
+html[lang="ko-KR"] .td-main-sidebar .widget_text_icl,
+html[lang="tr"] .td-main-sidebar .widget_text_icl,
+html[lang="ur"] .td-main-sidebar .widget_text_icl,
+html[lang="vi"] .td-main-sidebar .widget_text_icl {
   display: none;
 }
-html[lang="ur"] .td-footer-wrapper,
+html[lang="fa-IR"] .td-footer-wrapper,
+html[lang="he-IL"] .td-footer-wrapper,
 html[lang="id-ID"] .td-footer-wrapper,
-html[lang="fa-IR"] .td-footer-wrapper {
+html[lang="ja"] .td-footer-wrapper,
+html[lang="ko-KR"] .td-footer-wrapper,
+html[lang="tr"] .td-footer-wrapper,
+html[lang="ur"] .td-footer-wrapper,
+html[lang="vi"] .td-footer-wrapper {
   display: none !important;
 }
-
+html[lang="fa-IR"] .menu-item-subscribe,
+html[lang="he-IL"] .menu-item-subscribe,
+html[lang="id-ID"] .menu-item-subscribe,
+html[lang="ja"] .menu-item-subscribe,
+html[lang="ko-KR"] .menu-item-subscribe,
+html[lang="tr"] .menu-item-subscribe,
+html[lang="ur"] .menu-item-subscribe,
+html[lang="vi"] .menu-item-subscribe {
+  display: none;
+}
 /* Pull quote style changes */
 blockquote.td_quote_box {
   border-color: #343c6c !important;
