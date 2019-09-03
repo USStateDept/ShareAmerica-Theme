@@ -26,7 +26,7 @@ function share_add_scripts() {
   wp_enqueue_script( 'formidable-js', get_stylesheet_directory_uri() . '/js/formidable-js.js', array('jquery'), '1.0.0', false );
 
   // Subscribe button functionality
-  wp_enqueue_script( 'subscribe-js', get_stylesheet_directory_uri() . '/js/subscribe-js.js', array('jquery'), '1.0.1', false );
+  wp_enqueue_script( 'subscribe-js', get_stylesheet_directory_uri() . '/js/subscribe-js.js', array(), '1.0.1', false );
 
   wp_enqueue_script( 'share-js', get_stylesheet_directory_uri() . '/js/script.js', array());
   // If Timeline plugin is active, load the opacity 0 image fix
