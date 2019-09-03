@@ -1391,7 +1391,7 @@ figure + h2 {
 .menu-item-subscribe-position {
   position: absolute !important;
   top: 0;
-  right: 136px;
+  right: 147px;
 }
 
 .rtl .menu-item-subscribe-position {
@@ -1400,7 +1400,7 @@ figure + h2 {
 
 @media screen and (min-width: 768px) {
   .rtl .menu-item-subscribe-position {
-    left: 136px;
+    left: 147px;
   }
 }
 
