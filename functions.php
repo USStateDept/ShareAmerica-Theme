@@ -394,3 +394,11 @@ function add_chartbeat_head_code() {
 }
 
 add_action('wp_head', 'add_chartbeat_head_code');
+
+add_action( 'after_setup_theme', 'add_theme_posts_format_image', 11 );
+function add_theme_posts_format_image(){
+ add_theme_support( 'post-formats', array(
+    'image',
+    'video',
+    ) );
+}

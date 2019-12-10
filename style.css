@@ -1294,3 +1294,11 @@ figure + h2 {
 .share-sidebar-t-8 {margin-top: 8em;}
 .share-sidebar-t-10 {margin-top: 6em;}
 .share-sidebar-t-12 {margin-top: 8em;}
+
+.post-format-image .td-meta-info-container {
+    display: none;
+}
+  
+.post-format-image a:before {
+    background: none !important;
+}
