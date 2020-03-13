@@ -25,13 +25,12 @@ if($loop_sidebar_position == 'sidebar_left') {
 $current_tag_name = single_tag_title( '', false );
 
 //Simple function to add a banner if Tag = Coronavirus
-function coronavirus_banner() {
-    global $current_tag_name;
-    if ($current_tag_name == "coronavirus" || $current_tag_name == "冠状病毒") {
+function coronavirus_banner($tag_name) {
+    if ($tag_name === "coronavirus" || $tag_name === "冠状病毒") {
         ?>
         <div style="max-width:610px; min-height:46px; background:#d8e7f0; margin: 0 0 65px 0;">
             <div style="transform: translateY(50%); font-weight: bold; text-align: center;">
-                <span><?php  _e('Latest news from the CDC on Coronavirus Disease 2019 (COVID-19)L', 'covid-banner-text'); ?></span>
+                <span><?php  _e('Latest news from the CDC on Coronavirus Disease 2019 (COVID-19)', 'covid-banner-text'); ?></span>
                 <a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html" style="color: black;">
                     <span style="vertical-align: middle; font-size: 20pt; padding-left: 8px;">
                     <i class="fa fa-external-link" aria-hidden="true"></i>
@@ -59,9 +58,9 @@ function coronavirus_banner() {
                             <div class="td-ss-main-content">
                                 <div class="td-page-header">
                                     <h1 class="entry-title td-page-title">
-                                        <span><?php echo __td('Tag', TD_THEME_NAME);?>: <?php /* echo $current_tag_name */ ?></span>
+                                        <span><?php echo __td('Tag', TD_THEME_NAME);?>: <?php echo $current_tag_name ?></span>
                                     </h1>
-                                    <?php coronavirus_banner(); ?>
+                                    <?php coronavirus_banner($current_tag_name); ?>
                                 </div>
                                 <?php
                                 $td_tag_description = tag_description();
@@ -93,7 +92,7 @@ function coronavirus_banner() {
                                     <?php /*<a itemprop="url" href="<?php echo get_tag_link(get_query_var('tag_id'));?>" rel="bookmark" title="<?php echo __td('Posts in ') . $current_tag_name?>">Tag: <?php echo $current_tag_name ?></a>*/?>
                                     <span><?php echo __td('Tag', TD_THEME_NAME);?>: <?php echo $current_tag_name ?></span>
                                 </h1>
-                                <?php coronavirus_banner(); ?>
+                                <?php coronavirus_banner($current_tag_name); ?>
                             </div>
 
                             <?php
@@ -126,7 +125,7 @@ function coronavirus_banner() {
                                     <?php /*<a itemprop="url" href="<?php echo get_tag_link(get_query_var('tag_id'));?>" rel="bookmark" title="<?php echo __td('Posts in ') . $current_tag_name?>"><?php echo $current_tag_name ?></a>*/?>
                                     <span><?php echo ucwords( $current_tag_name ) ?></span>
                                 </h1>
-                                <?php coronavirus_banner(); ?>
+                                <?php coronavirus_banner($current_tag_name); ?>
                             </div>
                             <?php
 
