@@ -26,18 +26,19 @@ $current_tag_name = single_tag_title( '', false );
 
 //Simple function to add a banner if Tag = Coronavirus
 function coronavirus_banner($tag_name) {
-    $language_locale = wpml_get_language_information($post_id)['locale'];
-    $cdc_url = '';
-    switch ($language_locale) {
-        case es_ES:
-            $cdc_url = 'https://www.cdc.gov/coronavirus/2019-ncov/index-sp.html';
-            break;
-        case zh_CN:
-            $cdc_url = 'https://www.cdc.gov/coronavirus/2019-ncov/index-Chinese.html';
-            break;
-        default:
-        $cdc_url = 'https://www.cdc.gov/coronavirus/2019-ncov/index.html';
-    }
+  $current_lang = apply_filters( 'wpml_current_language', null );
+
+  $cdc_url = '';
+  switch ($current_lang) {
+    case 'es':
+      $cdc_url = 'https://www.cdc.gov/coronavirus/2019-ncov/index-sp.html';
+      break;
+    case 'zh-hans':
+      $cdc_url = 'https://www.cdc.gov/coronavirus/2019-ncov/index-Chinese.html';
+      break;
+    default:
+      $cdc_url = 'https://www.cdc.gov/coronavirus/2019-ncov/index.html';
+  }
     
     if ($tag_name === "coronavirus" || $tag_name === "فيروس كورونا" || $tag_name === "冠状病毒" || $tag_name === "Коронавирус" || $tag_name === "کورونا وائرس") {
         ?>
