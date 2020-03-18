@@ -26,16 +26,32 @@ $current_tag_name = single_tag_title( '', false );
 
 //Simple function to add a banner if Tag = Coronavirus
 function coronavirus_banner($tag_name) {
-    if ($tag_name === "coronavirus" || $tag_name === "冠状病毒") {
+  $current_lang = apply_filters( 'wpml_current_language', null );
+
+  $cdc_url = '';
+  switch ($current_lang) {
+    case 'es':
+      $cdc_url = 'https://www.cdc.gov/coronavirus/2019-ncov/index-sp.html';
+      break;
+    case 'zh-hans':
+      $cdc_url = 'https://www.cdc.gov/coronavirus/2019-ncov/index-Chinese.html';
+      break;
+    default:
+      $cdc_url = 'https://www.cdc.gov/coronavirus/2019-ncov/index.html';
+  }
+    
+    if ($tag_name === "coronavirus" || $tag_name === "فيروس كورونا" || $tag_name === "冠状病毒" || $tag_name === "Коронавирус" || $tag_name === "کورونا وائرس") {
         ?>
-        <div style="max-width:610px; min-height:46px; background:#d8e7f0; margin: 0 0 65px 0;">
-            <div style="transform: translateY(50%); font-weight: bold; text-align: center;">
-                <span><?php  _e('Latest news from the CDC on Coronavirus Disease 2019 (COVID-19)', 'covid-banner-text'); ?></span>
-                <a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html" style="color: black;">
-                    <span style="vertical-align: middle; font-size: 20pt; padding-left: 8px;">
-                    <i class="fa fa-external-link" aria-hidden="true"></i>
-                    </span>
-                </a>
+        <div style="margin: 0 0 65px 0;">
+            <div style="display: flex; flex-wrap: nowrap; flex-direction: row; padding: 12px; background: #d8e7f0; inline-size: max-content; align-items: center;">
+                <div style="flex: auto; max-width: 700px; min-width: 450px; font-weight: bold;"><?php  _e('Latest news from the CDC on Coronavirus Disease 2019 (COVID-19)', 'covid-banner-text'); ?></div>
+                <div style="flex: auto; padding-left: 5px">
+                    <a href="<?php echo $cdc_url; ?>" style="color: black; display: block; padding-top: 5px">
+                        <span style="font-size: 20pt;">
+                            <i class="fa fa-external-link" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                </div>
             </div>
         </div>
     <?php
