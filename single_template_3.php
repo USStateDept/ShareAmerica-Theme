@@ -14,35 +14,69 @@ $featured_image_info = td_util::attachment_get_full_info($featured_image_id, $th
 
 ?>
 <article id="post-<?php echo $td_mod_single->post->ID;?>" class="<?php echo join(' ', get_post_class('td-post-template-3'));?> td-container-wrap" <?php echo $td_mod_single->get_item_scope();?>>
-    <div class="td-post-header td-container">
-        <div class="td-crumb-container"><?php echo td_page_generator::get_single_breadcrumbs($td_mod_single->title); ?></div>
-        <div class="td-post-header-holder td-image-gradient">
-            <?php echo $td_mod_single->get_image('td_1068x0'); ?>
-
+    <?php 
+    $heading_shift_value = get_post_meta( $post->ID, "_add_heading_title_shift", true );
+    if ($heading_shift_value) { ?>
+        <style>
+            .td-post-template-3 .td-post-title {
+                position: relative !important;
+                padding: 0 20px 9px 0 !important;
+                color: black !important;
+            }
+            .td-post-title .entry-title, .td-post-title .td-post-author-name, .td-post-title .td-author-line, .td-post-title .td-post-date, .td-post-title a {
+                color: black !important;
+            }
+        </style>
+        <div class="td-post-header td-container">
+            <div class="td-crumb-container"><?php echo td_page_generator::get_single_breadcrumbs($td_mod_single->title); ?></div>
+            <div class="td-post-header-holder td-image-gradient">
+                <?php echo $td_mod_single->get_image('td_1068x0'); ?>
+            </div>
+            <div class="wp-caption-text">
+              <?php echo $featured_image_info['caption'];?>
+            </div>
+        </div>
+        <div class="td-container header-contain">
             <header class="td-post-title">
                 <?php echo $td_mod_single->get_category(); ?>
                 <?php echo $td_mod_single->get_title();?>
-
-
                 <?php if (!empty($td_mod_single->td_post_theme_settings['td_subtitle'])) { ?>
                     <p class="td-post-sub-title"><?php echo $td_mod_single->td_post_theme_settings['td_subtitle'];?></p>
                 <?php } ?>
-
-
                 <div class="td-module-meta-info">
                     <?php echo $td_mod_single->get_author();?>
                     <?php echo $td_mod_single->get_date(false);?>
                     <?php echo $td_mod_single->get_views();?>
                     <?php echo $td_mod_single->get_comments();?>
                 </div>
-
             </header>
         </div>
-        <div class="wp-caption-text">
-          <?php echo $featured_image_info['caption'];?>
+    <?php } else { ?>
+        <div class="td-post-header td-container">
+            <div class="td-crumb-container"><?php echo td_page_generator::get_single_breadcrumbs($td_mod_single->title); ?></div>
+            <div class="td-post-header-holder td-image-gradient">
+                <?php echo $td_mod_single->get_image('td_1068x0'); ?>
+                <header class="td-post-title">
+                    <?php echo $td_mod_single->get_category(); ?>
+                    <?php echo $td_mod_single->get_title();?>
+    
+                    <?php if (!empty($td_mod_single->td_post_theme_settings['td_subtitle'])) { ?>
+                        <p class="td-post-sub-title"><?php echo $td_mod_single->td_post_theme_settings['td_subtitle'];?></p>
+                    <?php } ?>
+    
+                    <div class="td-module-meta-info">
+                        <?php echo $td_mod_single->get_author();?>
+                        <?php echo $td_mod_single->get_date(false);?>
+                        <?php echo $td_mod_single->get_views();?>
+                        <?php echo $td_mod_single->get_comments();?>
+                    </div>
+                </header>
+            </div>
+            <div class="wp-caption-text">
+              <?php echo $featured_image_info['caption'];?>
+            </div>
         </div>
-    </div>
-
+    <?php } ?>
     <div class="td-container">
         <div class="td-pb-row">
             <?php
