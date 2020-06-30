@@ -1506,3 +1506,23 @@ figure + h2 {
     font-size: 21px !important;
   }
 }
+   padding: 0 30px;
+   border-left: 1px solid black;
+}
+
+.share-sidebar-t-1 {margin-top: 1em;}
+.share-sidebar-t-2 {margin-top: 2em;}
+.share-sidebar-t-3 {margin-top: 3em;}
+.share-sidebar-t-4 {margin-top: 4em;}
+.share-sidebar-t-6 {margin-top: 6em;}
+.share-sidebar-t-8 {margin-top: 8em;}
+.share-sidebar-t-10 {margin-top: 6em;}
+.share-sidebar-t-12 {margin-top: 8em;}
+
+.post-format-image .td-meta-info-container {
+    display: none;
+}
+  
+.post-format-image a:before {
+    background: none !important;
+}
