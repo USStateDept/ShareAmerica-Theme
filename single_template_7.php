@@ -41,58 +41,119 @@ if (!empty($td_post_featured_image)) {
 ?>
 
 <article id="post-<?php echo $td_mod_single->post->ID;?>" class="<?php echo join(' ', get_post_class('td-post-template-7'));?> td-container-wrap" <?php echo $td_mod_single->get_item_scope();?>>
+<?php 
+    $heading_shift_value = get_post_meta( $post->ID, "_add_heading_title_shift", true );
+    if ($heading_shift_value) { ?>
+        <style>
+            .td-post-template-7 .td-main-content, .td-post-template-7 .td-main-sidebar {
+                margin-top: 12px !important;
+            }
+            
+            .td-post-title .td-post-author-name, .td-post-title .td-post-author-name a, .td-post-title .td-post-date, .td-post-title .entry-title {
+                color :black !important;
+            }
+        </style>
+        <div class="td-full-screen-header-image-wrap">
+            <div class="td-container td-post-header">
+                <div class="td-crumb-container"><?php echo td_page_generator::get_single_breadcrumbs($td_mod_single->title); ?></div>
+                <div class="td-post-header-holder">
 
-    <div class="td-full-screen-header-image-wrap">
+                    <?php
+                    /**
+                     * Replace default .td-parallax-header
+                     * with .td-parallax-header-no-fade to
+                     * prevent header fade on scroll
+                     * (IIPNET-102)
+                     */
+                    ?>
 
-        <div class="td-container td-post-header">
-            <div class="td-crumb-container"><?php echo td_page_generator::get_single_breadcrumbs($td_mod_single->title); ?></div>
-
-	        <div class="td-post-header-holder">
-
-                <?php
-                /**
-                 * Replace default .td-parallax-header
-                 * with .td-parallax-header-no-fade to
-                 * prevent header fade on scroll
-                 * (IIPNET-102)
-                 */
-                ?>
-		        <div class="td-parallax-header-no-fade">
-
-	                <header class="td-post-title">
-
-	                    <?php echo $td_mod_single->get_category(); ?>
-	                    <?php echo $td_mod_single->get_title();?>
-
-
-	                    <?php if (!empty($td_mod_single->td_post_theme_settings['td_subtitle'])) { ?>
-	                        <p class="td-post-sub-title"><?php echo $td_mod_single->td_post_theme_settings['td_subtitle']; ?></p>
-	                    <?php } ?>
-
-	                    <div class="td-module-meta-info">
-	                        <?php echo $td_mod_single->get_author();?>
-	                        <?php echo $td_mod_single->get_date(false);?>
-	                        <?php echo $td_mod_single->get_views();?>
-	                        <?php echo $td_mod_single->get_comments();?>
-	                    </div>
-
-										<div class="wp-caption-text">
-											<?php echo $featured_image_info['caption'];?>
-										</div>
-
-	                </header>
-
-		            <div class="td-read-down"><a href="#"><i class="td-icon-read-down"></i></a></div>
-		        </div>
+                    <div class="td-parallax-header-no-fade">
+                        <div class="td-read-down"><a href="#"><i class="td-icon-read-down"></i></a></div>
+                    </div>
+                </div>
             </div>
 
+            <div id="td-full-screen-header-image" class="td-image-gradient-style7">
+                <img class="td-backstretch" src="<?php echo $td_post_featured_image; ?>" alt="<?php echo $featured_image_info['alt']; ?>" title="<?php echo $featured_image_info['title']; ?>">
+            </div>
         </div>
 
-        <div id="td-full-screen-header-image" class="td-image-gradient-style7">
-					<img class="td-backstretch" src="<?php echo $td_post_featured_image; ?>" alt="<?php echo $featured_image_info['alt']; ?>" title="<?php echo $featured_image_info['title']; ?>">
-        </div>
-    </div>
+        <div class="td-container header-contain">
+            <div class="wp-caption-text">
+                <?php echo $featured_image_info['caption'];?>
+            </div>
 
+            <header class="td-post-title">
+                <?php echo $td_mod_single->get_category(); ?>
+                <?php echo $td_mod_single->get_title();?>
+
+                <?php if (!empty($td_mod_single->td_post_theme_settings['td_subtitle'])) { ?>
+                    <p class="td-post-sub-title"><?php echo $td_mod_single->td_post_theme_settings['td_subtitle']; ?></p>
+                <?php } ?>
+
+                <div class="td-module-meta-info">
+                    <?php echo $td_mod_single->get_author();?>
+                    <?php echo $td_mod_single->get_date(false);?>
+                    <?php echo $td_mod_single->get_views();?>
+                    <?php echo $td_mod_single->get_comments();?>
+                </div>
+            </header>
+        </div>
+
+    <?php } else { ?>
+        <div class="td-full-screen-header-image-wrap">
+
+            <div class="td-container td-post-header">
+                <div class="td-crumb-container"><?php echo td_page_generator::get_single_breadcrumbs($td_mod_single->title); ?></div>
+
+                <div class="td-post-header-holder">
+
+                    <?php
+                    /**
+                     * Replace default .td-parallax-header
+                     * with .td-parallax-header-no-fade to
+                     * prevent header fade on scroll
+                     * (IIPNET-102)
+                     */
+                    ?>
+                    <div class="td-parallax-header-no-fade">
+
+                        <header class="td-post-title">
+
+                            <?php echo $td_mod_single->get_category(); ?>
+                            <?php echo $td_mod_single->get_title();?>
+
+
+                            <?php if (!empty($td_mod_single->td_post_theme_settings['td_subtitle'])) { ?>
+                                <p class="td-post-sub-title"><?php echo $td_mod_single->td_post_theme_settings['td_subtitle']; ?></p>
+                            <?php } ?>
+
+                            <div class="td-module-meta-info">
+                                <?php echo $td_mod_single->get_author();?>
+                                <?php echo $td_mod_single->get_date(false);?>
+                                <?php echo $td_mod_single->get_views();?>
+                                <?php echo $td_mod_single->get_comments();?>
+                            </div>
+
+                            <div class="wp-caption-text">
+                                <?php echo $featured_image_info['caption'];?>
+                            </div>
+
+                        </header>
+
+                        <div class="td-read-down"><a href="#"><i class="td-icon-read-down"></i></a></div>
+                    </div>
+                </div>
+
+            </div>
+            
+
+
+            <div id="td-full-screen-header-image" class="td-image-gradient-style7">
+                        <img class="td-backstretch" src="<?php echo $td_post_featured_image; ?>" alt="<?php echo $featured_image_info['alt']; ?>" title="<?php echo $featured_image_info['title']; ?>">
+            </div>
+        </div>
+    <?php } ?>
     <div class="td-container">
         <div class="td-pb-row">
             <?php
