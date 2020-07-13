@@ -410,3 +410,11 @@ function new_nav_menu_items( $items, $args ) {
   return $items;
 }
 add_filter( 'wp_nav_menu_items', 'new_nav_menu_items', 10, 2 );
+
+add_action( 'after_setup_theme', 'add_theme_posts_format_image', 11 );
+function add_theme_posts_format_image(){
+ add_theme_support( 'post-formats', array(
+    'image',
+    'video',
+    ) );
+}
