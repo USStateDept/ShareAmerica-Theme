@@ -1506,3 +1506,11 @@ figure + h2 {
     font-size: 21px !important;
   }
 }
+
+.post-format-image .td-meta-info-container {
+  display: none;
+}
+
+.post-format-image a:before {
+  background: none !important;
+}
