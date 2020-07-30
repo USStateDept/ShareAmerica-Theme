@@ -383,8 +383,8 @@ end back up fonts  */
   vertical-align: middle;
 }
 .td-footer-wrapper .frm_forms .frm_submit {
-  display: inline-block;
-  float: right;
+  position: absolute;
+  right: 26px;
   height: 68px;
   width: 82px;
   transform: translateY(-80px);
@@ -1087,6 +1087,7 @@ figure + h2 {
   .td-footer-wrapper .frm_forms .form-field {
     right: inherit;
     display: block;
+    width: 250px;
   }
   .td-footer-wrapper .frm_forms .frm_description {
     display: block;
@@ -1113,7 +1114,6 @@ figure + h2 {
     position: relative;
     margin: 0;
     padding: 0;
-    width: 80%;
   }
   .rtl .td-footer-wrapper .frm_forms .form-field {
     left: inherit;
@@ -1447,7 +1447,9 @@ figure + h2 {
 }
 
 .subscribeActive .frm_forms .frm_fields_container {
-  text-align: center;
+  margin: 0 auto;
+  justify-content: center;
+  grid-gap: 0;
 }
 
 .subscribeActive .frm_forms fieldset {
@@ -1464,20 +1466,36 @@ figure + h2 {
 }
 
 .subscribeActive .frm_forms #frm_field_68_container {
-  position: relative !important;
-  display: inline-block;
-  right: 0 !important;
+  position: relative;
+  grid-row-start: 1;
+  grid-column: 4/9;
+  width: auto;
+  right: 0;
 }
 
 .subscribeActive .frm_forms .frm_submit {
-  float: none;
+  position: relative;
+  grid-row-start: 1;
+  grid-column: 9;
   transform: translateY(0);
+  right: 0;
 }
 
 @media (max-width: 979px) {
+  .subscribeActive .frm_forms .frm_fields_container {
+    justify-content: none;
+  }
+  
   .subscribeActive .frm_forms #frm_field_68_container {
-    float: none;
-    width: 350px;
+    grid-row-start: 1;
+    grid-column: 2/9 !important;
+  }
+
+  .subscribeActive .frm_forms .frm_submit {
+    position: relative;
+    grid-row-start: 1;
+    grid-column: 9;
+    width: 82px;
   }
 }
 
@@ -1505,6 +1523,23 @@ figure + h2 {
   .menu-item-subscribe-position > a {
     font-size: 21px !important;
   }
+
+  .subscribeActive .frm_forms .frm_fields_container {
+    justify-content: none;
+  }
+
+  .subscribeActive .frm_forms #frm_field_68_container {
+    grid-row-start: 1;
+    grid-column: 2/9 !important;
+  }
+
+  .subscribeActive .frm_forms .frm_submit {
+    position: relative;
+    grid-row-start: 1;
+    grid-column: 9 !important;
+    width: 82px;
+  }
+
 }
 
 .post-format-image .td-meta-info-container {
