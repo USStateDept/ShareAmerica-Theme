@@ -418,3 +418,19 @@ function add_theme_posts_format_image(){
     'video',
     ) );
 }
+
+function has_shareable_imgs() {
+  // If shareable image class applied add shareaholic script to heading
+  if ( preg_match('/shareable/', apply_filters('the_content', get_the_content())) ) {
+    ?>
+    <!-- BEGIN SHAREAHOLIC CODE -->
+    <link rel="preload" href="https://cdn.shareaholic.net/assets/pub/shareaholic.js" as="script" />
+    <meta name="shareaholic:site_id" content="bf84f6386ad4ebb78c5da338c508966f" />
+    <script data-cfasync="false" async src="https://cdn.shareaholic.net/assets/pub/shareaholic.js">
+    <!-- END SHAREAHOLIC CODE -->
+
+    <?php
+      wp_enqueue_script( 'shareaholic-js', get_stylesheet_directory_uri() . '/vendor/shareaholic/shareaholic-js.js', array(), '1.0.1', false );
+  }
+}
+add_action( 'wp_head', 'has_shareable_imgs' );
