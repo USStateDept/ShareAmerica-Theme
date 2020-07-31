@@ -309,9 +309,10 @@ class td_module_single_base extends td_module {
 
         } else {
             if (td_util::get_option('tds_p_show_date') != 'hide') {
+                $format = __('M j, Y', 'share');
                 $td_article_date_unix = get_the_time('U', $this->post->ID);
                 $buffy .= '<span class="td-post-date' . $td_post_date_no_dot . '">';
-                $buffy .= '<time class="entry-date updated td-module-date' . $visibility_class . '" datetime="' . date(DATE_W3C, $td_article_date_unix) . '" >' . get_the_time(get_option('date_format'), $this->post->ID) . '</time>';
+                $buffy .= '<time class="entry-date updated td-module-date' . $visibility_class . '" datetime="' . date(DATE_W3C, $td_article_date_unix) . '" >' . get_the_time($format, $this->post->ID) . '</time>';
                 $buffy .= '</span>';
             }
         }
