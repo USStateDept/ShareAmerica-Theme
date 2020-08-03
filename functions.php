@@ -419,6 +419,7 @@ function add_theme_posts_format_image(){
     ) );
 }
 
+add_action( 'wp_head', 'has_shareable_imgs' );
 function has_shareable_imgs() {
   // If shareable image class applied add shareaholic script to heading
   if ( preg_match('/shareable/', apply_filters('the_content', get_the_content())) ) {
@@ -433,4 +434,3 @@ function has_shareable_imgs() {
       wp_enqueue_script( 'shareaholic-js', get_stylesheet_directory_uri() . '/vendor/shareaholic/shareaholic-js.js', array(), '1.0.1', false );
   }
 }
-add_action( 'wp_head', 'has_shareable_imgs' );

@@ -1,6 +1,6 @@
 <?php
 
-// Get and sanitize incoming image source;
+// Get and sanitize incoming image source
 $imgName = filter_input(INPUT_GET, 'src', FILTER_SANITIZE_URL);
 
 // Create Header info
