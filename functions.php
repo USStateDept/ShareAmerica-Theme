@@ -418,3 +418,6 @@ function add_theme_posts_format_image(){
     'video',
     ) );
 }
+
+// Remove canonical url from head
+add_filter( 'wpseo_canonical', '__return_false' );
