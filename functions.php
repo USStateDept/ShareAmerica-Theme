@@ -421,3 +421,12 @@ function add_theme_posts_format_image(){
 
 // Remove canonical url from head
 add_filter( 'wpseo_canonical', '__return_false' );
+
+// Filter out edit from opengraph urls
+function filter_edit_opengraph_url( $wpseo_frontend ) {
+  $rewritten = str_replace ( 'share.edit', 'share', $wpseo_frontend );
+
+  return $rewritten;
+};
+
+add_filter( 'wpseo_opengraph_url', 'filter_edit_opengraph_url', 10, 1 );

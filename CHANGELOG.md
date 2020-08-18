@@ -5,7 +5,13 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [3.0.30] - 2020.00.05
+## [3.0.31] - 2020.08.18
+
+**Changed:**
+
+- Filter '.edit' of from Yoast opengraph urls
+
+## [3.0.30] - 2020.08.05
 
 **Changed:**
 
